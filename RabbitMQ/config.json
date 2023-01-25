@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "1":{
         "connectionname":"amqps://dbjdlrml:VMXe89uO9hMIoUSPcGibJ6XirnbUFxNg@campbell.lmq.cloudamqp.com/dbjdlrml",
@@ -12,4 +13,20 @@
             "programname" :"saving_Account_Consumer.js"
             }
         
+=======
+{
+    "1":{
+        "connectionname":"amqps://dbjdlrml:VMXe89uO9hMIoUSPcGibJ6XirnbUFxNg@campbell.lmq.cloudamqp.com/dbjdlrml",
+        "queuename":"DocGenQueue",
+        "Redirecturl":"https://dummy.restapiexample.com/api/v1/create",
+        "programname" :"Consumer.js"
+        },
+        "2":{
+            "connectionname":"amqps://dbjdlrml:VMXe89uO9hMIoUSPcGibJ6XirnbUFxNg@campbell.lmq.cloudamqp.com/dbjdlrml",
+            "queuename":"Saving_account_que",
+            "Redirecturl":"https://dummy.restapiexample.com/api/v1/create",
+            "programname" :"saving_Account_Consumer.js"
+            }
+        
+>>>>>>> 4245e5ca8949567eebfb153fca4dd0a367009d09
 }
