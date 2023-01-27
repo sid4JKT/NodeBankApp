@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const DB = require("../dbconnection");
 const { logger } = require("../../Util/logeer");
 
@@ -72,7 +71,9 @@ exports.getAllCustomerTxnFilter = async (req) => {
     public.customerdetail.country,
     public.accounttype.accounttype,
     public.accounttype.accsubtype,
+    public.customeraccounts.status,
     public.customeraccounts.acctnum,
+    
     public.savingaccountdetail.balance as savingbalance
     from public.customerdetail Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
     join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer
@@ -84,6 +85,7 @@ exports.getAllCustomerTxnFilter = async (req) => {
       let appenddata = "";
 
       let customerdetail = "customerdetail";
+      let customeraccount = "customeraccounts";
       let accounttype = "accounttype";
       console.log("the key=", key);
       if (key == "cust_id") {
@@ -100,8 +102,8 @@ exports.getAllCustomerTxnFilter = async (req) => {
         }
       } else {
         if (req[key] != "") {
-          appenddata = accounttype + "." + appenddata + key;
-          appenddata = appenddata + "=" + "" + req[key] + "";
+          appenddata = customeraccount + "." + appenddata + key;
+          appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
           v++;
         }
       }
@@ -230,7 +232,7 @@ exports.getcCustomerTxnByName = async (req) => {
               from public.customerdetail
               Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
               join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer 
-              where customerdetail.firstname='${req.firstname}'`;
+              where customerdetail.firstname like '${req.firstname}%'`;
     logger.info("the customertxnquerry ", customertxnquerry);
     let getCustInfoData = await DB.ExtractQuerry(client, customertxnquerry);
 
@@ -340,148 +342,11 @@ exports.getLoanAmountByFilter = async (filterReq) => {
     client.release();
   }
 };
-=======
-const DB = require("../dbconnection");
-const { logger } = require("../../Util/logeer");
 
-exports.getAllCustomerTxn = async () => {
-  const client = await DB.dbConnection();
-  try {
-    let getCustInfoQuerry = `select public.customerdetail.cust_id ,
-     public.customerdetail.firstname,
-    public.customerdetail.lastname,
-   public.customerdetail.address1,
-    public.customerdetail.address2,
-    public.customerdetail.emailid,
-    public.customerdetail.phone,
-    public.customerdetail.mobile,
-    public.customerdetail.dob,
-    public.customerdetail.maritalstatus,
-    public.customerdetail.zipcode,
-  public.customerdetail.city,
-    public.customerdetail.state,
-    public.customerdetail.country,
-    public.accounttype.accounttype,
-    public.accounttype.accsubtype,
-    public.customeraccounts.acctnum,
-    public.customeraccounts.status
-    from public.customerdetail
-    Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
-    join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer`;
 
-    logger.info("the getCustInfoQuerry ", getCustInfoQuerry);
 
-    let getCustInfoData = await DB.ExtractQuerry(client, getCustInfoQuerry);
 
-    let getData = {};
-    if (getCustInfoData.rows.length > 0) {
-      getData.customerdetails = getCustInfoData.rows;
-    } else {
-     throw new Error('no data found')
-    }
-
-logger.info("get the data from database===", getData.customerdetails);
-
-    // getData.Accounts=Account
-    getData.statusvalue = true;
-    return getData;
-  } catch (err) {
-
-    logger.error("get the error in the getAllCustomerTxn ", err);
-    throw err
-  
-  } finally {
-    client.release();
-  }
-};
-
-exports.getAllCustomerTxnFilter = async (req) => {
-  const client = await DB.dbConnection();
-  try {
-    let getCustInfoQuerry = `select public.customerdetail.cust_id ,
-    public.customerdetail.firstname,
-    public.customerdetail.lastname,
-    public.customerdetail.address1,
-    public.customerdetail.address2,
-    public.customerdetail.emailid,
-    public.customerdetail.phone,
-    public.customerdetail.mobile,
-    public.customerdetail.dob,
-    public.customerdetail.maritalstatus,
-    public.customerdetail.zipcode,
-    public.customerdetail.city,
-    public.customerdetail.state,
-    public.customerdetail.country,
-    public.accounttype.accounttype,
-    public.accounttype.accsubtype,
-    public.customeraccounts.acctnum,
-    public.savingaccountdetail.balance as savingbalance
-    from public.customerdetail Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
-    join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer
-    join public.savingaccountdetail on savingaccountdetail.acctnum=customeraccounts."acctnum"
-   where `;
-    let finaldata = "";
-    let v = 1;
-    for (const key in req) {
-      let appenddata = "";
-
-      let customerdetail = "customerdetail";
-      let accounttype = "accounttype";
-      console.log("the key=", key);
-      if (key == "cust_id") {
-        if (req[key] != "") {
-          appenddata = customerdetail + "." + appenddata + key;
-          appenddata = appenddata + "=" + "" + req[key] + "";
-          v++;
-        }
-      } else if (key == "firstname") {
-        if (req[key] != "") {
-          appenddata = customerdetail + "." + appenddata + `${key}`;
-          appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
-          v++;
-        }
-      } else {
-        if (req[key] != "") {
-          appenddata = accounttype + "." + appenddata + key;
-          appenddata = appenddata + "=" + "" + req[key] + "";
-          v++;
-        }
-      }
-
-      if (Object.keys(req).length == v) {
-        finaldata = finaldata + appenddata + " AND ";
-        console.log(appenddata, Object.keys(req).length, v);
-      } else {
-        finaldata = finaldata + appenddata + "  ";
-      }
-    }
-
-    logger.info("final extract querry is ", getCustInfoQuerry + finaldata);
-    let finalextractquerry = getCustInfoQuerry + finaldata;
-
-    let getCustInfoData = await DB.ExtractQuerry(client, finalextractquerry);
-    if(getCustInfoData.rows.length<0)
-    {
-    throw new Error(" not data found")
-    }
-    let getData = {};
-
-    getData.value = getCustInfoData.rows;
-  
-
-    logger.info("get the data from database==", getData.value);
-    return getData;
-  } catch (err) {
-   
-    logger.error("get the error in the getAllCustomerTxn ", err);
-    throw err
-   
-  } finally {
-    client.release();
-  }
-};
-
-exports.getBalanceAndLoanAmountByFilter = async (filterReq) => {
+exports.getSavingDetailsByFilter = async (filterReq) => {
   const client = await DB.dbConnection();
   try {
     let req = {};
@@ -491,8 +356,9 @@ exports.getBalanceAndLoanAmountByFilter = async (filterReq) => {
         req[key] = filterReq[key];
       }
     }
-
-    let getCustInfoQuerry = `select  public.savingaccountdetail.balance, 
+    let getCustInfoQuerry = `select  public.savingaccountdetail.acctnum, public.savingaccountdetail.balance,
+    public.savingaccountdetail.transfer_limit,  public.savingaccountdetail.branch_code,  public.savingaccountdetail.status,   
+    public.accounttype.accounttype, public.accounttype.accsubtype,
     public.customerdetail.firstname,public.customerdetail.lastname,public.customerdetail.address1,
     public.customerdetail.emailid,public.customerdetail.phone,public.customerdetail.mobile,
     public.customerdetail.dob,public.customerdetail.maritalstatus,public.customerdetail.zipcode,
@@ -501,14 +367,13 @@ exports.getBalanceAndLoanAmountByFilter = async (filterReq) => {
    from public.customerdetail
        join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
        join public.savingaccountdetail on savingaccountdetail.acctnum = customeraccounts.acctnum
-       where `;
-
+       join public.accounttype on accounttype."accounttypeID"=customeraccounts.accounttypeId
+       where accounttypeID=1 AND  `;
     let v = 0;
     let finaldata = "";
     for (const key in req) {
       let appenddata = "";
       let customerdetail = "customerdetail";
-
       if (key == "phone" || key == "cust_id") {
         if (req[key] != "") {
           appenddata = customerdetail + "." + appenddata + key;
@@ -516,7 +381,6 @@ exports.getBalanceAndLoanAmountByFilter = async (filterReq) => {
           v++;
         }
       }
-
       if (Object.keys(req).length != v) {
         finaldata = finaldata + appenddata + " AND ";
       } else {
@@ -526,144 +390,6 @@ exports.getBalanceAndLoanAmountByFilter = async (filterReq) => {
     console.log("final extract querry is ", getCustInfoQuerry + finaldata);
     let finalextractquerry = getCustInfoQuerry + finaldata;
     let getCustInfoData = await DB.ExtractQuerry(client, finalextractquerry);
-
-    let getCustInfoFinalData = {};
-
-    if (getCustInfoData.rows.length > 0) {
-      getCustInfoFinalData.value = getCustInfoData.rows;
-    } else {
-      throw new Error('no data found')
-    }
-    
-
-    logger.info("get the data from database==", getCustInfoFinalData.value);
-    return getCustInfoFinalData;
-  } catch (err) {
-    
-    logger.error("get the error in the getBalanceAndLoanAmountByFilter ", err);
-   throw err
-  } finally {
-    client.release();
-  }
-};
-
-exports.getcCustomerTxnByName = async (req) => {
-  const client = await DB.dbConnection();
-  try {
-    let resultData = {};
-    let customertxnquerry = `select public.customerdetail.cust_id ,
-    public.customerdetail.firstname,
-       public.customerdetail.lastname,
-       public.customerdetail.address1,
-       public.customerdetail.address2,
-       public.customerdetail.emailid,
-       public.customerdetail.phone,
-       public.customerdetail.mobile,
-       public.customerdetail.dob,
-       public.customerdetail.maritalstatus,
-       public.customerdetail.zipcode,
-       public.customerdetail.city,
-       public.customerdetail.state,
-       public.customerdetail.country,
-           public.accounttype.accounttype,
-           public.accounttype.accsubtype,
-           public.customeraccounts.acctnum,
-           public.customeraccounts.status
-              from public.customerdetail
-              Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
-              join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer 
-              where customerdetail.firstname='${req.firstname}'`;
-    logger.info("the customertxnquerry ", customertxnquerry);
-    let getCustInfoData = await DB.ExtractQuerry(client, customertxnquerry);
-
-    if (getCustInfoData.rows.length > 0) {
-      resultData.statusvalue = true;
-      resultData.value = getCustInfoData.rows;
-    } else {
-       throw new Error("no data found")
-    }
-
-    return resultData;
-  } catch (err) {
-    let resultdata = {};
-    logger.error("get the error in the getAllCustomerTxn ", err);
-    throw err
-  } finally {
-    client.release();
-  }
-};
-// select * from public."document_cutomer_master _table"
-exports.getCustomerSavingAccountbyCustId = async (req,client) => {
-  // const client = await DB.dbConnection();
-  try {
-    let resultData = {};
-    let getCustomerSavingAccountbyCustIdQueery = `SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
-    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=${req.cust_id}`;
-    logger.info(
-      "the getCustomerSavingAccountbyCustIdQueery ",
-      getCustomerSavingAccountbyCustIdQueery
-    );
-    let getCustInfoData = await DB.ExtractQuerry(
-      client,
-      getCustomerSavingAccountbyCustIdQueery
-    );
-
-    if (getCustInfoData.rows.length > 0) {
-      resultData.statusvalue = true;
-      resultData.value = getCustInfoData.rows[0];
-      return resultData
-    } else {
-      resultData.statusvalue = true;
-      resultData.value = "no data match";
-      throw new Error("no data match in saving account with this cust_id",req.cust_id)
-    }
-
-  } catch (err) {
-    logger.error("get the error in the getCustomerSavingAccountbyCustId ", err);
-    throw err
-  } finally {
-    // client.release();
-  }
-};
-
-exports.getLoanAmountByFilter = async (filterReq) => {
-  const client = await DB.dbConnection();
-  try {
-    let req = {};
-    for (const key in filterReq) {
-      if (filterReq[key] != "") {
-        console.log(filterReq[key]);
-        req[key] = filterReq[key];
-      }
-    }
-    let getCustInfoQuerry = `select  public.customerdetail.*, public.loanaccountdetail.*,public.AccountType.accounttype,
-  public.AccountType.accsubtype
- from public.customerdetail
-     join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
-     join public.AccountType on AccountType."accounttypeID" = customeraccounts.AccountTypeId
-     join public.LoanAccountDetail on LoanAccountDetail.acctnum = customeraccounts.acctnum
-     where public.AccountType.accounttype = 'Loan' AND `;
-    let v = 0;
-    let finaldata = "";
-    for (const key in req) {
-      let appenddata = "";
-      let customerdetail = "customerdetail";
-      if (key == "phone" || key == "cust_id") {
-        if (req[key] != "") {
-          appenddata = customerdetail + "." + appenddata + key;
-          appenddata = appenddata + "=" + "" + `${req[key]}` + "";
-          v++;
-        }
-      }
-      if (Object.keys(req).length != v) {
-        finaldata = finaldata + appenddata + " AND ";
-      } else {
-        finaldata = finaldata + appenddata + "  ";
-      }
-    }
-    logger.info("final extract querry is ", getCustInfoQuerry + finaldata);
-    let finalextractquerry = getCustInfoQuerry + finaldata;
-    let getCustInfoData = await DB.ExtractQuerry(client, finalextractquerry);
     let getCustInfoFinalData = {};
     if (getCustInfoData.rows.length > 0) {
       getCustInfoFinalData.value = getCustInfoData.rows;
@@ -676,10 +402,12 @@ exports.getLoanAmountByFilter = async (filterReq) => {
     logger.info("get the data from database==", getCustInfoFinalData.value);
     return getCustInfoFinalData;
   } catch (err) {
-    logger.error("get the error in the getBalanceAndLoanAmountByFilter ", err);
-    throw err;
+    let resultdata = {};
+    logger.error("get the error in the getSavingDetailsByFilter ", err);
+    resultdata.statusvalue = false;
+    resultdata.message = "something Went Wrong " + err;
+    return resultdata;
   } finally {
     client.release();
   }
 };
->>>>>>> 4245e5ca8949567eebfb153fca4dd0a367009d09

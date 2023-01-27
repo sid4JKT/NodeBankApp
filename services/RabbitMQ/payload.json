@@ -1,0 +1,35 @@
+{
+	"customerdetail": {
+
+		"cust_id": 1,
+
+		"firstname": "John",
+
+		"lastname": "wick",
+
+		"address1": "adsa",
+
+		"address2": "asdasd",
+
+		"emailid": null,
+
+		"phone": null,
+
+		"mobile": null,
+
+		"dob": null,
+
+		"maritalstatus": null,
+
+		"zipcode": null,
+
+		"city": null,
+
+		"state": null,
+
+		"country": null
+
+	}
+	
+	
+}
