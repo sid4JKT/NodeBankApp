@@ -59,28 +59,41 @@ exports.getCustomerAccounts = async (accountDataRequest) => {
   try {
     let queryString;
     let resultdata = {};
+    let custId;
     if (
       (accountDataRequest.hasOwnProperty("CustID") ||
         accountDataRequest.hasOwnProperty("cust_id")) &&
       accountDataRequest.hasOwnProperty("AccountNumber")
     ) {
-      let custId = accountDataRequest.CustID;
+      if (accountDataRequest.hasOwnProperty("CustID")) {
+        custId = accountDataRequest.CustID;
+      } else {
+        custId = accountDataRequest.cust_id;
+      }
       let accNumber = accountDataRequest.AccountNumber;
       queryString = `SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.cust_id = '${custId}' AND CustomerAccounts.AcctNum = '${accNumber}'`;
-    } else if (accountDataRequest.hasOwnProperty("CustID")) {
-      let custId = accountDataRequest.CustID;
-      queryString = `SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.CustId = '${custId}'`;
+    } else if (
+      accountDataRequest.hasOwnProperty("CustID") ||
+      accountDataRequest.hasOwnProperty("cust_id")
+    ) {
+      if (accountDataRequest.hasOwnProperty("CustID")) {
+        custId = accountDataRequest.CustID;
+      } else {
+        custId = accountDataRequest.cust_id;
+      }
+      queryString = `SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.cust_id = '${custId}'`;
     } else if (accountDataRequest.hasOwnProperty("AccountNumber")) {
       let accNumber = accountDataRequest.AccountNumber;
       queryString = `SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.AcctNum = '${accNumber}'`;
     } else {
       logger.info(
-        "CustomerAccount_Repo -> createCustomerAccount -> Request should get Customer Id or Account Number"
+        "CustomerAccount_Repo -> getCustomerAccounts -> Request should get Customer Id or Account Number"
       );
       throw new Error(" Request should get Customer Id or Account Number");
     }
     logger.info(
-      "CustomerAccount_Repo -> createCustomerAccount -> Query String is : " + queryString
+      "CustomerAccount_Repo -> getCustomerAccounts -> Query String is : " +
+        queryString
     );
     let customerAccountData = await DB.ExtractQuerry(client, queryString);
 
@@ -94,6 +107,55 @@ exports.getCustomerAccounts = async (accountDataRequest) => {
   } catch (err) {
     logger.info(
       "CustomerAccount_Repo -> getCustomerAccounts -> Customer account Repo Error : " +
+        err
+    );
+    throw err;
+  } finally {
+    client.release();
+  }
+};
+
+exports.diactivateCustomerAccounts = async (accountDataRequest) => {
+  const client = await DB.dbConnection();
+  try {
+    let queryString;
+    let resultdata = {};
+    let accountStatus = "InActive";
+    let custId;
+
+    logger.info(
+      "CustomerAccount_Repo -> diactivateCustomerAccounts -> Inputs  : " +
+        JSON.stringify(accountDataRequest)
+    );
+
+    if (
+      accountDataRequest.hasOwnProperty("CustID") ||
+      accountDataRequest.hasOwnProperty("cust_id")
+    ) {
+      if (accountDataRequest.hasOwnProperty("CustID")) {
+        custId = accountDataRequest.CustID;
+      } else {
+        custId = accountDataRequest.cust_id;
+      }
+      queryString = `UPDATE public.customeraccounts SET status = '${accountStatus}' WHERE customeraccounts.cust_id = '${custId}'`;
+    } else {
+      logger.info(
+        "CustomerAccount_Repo -> diactivateCustomerAccounts -> Request should get Customer Id "
+      );
+      throw new Error(" Request should get Customer Id");
+    }
+    logger.info(
+      "CustomerAccount_Repo -> diactivateCustomerAccounts -> Query String is : " +
+        queryString
+    );
+    let customerAccountData = await DB.ExtractQuerry(client, queryString);
+
+    resultdata.statusvalue = true;
+    resultdata.value = customerAccountData;
+    return resultdata;
+  } catch (err) {
+    logger.info(
+      "CustomerAccount_Repo -> diactivateCustomerAccounts -> Customer account Repo Error : " +
         err
     );
     throw err;

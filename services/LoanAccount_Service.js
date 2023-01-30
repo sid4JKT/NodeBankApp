@@ -67,7 +67,7 @@ exports.getLoanAccountByCustomerId = async (loanDataRequest) => {
           JSON.stringify(accountTypesData)
       );
       let accountType = accountTypesData.value.rows[0].accounttype;
-      if (accountType == "Loan") {
+      if (accountType == "Loan" || accountType == "loan") {
         logger.info("accounttype is loan : ");
         responseWithData = loanData.getloanAccountByAccountNumber(
           requestBody.AccountNumber
@@ -116,15 +116,25 @@ exports.createLoanAccount = async (loanDataRequest) => {
       accountTypeId
     );
     if (customerAccounts.statusvalue) {
+      logger.info(
+        "LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)"
+      );
       accountNum = customerAccounts.value.AcctNum;
-      let accountType = loanDataRequest.AccountType;
+      let accountType;
+      if (loanDataRequest.hasOwnProperty("AccountType")) {
+        accountType = loanDataRequest.AccountType;
+      } else if (loanDataRequest.hasOwnProperty("accountType")) {
+        accountType = loanDataRequest.accountType;
+      } else {
+        throw new Error(" Please pass AccountType and AccSubType");
+      }
       logger.info(
         "calling createLoanAccount repo program : " +
           accountNum +
           " <===> " +
           accountType
       );
-      if (accountType == "Loan" || accountType == "loan" ) {
+      if (accountType == "Loan" || accountType == "loan") {
         responseWithData = await loanData.createloanAccount(
           loanDataRequest,
           accountNum,

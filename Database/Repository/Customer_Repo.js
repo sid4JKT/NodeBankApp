@@ -204,3 +204,26 @@ async function Update(data) {
 
   return UpdateCust;
 }
+
+//Deleting customer
+exports.deleteCustomer = async (data) => {
+  const client = await DB.dbConnection();
+  try {
+    let resultfinaldata = {};
+    logger.info(`the DB is Connected`, data);
+    let Status = "inactive";
+    let queryString1 = `DELETE FROM public.customerdetail WHERE cust_id=${data.cust_id}`;
+    let resultdata1 = await DB.ExtractQuerry(client, queryString1);
+    resultfinaldata.statusvalue = true;
+    resultfinaldata.values =
+      " customer account status is updated  and customer account deleted for custId ";
+    return resultfinaldata;
+  } 
+  catch (err) {
+    logger.error("get the error in the deleteCustomer ", err);
+    throw err;
+  }
+  finally {
+    client.release();
+  }
+};

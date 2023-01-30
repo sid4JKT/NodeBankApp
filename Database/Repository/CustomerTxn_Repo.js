@@ -302,7 +302,7 @@ exports.getLoanAmountByFilter = async (filterReq) => {
      join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
      join public.AccountType on AccountType."accounttypeID" = customeraccounts.AccountTypeId
      join public.LoanAccountDetail on LoanAccountDetail.acctnum = customeraccounts.acctnum
-     where public.AccountType.accounttype = 'Loan' AND `;
+     where public.AccountType.accounttype = 'loan' AND `;
     let v = 0;
     let finaldata = "";
     for (const key in req) {

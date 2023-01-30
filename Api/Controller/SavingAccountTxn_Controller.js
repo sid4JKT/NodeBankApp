@@ -147,3 +147,35 @@ exports.deleteSavingAccountController = async (req, res) => {
     });
   }
 };
+exports.getSaving_Transactionhistory = async (req, res) => {
+  try{
+    logger.info(`get the data send to service `,req.body);
+  
+    const getData = await SavingAccountTxnService.getSaving_Transactionhistory(req.body);
+    if (getData.customerTXnHistory.statusvalue) {
+      delete getData.customerTXnHistory.statusvalue;
+      return res.status(200).send(getData.customerTXnHistory.value)
+    } else {
+      return res.status(500).json({
+        Status: { 
+          StatusCode: 500,
+          StatusType: "error",
+          StatusMessage: `${err}`,
+          StatusSeverity: "Information",
+        },
+      });
+    }
+  
+  }catch(err)
+  {
+    logger.error("err in the controller", err);
+    return res.status(500).json({
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+      },
+    });  
+  } 
+};

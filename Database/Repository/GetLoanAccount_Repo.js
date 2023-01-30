@@ -241,7 +241,7 @@ exports.deactivateLoanAccount = async (accountNum) => {
     let accountStatus = "InActive";
 
     if (accountNum !== "") {
-      queryString = `UPDATE LoanAccountDetail SET LoanAccountDetail.status = '${accountStatus}' WHERE LoanAccountDetail.AcctNum = '${accountNum}' `;
+      queryString = `UPDATE LoanAccountDetail SET status = '${accountStatus}' WHERE LoanAccountDetail.AcctNum = '${accountNum}' `;
       logger.info(
         "GetLoanAccount_Repo -> deactivateLoanAccount -> Query : " + queryString
       );

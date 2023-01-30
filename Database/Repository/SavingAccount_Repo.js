@@ -341,3 +341,64 @@ exports.deleteSavingAccount = async (acctnum) => {
     client.release();
   }
 };
+exports.getSaving_Transactionhistory = async (data) => {
+  const client = await DB.dbConnection();
+  try{
+      let Savingdetaildata = {};
+      let LoanDetail = {};
+      
+      if (data.accountType == "Saving") {
+        let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
+        let accnum = await DB.ExtractQuerry(client, Accnumber);
+        if(accnum.rows.length<0)
+        {
+        throw new Error("acctnum not found with custid: ",data.custId)
+        }
+        logger.info(`the acctnum  ${accnum.rows[0].acctnum}`); 
+          let Savingdetailquerry = `select savingaccounttxnhistory.*,
+            accounttype.accounttype,accounttype.accsubtype
+            from savingaccounttxnhistory
+            join customeraccounts on customeraccounts.acctnum = savingaccounttxnhistory.acctnum
+            join accounttype on accounttype."accounttypeID" = customeraccounts.accounttypeid 
+            where savingaccounttxnhistory.acctnum='${accnum.rows[0].acctnum}'`;
+          logger.info("Savingdetailquerry===", Savingdetailquerry);
+          let Savingdetail = await DB.ExtractQuerry(client, Savingdetailquerry);
+           
+          logger.info("Saving detail==", Savingdetail.rows);
+          Savingdetaildata.statusvalue = true;
+          Savingdetaildata.value = Savingdetail.rows
+          return Savingdetaildata; 
+      }else if (data.accountType == "Loan") {
+        let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
+        let accnum = await DB.ExtractQuerry(client, Accnumber);
+        if(accnum.rows.length<0)
+        {
+        throw new Error("acctnum not found with custid: ",data.custId)
+        }
+        logger.info("acctnum==", accnum.rows[0].acctnum);
+          console.log("acctype==",data.accountType) 
+          let LoanDetailQuery = `select emiid from  public.loanaccountdetail where acctnum=${accnum.rows[0].acctnum}`;
+          let Emiid = await DB.ExtractQuerry(client, LoanDetailQuery);
+          logger.info("emiid===", Emiid.rows);
+
+          let EMiDetailquerry2 = `select loanaccountdetail.acctnum,loanemidetail.*,accounttype.accounttype,
+          accounttype.accsubtype from  public.loanemidetail  
+          join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+          join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+          where loanemidetail.emiid='${Emiid.rows[0].emiid}'`;
+          let getrecord = await DB.ExtractQuerry(client, EMiDetailquerry2);
+          logger.info("loandetail===", LoanDetail.rows);
+
+          LoanDetail.statusvalue = true;  
+          LoanDetail.value = getrecord.rows;
+          return LoanDetail;
+      }
+  }
+  catch(err){
+          logger.error("error in the SavingAcc_txnhistoryrepo getTransactionhistory",err)
+          throw err;
+  }
+  finally{ 
+    client.release();
+  }
+}

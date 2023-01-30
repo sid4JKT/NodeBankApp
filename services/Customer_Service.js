@@ -2,6 +2,10 @@ const custRepo = require("../Database/Repository/Customer_Repo");
 const { logger } = require("../Util/logeer");
 const SavingAccountTxn_Service = require("./SavingAccountTxn_Service");
 const loanAccountDetail = require("./LoanAccount_Service");
+const loanDataRepo = require("../Database/Repository/GetLoanAccount_Repo");
+const customerAccountRepo = require("../Database/Repository/CustomerAccount_Repo");
+const accountTypeRepo = require("../Database/Repository/AccountType_Repo");
+const SavingAccountRepo = require("../Database/Repository/SavingAccount_Repo");
 
 //Getting customer by id
 exports.getCustomerById = async (data) => {
@@ -97,11 +101,63 @@ exports.addCustomer = async (data) => {
 
 exports.deleteCustomer = async (data) => {
   try {
+    logger.info(
+      "Customer_Service -> deleteCustomer -> Initial Inputs : " +
+        JSON.stringify(data)
+    );
+    let customerAccounts = await customerAccountRepo.getCustomerAccounts(data);
+    console.log("Customer Account Info : " + JSON.stringify(customerAccounts));
+
+    let diactivateAccounts =
+      await customerAccountRepo.diactivateCustomerAccounts(data);
+
+    logger.info(
+      "Customer_Service -> deleteCustomer -> Diactivated the accounttype table  : ",
+      JSON.stringify(diactivateAccounts)
+    );
+
+    customerAccounts.value.rows.forEach(async (custAccount) => {
+      let getAccountTypeData = await accountTypeRepo.getAccountType(
+        custAccount
+      );
+      logger.info(
+        "Customer_Service -> deleteCustomer -> Loop of customeraccounts  : " +
+          JSON.stringify(custAccount) +
+          " ====Account type data :  " +
+          JSON.stringify(getAccountTypeData)
+      );
+
+      let accType = getAccountTypeData.value.rows[0].accounttype;
+      logger.info(
+        "Customer_Service -> deleteCustomer -> Accounttype is  : " +
+          accType +
+          " ---  " +
+          JSON.stringify(getAccountTypeData.value.rows[0])
+      );
+      if (accType == "saving" || accType == "Saving") {
+        logger.info(
+          "Customer_Service -> deleteCustomer -> Going to delete savingaccount  : " +
+            custAccount.acctnum
+        );
+        responseWithData = await SavingAccountRepo.deleteSavingAccount(
+          custAccount.acctnum
+        );
+      } else if (accType == "loan" || accType == "Loan") {
+        logger.info(
+          "Customer_Service -> deleteCustomer -> Going to delete loanaccount  : " +
+            custAccount.acctnum
+        );
+        responseWithData = await loanDataRepo.deactivateLoanAccount(
+          custAccount.acctnum
+        );
+      }
+    });
+
     const deletecustomer = await custRepo.deleteCustomer(data);
     logger.info("service", deletecustomer);
     return deletecustomer;
   } catch (err) {
-    logger.info("error from addCustomer Service", err);
+    logger.info("error from deleteCustomer Service", err);
     throw err;
   }
 };

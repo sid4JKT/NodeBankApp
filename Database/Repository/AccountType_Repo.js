@@ -22,10 +22,27 @@ exports.getAccountType = async (accountTypeInfo) => {
       resultdata.value = accountTypeData;
       return resultdata;
     } else if (
-      accountTypeInfo.hasOwnProperty("AccountType") &&
-      accountTypeInfo.hasOwnProperty("AccSubType")
+      (accountTypeInfo.hasOwnProperty("AccountType") ||
+        accountTypeInfo.hasOwnProperty("accountType")) &&
+      (accountTypeInfo.hasOwnProperty("AccSubType") ||
+        accountTypeInfo.hasOwnProperty("accSubType"))
     ) {
-      queryString = `SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = '${accountTypeInfo.AccountType}' AND accounttype.accsubtype = '${accountTypeInfo.AccSubType}'  `;
+      let accType;
+      let accSubType;
+
+      if (accountTypeInfo.hasOwnProperty("AccountType")) {
+        accType = accountTypeInfo.AccountType;
+      } else {
+        accType = accountTypeInfo.accountType;
+      }
+
+      if (accountTypeInfo.hasOwnProperty("AccSubType")) {
+        accSubType = accountTypeInfo.AccSubType;
+      } else {
+        accSubType = accountTypeInfo.accSubType;
+      }
+
+      queryString = `SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = '${accType}' AND accounttype.accsubtype = '${accSubType}'  `;
       logger.info(
         "AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : " +
           queryString
@@ -43,7 +60,7 @@ exports.getAccountType = async (accountTypeInfo) => {
       logger.info(
         "AccountType_Repo -> getAccountType -> Account Type ID cannot be blank"
       );
-      throw new Error(" Account Type ID cannot be blank ");
+      throw new Error(" Account Type ID or Account Type and Sub Type cannot be blank ");
     }
   } catch (err) {
     throw err;

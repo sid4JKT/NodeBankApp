@@ -17,6 +17,7 @@ Router.post('/getcustomerloandetail', Customertxn_Controller.getLoanAmountByFilt
 
 // Shivamurti
 Router.post('/getsavingdetails', Customertxn_Controller.getSavingDetailsByFilterController)
+Router.post('/history',savingaccounttxn.getSaving_Transactionhistory)
 
 
 

@@ -106,3 +106,17 @@ exports.deleteSavingAccountService = async (acctnum) => {
     throw err;
   }
 };
+exports.getSaving_Transactionhistory=async(depositeJson)=>{
+    
+  try {
+   let getData={}
+   const getDataTxnHistory=await SavingAccountTxn_Repo.getSaving_Transactionhistory(depositeJson);
+   logger.info(`get the data from Repo  of getTransactionHistory ${getDataTxnHistory} in the service`)
+   getData.customerTXnHistory=getDataTxnHistory
+   return getData;
+  } catch (err) {
+   logger.error("err in the service getTransactionHistory",err)
+   throw err;
+  }
+
+}
