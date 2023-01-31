@@ -11,9 +11,8 @@ exports.main = async (data) => {
     const emailMessage = {
       sender: "<DoNotReply@22bbbda0-b834-4959-b9bc-7b7d88aaad76.azurecomm.net>",
       content: {
-        subject: "Welcome to Azure Communication Service Email.",
-        plainText:
-          "<This email message is sent from Azure Communication Service Email using JS SDK.>",
+        subject: "Welcome to JKT Bank",       
+        html: "<html><body>Dear Customer, <br> <br> Welcome to JKT Bank and thank you for choosing us. <br><br> We are pleased to inform you that your account has been created and your Account Number is xxxxxxxxx. <br><br> If you require further details on your account, please contact us at any of the telephone numbers given below. Our customer service representatives will be glad to assist you. <br><br> We value your relationship with us and assure you of our best services always. <br><br> Best Regards <br><h4> JKT Bank </h4>This is a computer generated letter hence does not require any signature. </body></html>",        
       },
       recipients: { to: [{ email: `<${data}>` }] },
     };
