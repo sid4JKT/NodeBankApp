@@ -129,6 +129,8 @@ exports.getAllDocumentCustomerMasterTable = async (filterData) => {
 exports.insert_Document_Customer = async (data) => {
   const client = await DB.dbConnection();
   let id = await randomNumberInt(4)
+  var nowDate = new Date();
+  var date = nowDate.getDate()+'/'+(nowDate.getMonth()+1)+'/'+nowDate.getFullYear(); 
   let timestamp = new Date();
   let getData = {};
   try {
@@ -139,7 +141,7 @@ exports.insert_Document_Customer = async (data) => {
       client,
       `INSERT INTO public."document_cutomer_master _table"(id,
         "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
-        VALUES (${id},'${data.Documents.doc_id}', '${data.Documents.doc_date}', '${data.Documents.Doctype}', ${data.customerdetail.cust_id}, '${data.Documents.doc_statuscode}','${timestamp}', '${data.Documents.Doc_Desc}', '${data.Documents.doc_name}')`
+        VALUES (${id},'${data.Documents.doc_id}', '${date}', '${data.Documents.Doctype}', ${data.customerdetail.cust_id}, '${data.Documents.doc_statuscode}','${timestamp}', '${data.Documents.Doc_Desc}', '${data.Documents.doc_name}')`
     );    
     getData.value = resultdata.rows;
     getData.statusvalue = true;
