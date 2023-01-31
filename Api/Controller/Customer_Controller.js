@@ -43,6 +43,8 @@ exports.addCustomer = async (req, res) => {
         let custidDoc = {
           custId: getData.value.Customerid.cust_id,
           listDtlId: 1,
+          acctnum:getData.accountDetail.acctnum,
+          accType:getData.accountDetail.accounttype
         };
         // console.log(custidDoc);
         const payload = await documentService.documentCustomer(custidDoc);

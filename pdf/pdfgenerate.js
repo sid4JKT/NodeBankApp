@@ -2,7 +2,8 @@ const PDFDocument = require('pdfkit');
 const fs = require('fs');
 const { addListener } = require('pdfkit');
 const { ClientRequest } = require('http');
-const doc_name = 'Welcome'
+const path = require('path');
+const doc_name = path.join(__dirname, '..','pdfdocuments','Welcome.pdf');
 // const doc_desc = {
 //     name:"Malliakarjun",
 //     doc
@@ -28,7 +29,7 @@ const doc = new PDFDocument();
 // Pipe its output somewhere, like to a file or HTTP response
 // See below for browser usage
 
-doc.pipe(fs.createWriteStream(`${doc_name}.pdf`));
+doc.pipe(fs.createWriteStream(doc_name));
 
 
 

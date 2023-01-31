@@ -19,10 +19,12 @@ exports.documentCustomer = async (custidDoc) => {
     console.log("line1 8");
     console.log(doc_id);
     let Document_Details = await Document_Repo.getdocumentbyId(doc_id,client);
-console.log("********")
+
     console.log(Document_Details.value[0].doc_id)
     let payloadDetail = {
       customerdetail: {
+        accountnum:custidDoc.acctnum,
+        accounttype:custidDoc.accType,
         cust_id: customerDetail.cust_id,
         firstname: customerDetail.firstname,
         lastname: customerDetail.lastname,

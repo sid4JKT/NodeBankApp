@@ -5,7 +5,7 @@ const { logger } = require("../Util/logeer");
 const doc = require("../RabbitMQ/Publisher");
 const { Client } = require("pg");
 const DB = require("../Database/dbconnection");
-
+const pdf = require("../pdf/savingsPdf");
 exports.withDrawByAccountNum = async (withdrawJson) => {
   try {
     let getData =
@@ -73,18 +73,28 @@ exports.createSavingAccountService = async (savingData) => {
       await SavingAccountTxn_Repo.createSavingAccount(savingData, client);
     logger.info("saving account created Data:", savingAccountCreatedData);
     if (savingAccountCreatedData.statusvalue == true) {
-        let custidDoc = {
-          cust_id: savingData.custId,
-          listDtlId: 1,
-        };
+      let custidDoc = {
+        cust_id: savingData.custId,
+        listDtlId: 1,
+      };
 
-        const payload = await documentService.documentCustomerForSaving(custidDoc,client);
-        logger.info("document payload",payload)
+      const payload = await documentService.documentCustomerForSaving(
+        custidDoc,
+        client
+      );
+      logger.info("document payload", payload);
 
-      let documentData= await  doc.savingDocumentPublisher(payload,'Saving_account_que');
-      logger.info("get the document data",documentData)
-        return savingAccountCreatedData;
-      }
+      pdf.SavingsPDF(payload);
+      logger.info("pdf savings acount");
+
+      let documentData = await doc.savingDocumentPublisher(
+        payload,
+        "Saving_account_que"
+      );
+      logger.info("get the document data", documentData);
+
+      return savingAccountCreatedData;
+    }
     return savingAccountCreatedData;
   } catch (err) {
     logger.error("err in the Service createSavingAccountService", err);
@@ -106,17 +116,18 @@ exports.deleteSavingAccountService = async (acctnum) => {
     throw err;
   }
 };
-exports.getSaving_Transactionhistory=async(depositeJson)=>{
-    
+exports.getSaving_Transactionhistory = async (depositeJson) => {
   try {
-   let getData={}
-   const getDataTxnHistory=await SavingAccountTxn_Repo.getSaving_Transactionhistory(depositeJson);
-   logger.info(`get the data from Repo  of getTransactionHistory ${getDataTxnHistory} in the service`)
-   getData.customerTXnHistory=getDataTxnHistory
-   return getData;
+    let getData = {};
+    const getDataTxnHistory =
+      await SavingAccountTxn_Repo.getSaving_Transactionhistory(depositeJson);
+    logger.info(
+      `get the data from Repo  of getTransactionHistory ${getDataTxnHistory} in the service`
+    );
+    getData.customerTXnHistory = getDataTxnHistory;
+    return getData;
   } catch (err) {
-   logger.error("err in the service getTransactionHistory",err)
-   throw err;
+    logger.error("err in the service getTransactionHistory", err);
+    throw err;
   }
-
-}
+};

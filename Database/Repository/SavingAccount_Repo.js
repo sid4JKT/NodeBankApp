@@ -303,6 +303,7 @@ exports.createSavingAccount = async (savingData, client) => {
         acctnum: accnumberdata.rows[0].acctnum,
         branch_code: savingData.branch_code,
         balance: savingData.balance,
+        accounttype:savingData.accountType
       };
       resultdata.value = value;
       logger.info("the data is  inserting saving  2=", resultdata);
