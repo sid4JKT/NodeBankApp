@@ -199,6 +199,7 @@ exports.createloanAccount = async (
           AcctNum: accountNum,
           branchcode: loanDataRequest.BranchCode,
           Status: accountStatus,
+          Accounttype:loanDataRequest.AccountType
         };
         logger.info(
           "GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : " +

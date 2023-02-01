@@ -50165,3 +50165,979 @@
   message: 'LoanAccountDetail Records Set to Inactive',
   value: { AcctNum: '1000000256', Status: 'InActive' }
 }
+[2023-01-31T16:59:03.665] [INFO] default - get the data send to service  { custId: '212', accountType: 'saving' }
+[2023-01-31T16:59:03.699] [ERROR] default - err in the service getTransactionHistory Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T16:59:03.703] [ERROR] default - err in the controller Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T16:59:07.823] [INFO] default - get the data send to service  { custId: '212', accountType: 'saving' }
+[2023-01-31T16:59:07.832] [ERROR] default - err in the service getTransactionHistory Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T16:59:07.834] [ERROR] default - err in the controller Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T17:04:17.649] [INFO] default - get the data send to service  { custId: '212', accountType: 'saving' }
+[2023-01-31T17:04:17.673] [ERROR] default - err in the service getTransactionHistory Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T17:04:17.675] [ERROR] default - err in the controller Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T17:05:30.059] [INFO] default - get the data send to service  { custId: '212', accountType: 'saving' }
+[2023-01-31T17:05:30.069] [ERROR] default - err in the service getTransactionHistory Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T17:05:30.070] [ERROR] default - err in the controller Error: connect ECONNREFUSED ::1:5432
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1300:16) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '::1',
+  port: 5432
+}
+[2023-01-31T17:06:08.067] [INFO] default - get the data send to service  { custId: '212', accountType: 'saving' }
+[2023-01-31T17:06:10.078] [ERROR] default - err in the service getTransactionHistory Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:313:12)
+[2023-01-31T17:06:10.083] [ERROR] default - err in the controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:313:12)
+[2023-01-31T17:06:13.101] [INFO] default - get the data send to service  { custId: '212', accountType: 'saving' }
+[2023-01-31T17:06:14.692] [INFO] default - Get the data for Querry:select acctnum from  public.customeraccounts where cust_id=212}
+[2023-01-31T17:06:14.693] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:06:14.693] [INFO] default - the acctnum  1000000001
+[2023-01-31T17:06:14.694] [INFO] default - Savingdetailquerry=== select savingaccounttxnhistory.*,
+            accounttype.accounttype,accounttype.accsubtype
+            from savingaccounttxnhistory
+            join customeraccounts on customeraccounts.acctnum = savingaccounttxnhistory.acctnum
+            join accounttype on accounttype."accounttypeID" = customeraccounts.accounttypeid 
+            where savingaccounttxnhistory.acctnum='1000000001'
+[2023-01-31T17:06:15.017] [INFO] default - Get the data for Querry:select savingaccounttxnhistory.*,
+            accounttype.accounttype,accounttype.accsubtype
+            from savingaccounttxnhistory
+            join customeraccounts on customeraccounts.acctnum = savingaccounttxnhistory.acctnum
+            join accounttype on accounttype."accounttypeID" = customeraccounts.accounttypeid 
+            where savingaccounttxnhistory.acctnum='1000000001'}
+[2023-01-31T17:06:15.018] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:06:15.019] [INFO] default - Saving detail== [
+  {
+    txnid: '6a1527b3-3798-4bed-8e7b-ec90ca5d9915',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '70',
+    txndate: 'Mon Jan 16 2023 12:54:29 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '72463',
+    acctnum: '1000000001',
+    txndetail: 'deposit',
+    withdrawamount: '0',
+    depositamount: '100000',
+    balance: '100070',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '147',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '270',
+    depositamount: '0',
+    balance: '100000',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '785',
+    acctnum: '1000000001',
+    txndetail: 'deposit',
+    withdrawamount: '270',
+    depositamount: '0',
+    balance: '99730',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '948',
+    acctnum: '1000000001',
+    txndetail: 'sagar',
+    withdrawamount: '730',
+    depositamount: '0',
+    balance: '99000',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '2b011739-8167-4cbf-a604-ab9b772a5e2b',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '98990',
+    txndate: 'Thu Jan 19 2023 16:57:02 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '51c05b80-2827-4128-9518-a55c5bc30dac',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99090',
+    txndate: 'Tue Jan 24 2023 13:30:56 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'de546e9a-f4c1-40a2-88b7-bbec2d459ef3',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99080',
+    txndate: 'Tue Jan 24 2023 13:32:14 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'fde56f11-4b3e-4722-b40f-4572c412ec19',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99070',
+    txndate: 'Wed Jan 25 2023 09:34:05 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '1de85182-2be7-4108-8b59-a002e77d9130',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99170',
+    txndate: 'Wed Jan 25 2023 09:39:55 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'caa30198-7807-430c-ad49-27305d7d5e9f',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99160',
+    txndate: 'Wed Jan 25 2023 11:01:01 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '299648a5-b975-4734-8f5e-12b3b933c4b9',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99150',
+    txndate: 'Wed Jan 25 2023 11:02:12 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '8f452ac8-9b3d-4b29-9f03-ed3e2fb314f9',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99250',
+    txndate: 'Wed Jan 25 2023 11:02:42 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '01c1a20e-1cc0-4339-91e7-0167ba3685dc',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99350',
+    txndate: 'Wed Jan 25 2023 11:03:25 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'd7a29cc2-69a7-4565-bb1a-7e0760c21029',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99450',
+    txndate: 'Wed Jan 25 2023 11:03:32 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '5936e083-c226-4113-9ae9-406d34346f5c',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99550',
+    txndate: 'Mon Jan 30 2023 06:13:51 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '843f3247-9489-4239-86b1-93d7567cbd28',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99540',
+    txndate: 'Mon Jan 30 2023 06:14:02 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '58bf562b-3343-4af3-b97b-8b2a77c79ba5',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '100',
+    depositamount: '0',
+    balance: '99440',
+    txndate: 'Mon Jan 30 2023 13:11:52 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  }
+]
+[2023-01-31T17:06:15.045] [INFO] default - get the data from Repo  of getTransactionHistory [object Object] in the service
+[2023-01-31T17:06:45.701] [INFO] default - get the data send to service  { custId: '769', accountType: 'loan' }
+[2023-01-31T17:06:47.703] [ERROR] default - err in the service getTransactionHistory Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:313:12)
+[2023-01-31T17:06:47.705] [ERROR] default - err in the controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:313:12)
+[2023-01-31T17:06:50.504] [INFO] default - get the data send to service  { custId: '769', accountType: 'loan' }
+[2023-01-31T17:06:51.809] [INFO] default - Get the data for Querry:select acctnum from  public.customeraccounts where cust_id=769}
+[2023-01-31T17:06:51.810] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:06:51.810] [INFO] default - acctnum== 1000000254
+[2023-01-31T17:06:52.126] [INFO] default - Get the data for Querry:select emiid from  public.loanaccountdetail where acctnum=1000000254}
+[2023-01-31T17:06:52.127] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:06:52.127] [INFO] default - emiid=== [ { emiid: '1039' } ]
+[2023-01-31T17:06:53.000] [INFO] default - Get the data for Querry:select loanaccountdetail.acctnum,loanemidetail.*,accounttype.accounttype,
+          accounttype.accsubtype from  public.loanemidetail  
+          join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+          join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+          where loanemidetail.emiid='1039'}
+[2023-01-31T17:06:53.001] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:06:53.002] [INFO] default - loandetail=== undefined
+[2023-01-31T17:06:53.002] [INFO] default - get the data from Repo  of getTransactionHistory [object Object] in the service
+[2023-01-31T17:07:20.918] [INFO] default - get the data send to service  { cust_id: '', acctnum: '', accounttype: 's', accsubtype: '' }
+[2023-01-31T17:07:22.934] [ERROR] default - err in the service getTransactionHistory Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:313:12)
+[2023-01-31T17:07:22.937] [ERROR] default - err in the controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (C:\Development\nodejsdec22\latestcode\NodeBankApp-main\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:313:12)
+[2023-01-31T17:07:25.412] [INFO] default - get the data send to service  { cust_id: '', acctnum: '', accounttype: 's', accsubtype: '' }
+[2023-01-31T17:07:26.835] [INFO] default - Get the data for Querry:select savingaccounttxnhistory.*,
+  accounttype.accounttype,accounttype.accsubtype
+  from savingaccounttxnhistory
+  join customeraccounts on customeraccounts.acctnum = savingaccounttxnhistory.acctnum
+  join accounttype on accounttype."accounttypeID" = customeraccounts.accounttypeid 
+  where accounttype.accounttype like 's%'  }
+[2023-01-31T17:07:26.837] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:07:26.838] [INFO] default - get the data from database== [
+  {
+    txnid: '83541',
+    acctnum: '1000000032',
+    txndetail: 'depositamount',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '100',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '58bf562b-3343-4af3-b97b-8b2a77c79ba5',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '100',
+    depositamount: '0',
+    balance: '99440',
+    txndate: 'Mon Jan 30 2023 13:11:52 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '843f3247-9489-4239-86b1-93d7567cbd28',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99540',
+    txndate: 'Mon Jan 30 2023 06:14:02 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '5936e083-c226-4113-9ae9-406d34346f5c',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99550',
+    txndate: 'Mon Jan 30 2023 06:13:51 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'd7a29cc2-69a7-4565-bb1a-7e0760c21029',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99450',
+    txndate: 'Wed Jan 25 2023 11:03:32 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '01c1a20e-1cc0-4339-91e7-0167ba3685dc',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99350',
+    txndate: 'Wed Jan 25 2023 11:03:25 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '8f452ac8-9b3d-4b29-9f03-ed3e2fb314f9',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99250',
+    txndate: 'Wed Jan 25 2023 11:02:42 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '299648a5-b975-4734-8f5e-12b3b933c4b9',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99150',
+    txndate: 'Wed Jan 25 2023 11:02:12 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'caa30198-7807-430c-ad49-27305d7d5e9f',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99160',
+    txndate: 'Wed Jan 25 2023 11:01:01 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '1de85182-2be7-4108-8b59-a002e77d9130',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99170',
+    txndate: 'Wed Jan 25 2023 09:39:55 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'fde56f11-4b3e-4722-b40f-4572c412ec19',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99070',
+    txndate: 'Wed Jan 25 2023 09:34:05 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'de546e9a-f4c1-40a2-88b7-bbec2d459ef3',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '99080',
+    txndate: 'Tue Jan 24 2023 13:32:14 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '51c05b80-2827-4128-9518-a55c5bc30dac',
+    acctnum: '1000000001',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '99090',
+    txndate: 'Tue Jan 24 2023 13:30:56 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '2b011739-8167-4cbf-a604-ab9b772a5e2b',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '98990',
+    txndate: 'Thu Jan 19 2023 16:57:02 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '948',
+    acctnum: '1000000001',
+    txndetail: 'sagar',
+    withdrawamount: '730',
+    depositamount: '0',
+    balance: '99000',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '785',
+    acctnum: '1000000001',
+    txndetail: 'deposit',
+    withdrawamount: '270',
+    depositamount: '0',
+    balance: '99730',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '147',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '270',
+    depositamount: '0',
+    balance: '100000',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '72463',
+    acctnum: '1000000001',
+    txndetail: 'deposit',
+    withdrawamount: '0',
+    depositamount: '100000',
+    balance: '100070',
+    txndate: null,
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '6a1527b3-3798-4bed-8e7b-ec90ca5d9915',
+    acctnum: '1000000001',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '70',
+    txndate: 'Mon Jan 16 2023 12:54:29 GMT+0530 (India Standard Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '6cd9831f-4d0c-411d-a4ad-e25160ae6c42',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '10',
+    balance: '1000',
+    txndate: 'Mon Jan 30 2023 10:58:06 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '8afe7922-a087-4ba0-88c9-5ec031bbc859',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '990',
+    txndate: 'Mon Jan 30 2023 10:56:47 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '01b501bb-fd2c-4c99-9cd0-037d5f862030',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '1000',
+    balance: '1000',
+    txndate: 'Mon Jan 30 2023 10:52:25 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '9cc3811c-4ebf-4e1a-b233-5791faf178ec',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '19002816998990',
+    depositamount: '0',
+    balance: '0',
+    txndate: 'Mon Jan 30 2023 10:47:45 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '8ce6e07a-23c4-46da-b4b3-2f8a98a485a4',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '19002816998990',
+    txndate: 'Mon Jan 30 2023 10:46:17 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '73807e81-1e60-4c1e-ac13-57692ba54e8b',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '10',
+    depositamount: '0',
+    balance: '19002816999000',
+    txndate: 'Mon Jan 30 2023 10:46:08 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'f288cbf9-856e-431a-ad52-a15a016eef49',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '190000000',
+    depositamount: '0',
+    balance: '19002816999010',
+    txndate: 'Mon Jan 30 2023 10:45:34 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '915a1377-5263-4761-ba68-beadf174c22e',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '1000',
+    depositamount: '0',
+    balance: '19003006999010',
+    txndate: 'Mon Jan 30 2023 10:42:19 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'b31ccde8-69e5-4f71-a770-ce748ad82268',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '1000',
+    depositamount: '0',
+    balance: '19003007000010',
+    txndate: 'Mon Jan 30 2023 10:42:14 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'f504eff0-1106-44e2-a5f3-1b4f15de2506',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '10',
+    balance: '19003007001010',
+    txndate: 'Mon Jan 30 2023 10:36:40 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '5371bcc6-2066-47f5-a798-a63916ec43a3',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '10',
+    balance: '190030070010',
+    txndate: 'Mon Jan 30 2023 10:31:15 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'e46b0600-a556-44fc-97f7-fbb42e819a86',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '700',
+    balance: '1900300700',
+    txndate: 'Mon Jan 30 2023 10:27:11 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '3620978e-a376-495d-b921-3d199477cf1a',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '1900300',
+    txndate: 'Mon Jan 30 2023 10:21:35 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '6ca03d0f-0d68-4287-9796-d660ccfa7f1d',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '1900200',
+    txndate: 'Mon Jan 30 2023 10:21:23 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '0611ae3f-ece7-4fba-9dba-412fa631727c',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '1900100',
+    txndate: 'Mon Jan 30 2023 10:05:34 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'b4c1b89e-66af-48d5-9f4d-76808abb71d9',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '100',
+    depositamount: '0',
+    balance: '1900',
+    txndate: 'Mon Jan 30 2023 09:52:55 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'b357e975-829e-4bd4-a8f1-bc0a7e59e0f7',
+    acctnum: '1000000065',
+    txndetail: 'deposit',
+    withdrawamount: '0',
+    depositamount: '1000',
+    balance: '2000',
+    txndate: 'Wed Jan 25 2023 11:13:02 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '3ee90970-f52b-4beb-97de-25a820b40630',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '600',
+    balance: '1000',
+    txndate: 'Wed Jan 25 2023 11:11:49 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'c002caac-cb36-467e-8cc6-87e6024db242',
+    acctnum: '1000000065',
+    txndetail: 'withdraw',
+    withdrawamount: '100',
+    depositamount: '0',
+    balance: '400',
+    txndate: 'Wed Jan 25 2023 11:05:03 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'e8f44204-178e-4267-876a-d4500ae8264b',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '500',
+    txndate: 'Wed Jan 25 2023 11:00:31 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '09178e76-da1a-4100-a615-557a3f35fb5d',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '400',
+    txndate: 'Wed Jan 25 2023 10:57:00 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '57d36343-5431-4c7a-b8e6-6bbea1b3e652',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '300',
+    txndate: 'Wed Jan 25 2023 10:24:55 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'dad7337b-9545-431c-831b-84482874b24f',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '200',
+    txndate: 'Wed Jan 25 2023 10:15:44 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: 'f1c8b5a2-2214-443e-b6b0-8b90f8e62f00',
+    acctnum: '1000000065',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100',
+    balance: '100',
+    txndate: 'Wed Jan 25 2023 10:08:26 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '27f02c46-5288-4216-8828-1d95d7553283',
+    acctnum: '1000000245',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '10',
+    balance: '10245010',
+    txndate: 'Mon Jan 30 2023 10:38:12 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '61d2b0ae-2b90-4f36-bef6-3a46cd23bfa5',
+    acctnum: '1000000245',
+    txndetail: 'withdraw',
+    withdrawamount: '2550',
+    depositamount: '0',
+    balance: '102450',
+    txndate: 'Mon Jan 30 2023 06:16:21 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '6b047ad0-449c-4320-883e-7d260f7516b9',
+    acctnum: '1000000245',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '5000',
+    balance: '105000',
+    txndate: 'Mon Jan 30 2023 06:13:30 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  },
+  {
+    txnid: '161d4753-b830-4f08-a7b8-7439c566808b',
+    acctnum: '1000000245',
+    txndetail: 'deposite',
+    withdrawamount: '0',
+    depositamount: '100000',
+    balance: '100000',
+    txndate: 'Mon Jan 30 2023 06:12:43 GMT+0000 (Coordinated Universal Time)',
+    accounttype: 'saving',
+    accsubtype: 'student'
+  }
+]
+[2023-01-31T17:07:26.890] [INFO] default - get the data form Repo  of CustomerTxnHistoryByFilter [object Object] 
+[2023-01-31T17:07:39.701] [INFO] default - get the data send to service  { cust_id: '', acctnum: '', accounttype: 'l', accsubtype: '' }
+[2023-01-31T17:07:41.945] [INFO] default - Get the data for Querry:select loanaccountdetail.acctnum,loanemidetail.*,
+    accounttype.accounttype,accounttype.accsubtype,loanaccountdetail.balanceamount
+    from loanemidetail
+    join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+    join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+    join customeraccounts on customeraccounts.acctnum = loanaccountdetail.acctnum
+    where accounttype.accounttype like 'l%'  }
+[2023-01-31T17:07:41.948] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:07:41.949] [INFO] default - get the data from database== [
+  {
+    acctnum: '1000000011',
+    eminum: '7',
+    emiid: '1001',
+    emiamount: '3233',
+    emistatus: 'UnPaid',
+    emireminder: 'true',
+    remainingbalance: '200',
+    emidate: '20-01-2023',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    balanceamount: '1000000'
+  },
+  {
+    acctnum: '1000000016',
+    eminum: '6',
+    emiid: '1003',
+    emiamount: '3333',
+    emistatus: 'Paid',
+    emireminder: null,
+    remainingbalance: null,
+    emidate: null,
+    accounttype: 'loan',
+    accsubtype: 'car',
+    balanceamount: '1000000'
+  },
+  {
+    acctnum: '1000000017',
+    eminum: '8',
+    emiid: '1004',
+    emiamount: '3323',
+    emistatus: 'paid',
+    emireminder: 'true',
+    remainingbalance: '500',
+    emidate: '20-01-2023',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    balanceamount: '1000000'
+  },
+  {
+    acctnum: '1000000014',
+    eminum: '5',
+    emiid: '1002',
+    emiamount: '3232',
+    emistatus: 'Unpaid',
+    emireminder: 'true',
+    remainingbalance: '200',
+    emidate: '20-01-2023',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    balanceamount: '1000000'
+  },
+  {
+    acctnum: '1000000254',
+    eminum: '9',
+    emiid: '1039',
+    emiamount: '3332',
+    emistatus: 'paid',
+    emireminder: 'true',
+    remainingbalance: '500',
+    emidate: '31-01-2023',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    balanceamount: '0'
+  }
+]
+[2023-01-31T17:07:41.958] [INFO] default - get the data form Repo  of CustomerLoanTxnHistoryByFilter [object Object] 
+[2023-01-31T17:11:46.328] [INFO] default - get the data send to service  { cust_id: '769', acctnum: '', accounttype: 'l', accsubtype: '' }
+[2023-01-31T17:11:48.204] [INFO] default - Get the data for Querry:select loanaccountdetail.acctnum,loanemidetail.*,
+    accounttype.accounttype,accounttype.accsubtype,loanaccountdetail.balanceamount
+    from loanemidetail
+    join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+    join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+    join customeraccounts on customeraccounts.acctnum = loanaccountdetail.acctnum
+    where customeraccounts.cust_id=769 AND accounttype.accounttype like 'l%'  }
+[2023-01-31T17:11:48.205] [INFO] default - the Data got :[object Object]}
+[2023-01-31T17:11:48.205] [INFO] default - get the data from database== [
+  {
+    acctnum: '1000000254',
+    eminum: '9',
+    emiid: '1039',
+    emiamount: '3332',
+    emistatus: 'paid',
+    emireminder: 'true',
+    remainingbalance: '500',
+    emidate: '31-01-2023',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    balanceamount: '0'
+  }
+]
+[2023-01-31T17:11:48.206] [INFO] default - get the data form Repo  of CustomerLoanTxnHistoryByFilter [object Object] 
