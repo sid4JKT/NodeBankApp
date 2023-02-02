@@ -3609,3 +3609,567 @@
 [2023-02-02T15:25:10.810] [INFO] default - the Data got :[object Object]}
 [2023-02-02T15:25:10.842] [INFO] default - Generatepdf undefined
 [2023-02-02T15:25:12.975] [INFO] default - get the document data undefined
+[2023-02-02T15:38:35.280] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-02T15:38:36.490] [INFO] default - the DB is Connected  {
+  FirstName: 'Priyanka 780',
+  LastName: 'goga',
+  Address1: 'Hyderabad',
+  Address2: 'Rajajinagar ',
+  EmailId: 'priyanka1@jktech.com',
+  Phone: 987564554,
+  Mobile: 985746663,
+  DateOfBirth: '22/03/2000',
+  MaritalStatus: 'Single',
+  ZIPCode: 530068,
+  City: 'Bengalore',
+  State: 'Karnataka',
+  Country: 'India',
+  ActionType: 'ADD'
+}
+[2023-02-02T15:38:36.799] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Priyanka 780', 'goga', 'Hyderabad', 'Rajajinagar ', 'priyanka1@jktech.com', 987564554, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-02T15:38:36.802] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:36.802] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Priyanka 780' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='priyanka1@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-02T15:38:37.092] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Priyanka 780' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='priyanka1@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-02T15:38:37.092] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:38.138] [INFO] default - the service  {
+  custId: 919,
+  accountType: 'saving',
+  accsubtype: 'student',
+  branch_code: 'BOI_1234',
+  transfer_limit: 5000
+}
+[2023-02-02T15:38:38.141] [INFO] default - the accounttypequerry:  SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'
+[2023-02-02T15:38:38.428] [INFO] default - Get the data for Querry:SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'}
+[2023-02-02T15:38:38.429] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:38.429] [INFO] default - the accounttype:  [ { accounttypeID: '1' } ]
+[2023-02-02T15:38:38.883] [INFO] default - the customeraccountsquerry for inserting customeraccounts :  INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (919,'1','active','Thu Feb 02 2023 15:38:38 GMT+0530 (India Standard Time)')
+[2023-02-02T15:38:39.180] [INFO] default - Get the data for Querry:INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (919,'1','active','Thu Feb 02 2023 15:38:38 GMT+0530 (India Standard Time)')}
+[2023-02-02T15:38:39.180] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:39.181] [INFO] default - the data is  inserting customer accounts  
+[2023-02-02T15:38:39.181] [INFO] default - the accounttypequerry:  SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=919  and accounttypeid=1
+[2023-02-02T15:38:39.487] [INFO] default - Get the data for Querry:SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=919  and accounttypeid=1}
+[2023-02-02T15:38:39.487] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:39.488] [INFO] default - the accounttype:  1000000394
+[2023-02-02T15:38:39.488] [INFO] default - the queryString for inserting saving :  INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000394, 0,5000,'BOI_1234',
+      1,'Active','Thu Feb 02 2023 15:38:39 GMT+0530 (India Standard Time)')
+[2023-02-02T15:38:39.917] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000394, 0,5000,'BOI_1234',
+      1,'Active','Thu Feb 02 2023 15:38:39 GMT+0530 (India Standard Time)')}
+[2023-02-02T15:38:39.918] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:39.919] [INFO] default - the data is  inserting saving  
+[2023-02-02T15:38:40.225] [INFO] default - the data is  inserting saving  2= {
+  value: {
+    acctnum: '1000000394',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-02T15:38:40.227] [INFO] default - saving account created Data: {
+  value: {
+    acctnum: '1000000394',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-02T15:38:40.228] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=919
+[2023-02-02T15:38:40.593] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=919}
+[2023-02-02T15:38:40.594] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:40.594] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 919,
+    firstname: 'Priyanka 780',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000394',
+    accounttypeid: '1',
+    id: null,
+    status: 'Active',
+    date: 'Thu Feb 02 2023 15:38:39 GMT+0530 (India Standard Time)',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234',
+    SavingacctypeId: '1'
+  }
+}
+[2023-02-02T15:38:40.979] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-02T15:38:40.980] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:41.280] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-02T15:38:41.280] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:41.282] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000394',
+    cust_id: 919,
+    firstname: 'Priyanka 780',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000394',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:38:41.285] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000394',
+    cust_id: 919,
+    firstname: 'Priyanka 780',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000394',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:38:41.326] [INFO] default - pdf savings acount
+[2023-02-02T15:38:41.343] [INFO] default - get the document data data is publish and consume
+[2023-02-02T15:38:41.343] [INFO] default - get the data from addCustomer api in Service  {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 919 } },
+  accountDetail: {
+    acctnum: '1000000394',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-02T15:38:41.346] [INFO] default - Add customer Data: {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 919 } },
+  accountDetail: {
+    acctnum: '1000000394',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-02T15:38:43.596] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=919}
+[2023-02-02T15:38:43.597] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:43.598] [INFO] default - data got from getCustomerbyID {
+  cust_id: 919,
+  firstname: 'Priyanka 780',
+  lastname: 'goga',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar ',
+  emailid: 'priyanka1@jktech.com',
+  phone: '987564554',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-02T15:38:43.886] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-02T15:38:43.887] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:44.169] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-02T15:38:44.169] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:44.175] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000394',
+    accounttype: 'saving',
+    cust_id: 919,
+    firstname: 'Priyanka 780',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:38:44.189] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000394',
+    accounttype: 'saving',
+    cust_id: 919,
+    firstname: 'Priyanka 780',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:38:44.197] [INFO] default - get the document data undefined
+[2023-02-02T15:38:45.419] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (4592,'wel002', '2/2/2023', 'pdf', 919, 'Active','Thu Feb 02 2023 15:38:45 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-02T15:38:45.421] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:38:45.456] [INFO] default - Generatepdf undefined
+[2023-02-02T15:38:47.439] [INFO] default - get the document data undefined
+[2023-02-02T15:47:51.970] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-02T15:47:53.174] [INFO] default - the DB is Connected  {
+  FirstName: 'Priyanka 781',
+  LastName: 'goga',
+  Address1: 'Hyderabad',
+  Address2: 'Rajajinagar ',
+  EmailId: 'priyanka1@jktech.com',
+  Phone: 987564554,
+  Mobile: 985746663,
+  DateOfBirth: '22/03/2000',
+  MaritalStatus: 'Single',
+  ZIPCode: 530068,
+  City: 'Bengalore',
+  State: 'Karnataka',
+  Country: 'India',
+  ActionType: 'ADD'
+}
+[2023-02-02T15:47:53.484] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Priyanka 781', 'goga', 'Hyderabad', 'Rajajinagar ', 'priyanka1@jktech.com', 987564554, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-02T15:47:53.485] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:53.485] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Priyanka 781' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='priyanka1@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-02T15:47:53.784] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Priyanka 781' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='priyanka1@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-02T15:47:53.785] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:54.683] [INFO] default - the service  {
+  custId: 920,
+  accountType: 'saving',
+  accsubtype: 'student',
+  branch_code: 'BOI_1234',
+  transfer_limit: 5000
+}
+[2023-02-02T15:47:54.685] [INFO] default - the accounttypequerry:  SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'
+[2023-02-02T15:47:54.983] [INFO] default - Get the data for Querry:SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'}
+[2023-02-02T15:47:54.984] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:54.984] [INFO] default - the accounttype:  [ { accounttypeID: '1' } ]
+[2023-02-02T15:47:55.283] [INFO] default - the customeraccountsquerry for inserting customeraccounts :  INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (920,'1','active','Thu Feb 02 2023 15:47:55 GMT+0530 (India Standard Time)')
+[2023-02-02T15:47:55.583] [INFO] default - Get the data for Querry:INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (920,'1','active','Thu Feb 02 2023 15:47:55 GMT+0530 (India Standard Time)')}
+[2023-02-02T15:47:55.585] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:55.585] [INFO] default - the data is  inserting customer accounts  
+[2023-02-02T15:47:55.585] [INFO] default - the accounttypequerry:  SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=920  and accounttypeid=1
+[2023-02-02T15:47:55.880] [INFO] default - Get the data for Querry:SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=920  and accounttypeid=1}
+[2023-02-02T15:47:55.881] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:55.881] [INFO] default - the accounttype:  1000000395
+[2023-02-02T15:47:55.882] [INFO] default - the queryString for inserting saving :  INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000395, 0,5000,'BOI_1234',
+      1,'Active','Thu Feb 02 2023 15:47:55 GMT+0530 (India Standard Time)')
+[2023-02-02T15:47:56.159] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000395, 0,5000,'BOI_1234',
+      1,'Active','Thu Feb 02 2023 15:47:55 GMT+0530 (India Standard Time)')}
+[2023-02-02T15:47:56.161] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:56.161] [INFO] default - the data is  inserting saving  
+[2023-02-02T15:47:56.469] [INFO] default - the data is  inserting saving  2= {
+  value: {
+    acctnum: '1000000395',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-02T15:47:56.473] [INFO] default - saving account created Data: {
+  value: {
+    acctnum: '1000000395',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-02T15:47:56.478] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=920
+[2023-02-02T15:47:56.774] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=920}
+[2023-02-02T15:47:56.777] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:56.778] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 920,
+    firstname: 'Priyanka 781',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000395',
+    accounttypeid: '1',
+    id: null,
+    status: 'Active',
+    date: 'Thu Feb 02 2023 15:47:55 GMT+0530 (India Standard Time)',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234',
+    SavingacctypeId: '1'
+  }
+}
+[2023-02-02T15:47:57.065] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-02T15:47:57.066] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:57.364] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-02T15:47:57.364] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:57.365] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000395',
+    cust_id: 920,
+    firstname: 'Priyanka 781',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000395',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:47:57.366] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000395',
+    cust_id: 920,
+    firstname: 'Priyanka 781',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000395',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:47:57.405] [INFO] default - pdf savings acount
+[2023-02-02T15:47:57.426] [INFO] default - get the document data data is publish and consume
+[2023-02-02T15:47:57.427] [INFO] default - get the data from addCustomer api in Service  {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 920 } },
+  accountDetail: {
+    acctnum: '1000000395',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-02T15:47:57.429] [INFO] default - Add customer Data: {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 920 } },
+  accountDetail: {
+    acctnum: '1000000395',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-02T15:47:59.586] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=920}
+[2023-02-02T15:47:59.587] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:47:59.587] [INFO] default - data got from getCustomerbyID {
+  cust_id: 920,
+  firstname: 'Priyanka 781',
+  lastname: 'goga',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar ',
+  emailid: 'priyanka1@jktech.com',
+  phone: '987564554',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-02T15:47:59.904] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-02T15:47:59.905] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:48:00.198] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-02T15:48:00.199] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:48:00.206] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000395',
+    accounttype: 'saving',
+    cust_id: 920,
+    firstname: 'Priyanka 781',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:48:00.224] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000395',
+    accounttype: 'saving',
+    cust_id: 920,
+    firstname: 'Priyanka 781',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'priyanka1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-02T15:48:00.235] [INFO] default - get the document data undefined
+[2023-02-02T15:48:01.425] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (2674,'wel002', '2/2/2023', 'pdf', 920, 'Active','Thu Feb 02 2023 15:48:01 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-02T15:48:01.426] [INFO] default - the Data got :[object Object]}
+[2023-02-02T15:48:01.451] [INFO] default - Generatepdf undefined
+[2023-02-02T15:48:03.361] [INFO] default - get the document data undefined
