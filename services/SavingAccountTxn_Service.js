@@ -75,7 +75,10 @@ exports.createSavingAccountService = async (savingData) => {
     if (savingAccountCreatedData.statusvalue == true) {
       let custidDoc = {
         cust_id: savingData.custId,
-        listDtlId: 1,
+        
+        AccountType:savingData.accountType,
+        accountnum:savingAccountCreatedData.value.acctnum,
+        listCode: "newcustDoc",
       };
 
       const payload = await documentService.documentCustomerForSaving(

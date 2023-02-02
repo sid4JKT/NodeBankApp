@@ -3,13 +3,16 @@
         "connectionname":"amqps://dbjdlrml:VMXe89uO9hMIoUSPcGibJ6XirnbUFxNg@campbell.lmq.cloudamqp.com/dbjdlrml",
         "queuename":"DocGenQueue",
         "Redirecturl":"https://dummy.restapiexample.com/api/v1/create",
-        "programname" :"Consumer.js"
+        "programname" :"Consumer.js",
+        "logfileName":"Consumer.log"
         },
         "2":{
             "connectionname":"amqps://dbjdlrml:VMXe89uO9hMIoUSPcGibJ6XirnbUFxNg@campbell.lmq.cloudamqp.com/dbjdlrml",
             "queuename":"Saving_account_que",
             "Redirecturl":"https://dummy.restapiexample.com/api/v1/create",
-            "programname" :"saving_Account_Consumer.js"
+            "programname" :"saving_Account_Consumer.js",
+            "logfileName":"saving_Account_Consumer.log"
             }
+           
         
 }

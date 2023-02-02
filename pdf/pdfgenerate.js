@@ -30,11 +30,7 @@ const doc = new PDFDocument();
 // See below for browser usage
 
 doc.pipe(fs.createWriteStream(doc_name));
-
-
-
-
-  doc.image('pdf\\images\\JKTech.png',50,50,{scale:0.10})
+doc.image('pdf\\images\\JKTech.png',50,50,{scale:0.10})
   doc.text(`Date:${date}`,70,70,{align:'right',scale:0.10})
   //doc.text("To,",100,150,{align:'left'})
   doc.text(`First Name: ${firstname}`,100,170,{align:'up-left',scale:0.5});

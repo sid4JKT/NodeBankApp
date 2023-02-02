@@ -1,10 +1,15 @@
-
 const amqpconn = require('./baseClass')
 const axios = require('axios');
+const { logger,logfiles } = require("./logger");
+
 
 var result = amqpconn.extractValues(process.argv);  // arguments coming from readconfig file
 
-console.log( `from Saving_Account_Consumer file with process Id ${process.pid} \r\n`);
+//console.log( `from Saving_Account_Consumer file with process Id ${process.pid} \r\n`);
+logfiles(result[4])
+//works as console.log into a log file
+logger.info( `from ${result[4]} file with process Id ${process.pid} \r\n`);
+
 
 
 amqpconn.connect(result[0]).then(async (channel) => {

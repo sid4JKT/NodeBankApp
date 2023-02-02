@@ -222,7 +222,7 @@ exports.getDetailIdbydesc = async (val, client) => {
   try {
     let getDocumentbyidquery;
     {
-      getDocumentbyidquery = `select listdtlvalue from listdatadetail where listDtlId = '${val}'`;
+      getDocumentbyidquery = `SELECT listdtlvalue FROM listdatadetail where "listCode" = '${val}'`;
     }
     let resultdata = await DB.ExtractQuerry(client, getDocumentbyidquery);
 
@@ -233,7 +233,8 @@ exports.getDetailIdbydesc = async (val, client) => {
     let getdata = {};
     getdata.value = resultdata.rows;
     getdata.statusvalue = true;
-    return getdata.value[0].listdtlvalue;
+    
+    return getdata.value[2].listdtlvalue;
   } catch (err) {
     let resultdata = {};
     // logger.error("in the documentrepo by Id",err);

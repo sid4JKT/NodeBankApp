@@ -16,6 +16,7 @@ for (let key in data) {
 var Url = connectionName;
 console.log(Url,queName)
 var queName = queu1[0];
+// console.log(queName);
 
 //create connection
 module.exports.newpubdoc = async (payloadDetail) => {
@@ -53,3 +54,26 @@ module.exports.newpubdoc = async (payloadDetail) => {
           throw err;
         }
       };
+      //-----------------------------------------------
+      // exports.EmiDocumentPublisher = async (payloadDetail, queName) => {
+      //   try {
+      //     //console.log("AK");
+      //    // console.log(payloadDetail);
+      //     amqpconn.connect(Url).then(async (channel) => {
+      //       try {
+      //         channel.assertQueue(queName);
+      //         channel.sendToQueue(
+      //           queName,
+      //           Buffer.from(JSON.stringify(payloadDetail))
+      //           );
+      //           console.log("message:", payloadDetail);
+      //         } catch (err) {
+      //           console.log(err);
+      //          }
+      //         });
+      //         return "data is publish and consume";
+      //       } catch (err) {
+      //         logger.info("err in EmiDcoumnet_publisher");
+      //         throw err;
+      //       }
+      //     };

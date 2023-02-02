@@ -6,6 +6,9 @@ const { logger } = require("../Util/logeer");
 const DB = require("../Database/dbconnection");
 
 exports.documentCustomer = async (custidDoc) => {
+  console.log("**********")
+  console.log(custidDoc.acctnum)
+  console.log(custidDoc.accType)
   const client = await DB.dbConnection();
   try {
     // console.log(custidDoc,"************")
@@ -14,10 +17,10 @@ exports.documentCustomer = async (custidDoc) => {
     // if(customerDetail.statusvalue) {
     logger.info("data got from getCustomerbyID", customerDetail);
 
-    let val = custidDoc.listDtlId;
+    let val = custidDoc.listCode;
     let doc_id = await Document_Repo.getDetailIdbydesc(val, client);
-    console.log("line1 8");
-    console.log(doc_id);
+    //console.log("line1 8");
+    //console.log(doc_id);
     let Document_Details = await Document_Repo.getdocumentbyId(doc_id,client);
 
     console.log(Document_Details.value[0].doc_id)
@@ -74,16 +77,22 @@ exports.documentCustomerForSaving = async (custidDoc, client) => {
     if (customerDetail.statusvalue) {
       logger.info("data got from getcCustomerTxnByCustId", customerDetail);
       customerDetail = customerDetail.value;
-      let val = custidDoc.listDtlId;
-      let doc_id = await Document_Repo.getDetailIdbydesc(val, client);
+      let val = custidDoc.listCode;
+      let docid_array = await Document_Repo.getDetailIdbydesc(val, client);
+      
+    
 
       let Document_Details = await Document_Repo.getdocumentbyId(
-        doc_id,
+        docid_array,
         client
       );
 
+    
+
       let payloadDetail = {
         customerdetail: {
+          AccountType:custidDoc.AccountType,
+          accountnum:custidDoc.accountnum,
           cust_id: customerDetail.cust_id,
           firstname: customerDetail.firstname,
           lastname: customerDetail.lastname,

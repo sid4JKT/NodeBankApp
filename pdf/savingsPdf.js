@@ -3,7 +3,7 @@ const fs = require('fs');
 const { addListener } = require('pdfkit');
 const { ClientRequest } = require('http');
 const path = require('path');
-const doc_name = path.join(__dirname, '..','pdfdocuments','Thank You.pdf');
+const doc_name = path.join(__dirname, '..','pdfdocuments','savingaccount.pdf');
 
 
  // Create a document
@@ -21,6 +21,8 @@ const zipcode = payload.customerdetail.zipcode;
 const city = payload.customerdetail.city;
 const state = payload.customerdetail.state;
 const country = payload.customerdetail.country;
+const accountnum = payload.customerdetail.accountnum;
+const accounttype = payload.customerdetail.AccountType;
 const doc = new PDFDocument();
 
 // Pipe its output somewhere, like to a file or HTTP response
@@ -37,18 +39,22 @@ doc.pipe(fs.createWriteStream(doc_name));
   doc.text(`First Name: ${firstname}`,100,170,{align:'up-left',scale:0.5});
   doc.text(`Address:${address1}`,100,190,{align:'up-left',scale:0.5});
   doc.text(`State:${state},Zipcode:${zipcode}`,100,210,{align:'up-left',scale:0.5});
-  doc.text("Subject: Thanks for choosing JKT Bank",100,240,{align:'up-left',scale:0.5});
-  doc.text(`Dear: ${firstname},`,100,270,{align:'up-left',scale:0.5});
-  doc.text(`Thank you for choosing (Bank Name). We value the trust and confidence you have placed in us and offer you a host of financial service, privileges and benefits.`,100,290,{align:'up-left',scale:0.5});
-  doc.text(`It has always been our endeavor to ensure a rewarding experience by providing superior services. Bank accounts provide the convenience of banking on the internet and enjoy 24 hrs easy accesses to your accounts through the largest ATM network located in all major cities of (Country Name).`,100,330,{align:'up-left',scale:0.5});
-  doc.text(`Once again we thank you for your patronage and look forward to mutually beneficial relationship.`,100,400,{align:'up-left',scale:0.5});
+  doc.text(`Accountnum:${accountnum},Accounttype:${accounttype}`,100,230,{align:'up-left',scale:0.5});
+  doc.text("Subject: Thanks for choosing JKT Bank",100,260,{align:'up-left',scale:0.5});
+  doc.text(`Dear: ${firstname},`,100,290,{align:'up-left',scale:0.5});
+  doc.text(`Thank you for choosing (JKTech Bank). We value the trust and confidence you have placed in us and offer you a host of financial service, privileges and benefits.`,100,320,{align:'up-left',scale:0.5});
+  doc.text(`It has always been our endeavor to ensure a rewarding experience by providing superior services. Bank accounts provide the convenience of banking on the internet and enjoy 24 hrs easy accesses to your accounts through the largest ATM network located in all major cities of (Country Name).`,100,360,{align:'up-left',scale:0.5});
+  doc.text(`Once again we thank you for your patronage and look forward to mutually beneficial relationship.`,100,430,{align:'up-left',scale:0.5});
   doc.text("Thank you",100,500,{align:'up-left',scale:0.5});
+  //doc.text(`Accountnum:${accountnum}`,100,520,{align:'up-left',scale:0.5});
+  //doc.text(`Accounttype:${accounttype}`,100,550,{align:'up-left',scale:0.5});
+
 
  
   
 
   doc
-  .fontSize(25).text("Welcome to savings acount", 90, 90,{align:'center'});
+  .fontSize(20).text("Welcome to Savings Account", 90, 90,{align:'center'});
  
 
  

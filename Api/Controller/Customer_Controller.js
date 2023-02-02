@@ -42,7 +42,7 @@ exports.addCustomer = async (req, res) => {
       } else {
         let custidDoc = {
           custId: getData.value.Customerid.cust_id,
-          listDtlId: 1,
+          listCode: "newcustDoc",
           acctnum:getData.accountDetail.acctnum,
           accType:getData.accountDetail.accounttype
         };
@@ -54,6 +54,10 @@ exports.addCustomer = async (req, res) => {
         let documentData = await doc.newpubdoc(payload)
         logger.info("get the document data", documentData);
 
+
+        //emi part
+       // doc.EmiDocumentPublisher(payload,"Emi_account_que");
+
         //inserting records into document_customer_master_table
         await Communication_Repo.insert_Document_Customer(payload);
 
@@ -61,10 +65,10 @@ exports.addCustomer = async (req, res) => {
         let pdfData = await pdfGenerate.pdfgenernate(payload);
         logger.info("Generatepdf", pdfData);
 
-        // sending emails
+        ///sending emails
         let data = payload.customerdetail.emailid;
-        const Emails = await email.main(data);
-        logger.info("get the document data", Emails);
+         const Emails = await email.main(data);
+         logger.info("get the document data", Emails);
 
         return res.status(200).send(getData);
       }

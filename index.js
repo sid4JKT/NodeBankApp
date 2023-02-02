@@ -10,6 +10,7 @@ const LoanRoute=require('./Api/RouteManager/LaonRoute')
 const Communication=require('./Api/RouteManager/CommunicationRoute')
 const Documentroute=require('./Api/RouteManager/Documentroute')
 const ListDataRoute = require('./Api/RouteManager/ListDataDetailRoute')
+
 if(process.argv[2] == 'RabbitMQ'){
     const readconfig=require("./RabbitMQ/readConfig")
 } 
