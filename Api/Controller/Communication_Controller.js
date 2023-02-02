@@ -21,6 +21,8 @@ try{
         });
       }
 }
+
+
 catch(err)
 {
 logger.error("err in the controller getCommunicationDataById",err)
