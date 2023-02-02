@@ -348,7 +348,7 @@ exports.getSaving_Transactionhistory = async (data) => {
       let Savingdetaildata = {};
       let LoanDetail = {};
       
-      if (data.accountType == "Saving") {
+      if (data.accountType == "saving") {
         let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
         let accnum = await DB.ExtractQuerry(client, Accnumber);
         if(accnum.rows.length<0)
@@ -369,7 +369,7 @@ exports.getSaving_Transactionhistory = async (data) => {
           Savingdetaildata.statusvalue = true;
           Savingdetaildata.value = Savingdetail.rows
           return Savingdetaildata; 
-      }else if (data.accountType == "Loan") {
+      }else if (data.accountType == "loan") {
         let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
         let accnum = await DB.ExtractQuerry(client, Accnumber);
         if(accnum.rows.length<0)
@@ -402,4 +402,167 @@ exports.getSaving_Transactionhistory = async (data) => {
   finally{ 
     client.release();
   }
+};
+
+exports.getTransactionsByfilter = async(filterData) =>{
+  const client = await DB.dbConnection();
+try {
+  let req = {};
+  for (const key in filterData) {
+    if (filterData[key] != "") {
+      console.log("key",filterData[key]);
+      req[key] = filterData[key];
+    }
+  }
+  let filterQuery = `select savingaccounttxnhistory.*,
+  accounttype.accounttype,accounttype.accsubtype
+  from savingaccounttxnhistory
+  join customeraccounts on customeraccounts.acctnum = savingaccounttxnhistory.acctnum
+  join accounttype on accounttype."accounttypeID" = customeraccounts.accounttypeid 
+  where `; 
+
+  let v = 0;
+  let finaldata = "";
+  for (const key in req){
+      let appenddata = "";
+      let customeraccounts = "customeraccounts"
+      let accounttype = "accounttype"
+      if(key == 'acctnum'){
+          if(req[key]!=""){
+              appenddata = customeraccounts + "." + appenddata + key;
+              appenddata = appenddata + "=" + "" + `${req[key]}` + "";
+              v++;
+          }
+      }else if(key == "cust_id" ){
+        if (req[key]!=""){
+              appenddata = customeraccounts + "." + appenddata + key;
+              appenddata = appenddata + "=" + "" + `${req[key]}` + "";
+              v++;
+        }
+      }else if(key == "accounttype" ){
+        if(req[key]!=""){
+              appenddata = accounttype + "." + appenddata + key;
+              appenddata = appenddata + " like " + "" + `'${req[key]}%'` + "";
+              v++;
+
+        }
+      }else{
+        if(req[key]!=""){
+          appenddata = accounttype + "." + appenddata + key;
+          appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
+          v++;
+
+        }
+      }
+      if (Object.keys(req).length != v) {
+          finaldata = finaldata + appenddata + " AND ";
+        } else {
+          finaldata = finaldata + appenddata + "  ";
+        }
+  }
+  console.log("final extract querry is ", filterQuery + finaldata);
+  let finalextractquerry = filterQuery + finaldata;
+  let gettransactionfilter = await DB.ExtractQuerry(client, finalextractquerry);
+
+  let getfilterfinaldata = {};
+
+  if (gettransactionfilter.rows.length > 0) {
+      getfilterfinaldata.value = gettransactionfilter.rows;
+  } else {
+    throw new Error('no data found in getTransactionsByfilter')
+  }
+  
+
+  logger.info("get the data from database==", getfilterfinaldata.value);
+  return getfilterfinaldata;
+  
+  
+} catch (err) {
+  logger.error("error in the gettransactionfilter ", err);
+  throw err
 }
+finally{
+  client.release();
+} 
+};
+
+exports.getLoan_TransactionsByfilter = async(filterData) =>{
+    const client = await DB.dbConnection();
+  try {
+    let req = {};
+    for (const key in filterData) {
+      if (filterData[key] != "") {
+        console.log("key",filterData[key]);
+        req[key] = filterData[key];
+      }
+    }
+    let filterQuery = `select loanaccountdetail.acctnum,loanemidetail.*,
+    accounttype.accounttype,accounttype.accsubtype,loanaccountdetail.balanceamount
+    from loanemidetail
+    join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+    join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+    join customeraccounts on customeraccounts.acctnum = loanaccountdetail.acctnum
+    where `; 
+
+    let v = 0;
+    let finaldata = "";
+    for (const key in req){
+        let appenddata = "";
+        let customeraccounts = "customeraccounts"
+        let accounttype = "accounttype"
+        if(key == 'acctnum'){
+            if(req[key]!=""){
+                appenddata = customeraccounts + "." + appenddata + key;
+                appenddata = appenddata + "=" + "" + `${req[key]}` + "";
+                v++;
+            }
+        }else if(key == "cust_id" ){
+          if (req[key]!=""){
+                appenddata = customeraccounts + "." + appenddata + key;
+                appenddata = appenddata + "=" + "" + `${req[key]}` + "";
+                v++;
+          }
+        }else if(key == "accounttype" ){
+          if(req[key]!=""){
+                appenddata = accounttype + "." + appenddata + key;
+                appenddata = appenddata + " like " + "" + `'${req[key]}%'` + "";
+                v++;
+
+          }
+        }else{
+          if(req[key]!=""){
+            appenddata = accounttype + "." + appenddata + key;
+            appenddata = appenddata + " like " + "" + `'${req[key]}%'` + "";
+            v++;
+
+          }
+        }
+        if (Object.keys(req).length != v) {
+            finaldata = finaldata + appenddata + " AND ";
+          } else {
+            finaldata = finaldata + appenddata + "  ";
+          }
+    }
+    console.log("final extract querry is ", filterQuery + finaldata);
+    let finalextractquerry = filterQuery + finaldata;
+    let gettransactionfilter = await DB.ExtractQuerry(client, finalextractquerry);
+
+    let getfilterfinaldata = {};
+
+    if (gettransactionfilter.rows.length > 0) {
+        getfilterfinaldata.value = gettransactionfilter.rows;
+    } else {
+      throw new Error('no data found in getLoan_TransactionsByfilter')
+    }
+    
+    logger.info("get the data from database==", getfilterfinaldata.value);
+    return getfilterfinaldata;
+    
+  } catch (err) {
+    logger.error("error in the getLoan_TransactionsByfilter ", err);
+    throw err
+  }
+  finally{
+    client.release();
+  } 
+};

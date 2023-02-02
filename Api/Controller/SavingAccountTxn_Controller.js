@@ -179,3 +179,43 @@ exports.getSaving_Transactionhistory = async (req, res) => {
     });  
   } 
 };
+exports.getSavingaccountTransactionByfilter = async (req, res) => {
+  try{
+    logger.info(`get the data send to service `,req.body);
+  
+    const getData = await SavingAccountTxnService.getTransactionByfilter(req.body);
+    return res.status(200).send(getData.value)
+    
+  }catch(err)
+  {
+  logger.error("err in the controller",err)
+  return res.status(500).json({
+    Status: { 
+      StatusCode: 500,
+      StatusType: "error",
+      StatusMessage: `${err}`,
+      StatusSeverity: "Information",
+    },
+  });
+  }
+  };
+  exports.getLoanaccountTransactionByfilter = async (req, res) => {
+    try{
+      logger.info(`get the data send to service `,req.body);
+    
+      const getData = await SavingAccountTxnService.getloanaccountTransactionByfilter(req.body);
+      return res.status(200).send(getData.value)
+       
+    }catch(err)
+    {
+    logger.error("err in the controller",err)
+    return res.status(500).json({
+      Status: { 
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "Information",
+      },
+    });
+    }
+};

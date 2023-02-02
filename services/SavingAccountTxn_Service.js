@@ -134,3 +134,29 @@ exports.getSaving_Transactionhistory = async (depositeJson) => {
     throw err;
   }
 };
+exports.getTransactionByfilter=async(depositeJson)=>{
+    
+  try {
+      let getData=await SavingAccountTxn_Repo.getTransactionsByfilter(depositeJson);
+      logger.info(`get the data form Repo  of CustomerTxnHistoryByFilter ${getData} `)
+      
+      return getData;
+  } catch (err) {
+   logger.error("err in the service getTransactionHistory",err)
+   throw err;
+  }
+
+}
+exports.getloanaccountTransactionByfilter=async(depositeJson)=>{
+    
+  try {
+      let getData=await SavingAccountTxn_Repo.getLoan_TransactionsByfilter(depositeJson);
+      logger.info(`get the data form Repo  of CustomerLoanTxnHistoryByFilter ${getData} `)
+      
+      return getData;
+  } catch (err) {
+   logger.error("err in the service getloanaccountTransactionByfilter",err)
+   throw err;
+  }
+
+}
