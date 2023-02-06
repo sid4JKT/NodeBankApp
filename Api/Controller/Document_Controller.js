@@ -2,30 +2,34 @@ const documentservice=require('../../services/Document_service')
 
 const { logger } =require( '../../Util/logeer')
 
-
-
 exports.getalldocuments= async (req,res)=>{
   try{
   console.log("get the data send to service", req.body)
-  const data= await documentservice.getDocument(req.body)
+  const getdata= await documentservice.getDocument(req.body)
   //console.log("controller",data)
   logger.info(`Server started at http://localhost:3100}`);
-  return res.status(200).send(data)
+  let value = getdata.value
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"recordsaved",
+      statusseverity:"information",
+      value
+    })
   }
   catch(err){
     logger.error("err in the controller getalldocuments",err)
+    
     return res.status(500).json({
-      Status: {
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
-        StatusMessage: "Record not Saved",
+        StatusMessage: `${err}`,
         StatusSeverity: "something went wrong",
-      },
+    
     });  }
 }
-
-
-
 exports.getdocumentMasterbyId= async (req,res)=>{
 
   try{
@@ -35,96 +39,90 @@ exports.getdocumentMasterbyId= async (req,res)=>{
   console.log("controller",data)
   logger.info(`Server started at http://localhost:3100}`);
   
-  if (data.statusvalue) {
-    delete data.statusvalue;
-    return res.status(200).send(data.value)
-  } else {
-    return res.status(500).json({
-      Status: {
-        StatusCode: 500,
-        StatusType: "error",
-        StatusMessage: data.message,
-        StatusSeverity: "Information",
-      },
-    });
-  }
+  let value = data.value
+  
+  return res.status(200).json({
+    ststusCode:200,
+    statusvalue:true,
+    statustype:"success",
+    statusmessage:"recordsaved",
+    statusseverity:"information",
+    value
+  })
+  
 }
 catch(err){
   logger.error("err in the controller getdocumentMasterbyId",err)
-  return res.status(500).json({
-    Status: {
-      StatusCode: 500,
-      StatusType: "error",
-      StatusMessage: "Record not Saved",
-      StatusSeverity: "something went wrong",
-    },
-  });
+  
+    return res.status(500).json({
+      
+        StatusCode: 500,
+        statusvalue:false,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+    
+    });
 }
 }
- 
 exports.getDocumentbyfilter= async (req,res)=>{
   try{
     let filterjson = req.body
     const getData = await documentservice.getDocumentMasterbyfilter(filterjson)
     console.log("controller",getData)
     //console.log("statusvalue",getData.statusvalue)
-    if (getData.statusvalue) { 
-        return res.status(200).send(getData.value);
-      } else {
-        return res.status(500).json({
-          Status: {
-            StatusCode: 500,
-            StatusType: "error",
-            StatusMessage: getData.message,
-            StatusSeverity: "Information",
-          },
-        });
-      }
+    let value = getData.value
+    
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"recordsaved",
+      statusseverity:"information",
+      value
+    })
     }
     catch(err){
       logger.error("err in the controller getDocumentbyfilter",err)
-      return res.status(500).json({
-        Status: {
-          StatusCode: 500,
-          StatusType: "error",
-          StatusMessage: `${err}`,
-          StatusSeverity: "something went wrong",
-        },
-      });    }
+      
+    return res.status(500).json({
+        StatusCode: 500,
+        statusvalue:false,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+    });  
+    }
     /*logger.info(`Server started at http://localhost:8080}`);
     return res.status(200).send(data)*/
 }
-
- 
 exports.addDocumentMaster= async (req,res)=>{
   try{
     const addJson = req.body
     const getData = await documentservice.Add_DocumentMaster(addJson)
     //console.log("controller",getData)
     console.log("statusvalue",getData.statusvalue)
-    if (getData.statusvalue) {
-        return res.status(200).send("Document added successfully")
-      } else {
-        return res.status(500).json({
-          Status: {
-            StatusCode: 500, 
-            StatusType: "error",
-            StatusMessage: "Record not Saved",
-            StatusSeverity: "Information",
-          },
-        });
-      }   
+    
+    
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"Record added successfully",
+      statusseverity:"information"
+    
+    })   
   }
   catch(err){
     logger.error("err in the controller addDocumentMaster",err)
+    
     return res.status(500).json({
-      Status: {
-        StatusCode: 500,
-        StatusType: "error",
-        StatusMessage: "Record not Saved",
-        StatusSeverity: "something went wrong",
-      },
-    }); 
+      StatusCode: 500,
+      statusvalue:false,
+      StatusType: "error",
+      StatusMessage: `${err}`,
+      StatusSeverity: "something went wrong",
+  });
   } 
 }
 exports.Update_DocumentMaster= async (req,res)=>{
@@ -133,29 +131,28 @@ exports.Update_DocumentMaster= async (req,res)=>{
     const getData = await documentservice.updateDocument_master(addJson)
     console.log("controller",getData)
     console.log("statusvalue",getData.statusvalue)
-    if (getData.statusvalue) {
-        return res.status(200).send(getData.value)
-      } else {
-        return res.status(500).json({
-          Status: {
-            StatusCode: 500,
-            StatusType: "error",
-            StatusMessage: "Record not Saved",
-            StatusSeverity: "Information",
-          },
-        });
-      }   
+      let value = getData.Newvalue
+      
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"Record updated successfully",
+        statusseverity:"information",
+        value
+      })
+         
   }
   catch(err){
     logger.error("err in the controller Update_DocumentMaster",err)
+    
     return res.status(500).json({
-      Status: {
-        StatusCode: 500,
-        StatusType: "error",
-        StatusMessage: "Record not Saved",
-        StatusSeverity: "something went wrong",
-      },
-    }); 
+      StatusCode: 500,
+      statusvalue:false,
+      StatusType: "error",
+      StatusMessage: `${err}`,
+      StatusSeverity: "something went wrong",
+  }); 
   } 
 };
 
@@ -165,32 +162,26 @@ exports.DeleteDocument_Master_byId= async (req,res)=>{
     const getData = await documentservice.Delete_Document_Master_Document(addJson)
     //console.log("controller",getData)
     //console.log("statusvalue",getData.statusvalue)
-    if (getData.statusvalue) {
-        return res.status(200).send({
-          id:req.body.doc_id,
-          message:"Deleted Successfully"
+    
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"Deleted Successfully",
+        statusseverity:"information",
+        id:req.body.doc_id,
         })
-      } else {
-        return res.status(500).json({
-          Status: {
-            StatusCode: 500,
-            StatusType: "error",
-            StatusMessage: "Record not Saved",
-            StatusSeverity: "Information",
-          },
-        });
-      }  
+      
     }
     catch(err){
       logger.error("err in the controller DeleteDocument_Master_byId",err)
       return res.status(500).json({
-        Status: {
-          StatusCode: 500,
-          StatusType: "error",
-          StatusMessage: "Record not Saved",
-          StatusSeverity: "something went wrong",
-        },
-      }); 
+        StatusCode: 500,
+        statusvalue:false,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+    }); 
     }  
 }
 

@@ -4,23 +4,17 @@ const { logger } = require("../../Util/logeer");
 exports.Customertxn = async (req, res) => {
   try {
     let getData = await Customertxn_Service.Customertxn(req.body);
-    let value = getData.customerdetails
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
-      value
-    })
+
+    return res.status(200).send(getData.customerdetails);
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "Information",
+      },
     });
   }
 };
@@ -31,23 +25,17 @@ exports.CustomerTxnHistoryByFilter = async (req, res) => {
       req.body
     );
     logger.info("controller", getData);
-    let value = getData.value
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
-      value
-    })
+
+    return res.status(200).send(getData.value);
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -60,23 +48,16 @@ exports.getBalanceAndLoanAmountByFilterController = async (req, res) => {
       );
     logger.info("controller", getData);
 
-    let value = getData.value
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
-      value
-    })
+    return res.status(200).send(getData.value);
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -88,23 +69,16 @@ exports.getcCustomerTxnByNameController = async (req, res) => {
     );
     logger.info("controller", getData);
 
-    let value = getData.value
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
-      value
-    })
+    return res.status(200).send(getData.value);
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -117,15 +91,7 @@ exports.getLoanAmountByFilterController = async (req, res) => {
     logger.info("controller", getData);
     if (getData.statusvalue) {
       delete getData.statusvalue;
-      let value = getData.value
-      return res.status(200).json({
-        ststusCode:200,
-        statusvalue:true,
-        statustype:"success",
-        statusmessage:"recordsaved",
-        statusseverity:"information",
-        value
-      });
+      return res.status(200).send(getData.value);
     } else {
       return res.status(500).json({
         Status: {
@@ -139,11 +105,12 @@ exports.getLoanAmountByFilterController = async (req, res) => {
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: "Record not Saved",
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -156,24 +123,17 @@ exports.getSavingDetailsByFilterController = async (req, res) => {
     logger.info("controller", getData);
     if (getData.statusvalue) {
       delete getData.statusvalue;
-      let value = getData.value
-      return res.status(200).json({
-        ststusCode:200,
-        statusvalue:true,
-        statustype:"success",
-        statusmessage:"recordsaved",
-        statusseverity:"information",
-        value
-      })
+      return res.status(200).send(getData.value);
     }
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };

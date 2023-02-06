@@ -1,0 +1,33 @@
+{
+  "name": "bank_app_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/communication-email": "^1.0.0-beta.1",
+    "amqplib": "^0.10.3",
+    "axios": "^1.2.1",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "log4js": "^6.7.1",
+    "nodemon": "^2.0.20",
+    "pdfkit": "^0.13.0",
+    "pg": "^8.8.0",
+    "uuid": "^9.0.0",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0"
+  },
+  "keywords": [],
+  "description": ""
+}

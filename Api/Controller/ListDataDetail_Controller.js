@@ -5,16 +5,23 @@ exports.getlistDataDetail = async (req, res) => {
     const data = await ListDataDetailService.getlistDataDetail();
     logger.info(`Server started at http://localhost:8080}`);
     if (data.statusvalue == true) {
-      return res.status(200).send(data.result);
+      let value = data.result;
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value
+      })
     }
   } catch (err) {
     return res.status(500).json({
-      Status: {
-        StatusCode: 500,
-        StatusType: "error",
-        StatusMessage: `${err}`,
-        StatusSeverity: "Information",
-      },
+      StatusCode: 500,
+      statusvalue:false,
+      StatusType: "error",
+      StatusMessage: `${err}`,
+      StatusSeverity: "Information",
     });
   }
 };
@@ -25,16 +32,23 @@ exports.getListDataDetailByCode = async (req, res) => {
     const data = await ListDataDetailService.getlistDataDetailBycode(ListCode);
     logger.info(`Server started at http://localhost:8080}`);
     if (data.statusvalue == true) {
-      return res.status(200).send(data.value);
+      let value = data.result;
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value
+      })
     }
   } catch (err) {
     return res.status(500).json({
-      Status: {
-        StatusCode: 500,
-        StatusType: "error",
-        errorMessage: `${err}`,
-        StatusSeverity: "Information",
-      },
+      StatusCode: 500,
+      statusvalue:false,
+      StatusType: "error",
+      StatusMessage: `${err}`,
+      StatusSeverity: "Information",
     });
   }
 };
@@ -45,16 +59,23 @@ exports.updateListDataDetail = async (req, res) => {
     const data = await ListDataDetailService.updatelistDataDetail(ListMstID);
     logger.info(`Server started at http://localhost:8080}`);
     if (data.statusvalue == true) {
-      return res.status(200).send(data.Newvalue);
+      let value =  data.Newvalue;
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value
+      })
     }
   } catch (err) {
     return res.status(500).json({
-      Status: {
-        StatusCode: 500,
-        StatusType: "error",
-        errorMessage: `${err}`,
-        StatusSeverity: "Information",
-      },
+      StatusCode: 500,
+      statusvalue:false,
+      StatusType: "error",
+      StatusMessage: `${err}`,
+      StatusSeverity: "Information",
     });
   }
 };
@@ -66,16 +87,23 @@ exports.deletelistDataDetail = async (req, res) => {
       const data = await ListDataDetailService.deletelistDataDetail(masterId);
       logger.info(`Server started at http://localhost:8080}`);
       if (data.statusvalue == true) {
-        return res.status(200).send(data.value);
+        let value = data.result;
+        return res.status(200).json({
+          ststusCode:200,
+          statusvalue:true,
+          statustype:"success",
+          statusmessage:"recordsaved",
+          statusseverity:"information",
+          value
+        })
       }
     } catch (err) {
       return res.status(500).json({
-        Status: {
-          StatusCode: 500,
-          StatusType: "error",
-          errorMessage: `${err}`,
-          StatusSeverity: "Information",
-        },
+        StatusCode: 500,
+        statusvalue:false,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "Information",
       });
     }
   };

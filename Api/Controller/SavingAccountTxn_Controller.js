@@ -13,17 +13,26 @@ exports.withDrawInAccount = async (req, res) => {
     logger.info(`get data in the withdraw ${getData.statusvalue}`);
     logger.info(`get data in the Deposite ${JSON.stringify(getData)}`);
    
-      return res.status(200).send(getData.value);
+    let value = getData.value
+    
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"recordsaved",
+      statusseverity:"information",
+      value
+    })
     
   } catch (err) {
     logger.error("err in the controller", err);
+    
     return res.status(500).json({
-      Status: {
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
-        StatusSeverity: "something went wrong",
-      },
+        StatusSeverity: "Information",
     });
   }
 };
@@ -36,17 +45,24 @@ exports.depositInAccount = async (req, res) => {
     getData = await SavingAccountTxnService.depositeInAccountByAccNum(
       depositeJson
     );
-
-    return res.status(200).send(getData.value);
+    let value = getData.value
+    
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"recordsaved",
+      statusseverity:"information",
+      value
+    })
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      Status: {
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
-        StatusSeverity: "something went wrong",
-      },
+        StatusSeverity: "Information",
     });
   }
 };
@@ -54,55 +70,59 @@ exports.depositInAccount = async (req, res) => {
 exports.getTransactionHistory = async (req, res) => {
   try {
     logger.info(`get the data send to service `, req.body);
-    const getData = await SavingAccountTxnService.getTransactionHistory(
-      req.body
-    );
+    const getData = await SavingAccountTxnService.getTransactionHistory(req.body);
 
     logger.info(`controller the data is `, getData);
 
-    logger.info(`Server started at http://localhost:8080}`);
-
-    return res.status(200).send(getData.customerTXnHistory);
+    logger.info(`Server started at http://localhost:3100}`);
+    let value = getData.customerTXnHistory
+    
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"recordsaved",
+      statusseverity:"information",
+      value
+    });
   } catch (err) {
     logger.error("err in the controller getTransactionHistory", err);
+    
     return res.status(500).json({
-      Status: {
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
-        StatusSeverity: "something went wrong",
-      },
+        StatusSeverity: "Information",
     });
   }
 };
 
 exports.getAllAccountType = async (req, res) => {
   logger.info(`get loan data by using customer id ${req.body}`);
-
-  const allAccountTypes = await SavingAccountTxnService.getAllAccountType();
-
   try {
-    if (allAccountTypes.statusvalue) {
-      return res.status(200).send(allAccountTypes.value.rows);
-    } else {
-      return res.status(500).json({
-        Status: {
-          StatusCode: 500,
-          StatusType: "error",
-          StatusMessage: "Record not Retrieved",
-          StatusSeverity: "Information",
-        },
-      });
-    }
+  const allAccountTypes = await SavingAccountTxnService.getAllAccountType();
+    
+      let value = allAccountTypes.value.rows
+      
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value
+      })
+    
   } catch (err) {
     logger.error("err in the controller", err);
+   
     return res.status(500).json({
-      Status: {
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
-        StatusMessage: "Record not Saved",
-        StatusSeverity: "something went wrong",
-      },
+        StatusMessage: `${err}`,
+        StatusSeverity: "Information",
     });
   }
 };
@@ -112,17 +132,27 @@ exports.createSavingAccountController = async (req, res) => {
     logger.info(`controller createSavingAccountController  ${req.body}`);
     const savingAccountData =
       await SavingAccountTxnService.createSavingAccountService(req.body);
-    return res.status(200).send(savingAccountData.value);
+      let value = savingAccountData.value
+      
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value
+      })
   } catch (err) {
     logger.error("err in the controller", err);
+    
     return res.status(500).json({
-      Status: {
+      
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
-        StatusSeverity: "something went wrong",
-        errmessage: err,
-      },
+        StatusSeverity: "Information",
+   
     });
   }
 };
@@ -131,19 +161,28 @@ exports.deleteSavingAccountController = async (req, res) => {
   try {
     logger.info(`controller deleteSavingAccountController  ${req.body}`);
     const deleteSavingAccountControllerData =
-      await SavingAccountTxnService.deleteSavingAccountService(
-        req.body.acctnum
-      );
-    return res.status(200).send(deleteSavingAccountControllerData.value);
+      await SavingAccountTxnService.deleteSavingAccountService(req.body.acctnum);
+    
+    
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"Deleted Successfully",
+      statusseverity:"information",
+      
+    })
   } catch (err) {
     logger.error("err in the controller", err);
+    
     return res.status(500).json({
-      Status: {
+      
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
-        StatusSeverity: "something went wrong",
-      },
+        StatusSeverity: "Information",
+   
     });
   }
 };
@@ -152,51 +191,57 @@ exports.getSaving_Transactionhistory = async (req, res) => {
     logger.info(`get the data send to service `,req.body);
   
     const getData = await SavingAccountTxnService.getSaving_Transactionhistory(req.body);
-    if (getData.customerTXnHistory.statusvalue) {
-      delete getData.customerTXnHistory.statusvalue;
-      return res.status(200).send(getData.customerTXnHistory.value)
-    } else {
-      return res.status(500).json({
-        Status: { 
-          StatusCode: 500,
-          StatusType: "error",
-          StatusMessage: `${err}`,
-          StatusSeverity: "Information",
-        },
-      });
-    }
-  
+    
+      let value = getData.value
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value,
+      })
   }catch(err)
   {
     logger.error("err in the controller", err);
+    
     return res.status(500).json({
-      Status: {
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
-        StatusSeverity: "something went wrong",
-      },
-    });  
+        StatusSeverity: "Information",
+   
+    });
   } 
 };
 exports.getSavingaccountTransactionByfilter = async (req, res) => {
   try{
     logger.info(`get the data send to service `,req.body);
-  
     const getData = await SavingAccountTxnService.getTransactionByfilter(req.body);
-    return res.status(200).send(getData.value)
+    console.log("statusvalue:",getData.statusvalue)
+    let value = getData.value
     
+    return res.status(200).json({
+      ststusCode:200,
+      statusvalue:true,
+      statustype:"success",
+      statusmessage:"recordsaved",
+      statusseverity:"information",
+      value
+    })
   }catch(err)
   {
   logger.error("err in the controller",err)
-  return res.status(500).json({
-    Status: { 
-      StatusCode: 500,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
-    },
-  });
+  
+    return res.status(500).json({
+      
+        StatusCode: 500,
+        statusvalue:false,
+        StatusType: "error",
+        StatusMessage: `${err}`,
+        StatusSeverity: "Information",
+    });
   }
   };
   exports.getLoanaccountTransactionByfilter = async (req, res) => {
@@ -204,18 +249,29 @@ exports.getSavingaccountTransactionByfilter = async (req, res) => {
       logger.info(`get the data send to service `,req.body);
     
       const getData = await SavingAccountTxnService.getloanaccountTransactionByfilter(req.body);
-      return res.status(200).send(getData.value)
+      let value = getData.value
+      
+      return res.status(200).json({
+        ststusCode:200,
+        statusvalue:true,
+        statustype:"success",
+        statusmessage:"recordsaved",
+        statusseverity:"information",
+        value
+      })
        
     }catch(err)
     {
     logger.error("err in the controller",err)
+    
     return res.status(500).json({
-      Status: { 
+       
         StatusCode: 500,
+        statusvalue:false,
         StatusType: "error",
         StatusMessage: `${err}`,
         StatusSeverity: "Information",
-      },
+      
     });
     }
 };

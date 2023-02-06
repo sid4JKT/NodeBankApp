@@ -16,10 +16,13 @@ exports.getLoanAccountByDateRange = async (req, res) => {
 
     if (loanData.statusvalue) {
       return res.status(200).json({
+        Status: {
           StatusCode: 200,
           StatusType: "Success",
           StatusMessage: "Record Recieved",
           StatusSeverity: "Information",
+        },
+
         loanData,
       });
     } else {
@@ -35,11 +38,12 @@ exports.getLoanAccountByDateRange = async (req, res) => {
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: "Record not Saved",
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -58,15 +62,7 @@ exports.getLoanAccountByCustomerId = async (req, res) => {
     );
 
     if (loanData.statusvalue) {
-      let value = loanData.value.rows[0]
-      return res.status(200).json({
-        ststusCode:200,
-        statusvalue:true,
-        statustype:"success",
-        statusmessage:"recordsaved",
-        statusseverity:"information",
-        value
-      });
+      return res.status(200).send(loanData.value.rows[0]);
     } else {
       return res.status(500).json({
         Status: {
@@ -81,11 +77,12 @@ exports.getLoanAccountByCustomerId = async (req, res) => {
     logger.error("err in the controller", err);
 
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: "Record not Saved",
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -96,15 +93,7 @@ exports.createLoanAccount = async (req, res) => {
     const loanData = await loanService.createLoanAccount(createLoanPayload);
     logger.info("the create loan account ", loanData);
     if (loanData.statusvalue) {
-      let value = loanData.value.value
-      return res.status(200).json({
-        ststusCode:200,
-        statusvalue:true,
-        statustype:"success",
-        statusmessage:"recordsaved",
-        statusseverity:"information",
-        value
-      });
+      return res.status(200).send(loanData.value.value);
     } else {
       return res.status(500).json({
         Status: {
@@ -118,11 +107,12 @@ exports.createLoanAccount = async (req, res) => {
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: "Record not Saved",
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };
@@ -141,15 +131,7 @@ exports.deactivateLoanAccount = async (req, res) => {
       loanDiavtivateData
     );
     if (loanDiavtivateData.statusvalue) {
-      let value = loanDiavtivateData.value
-      return res.status(200).json({
-        ststusCode:200,
-        statusvalue:true,
-        statustype:"success",
-        statusmessage:"recordsaved",
-        statusseverity:"information",
-        value
-      });
+      return res.status(200).send(loanDiavtivateData.value);
     } else {
       return res.status(500).json({
         Status: {
@@ -163,11 +145,12 @@ exports.deactivateLoanAccount = async (req, res) => {
   } catch (err) {
     logger.error("err in the controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        StatusMessage: "Record not Saved",
+        StatusSeverity: "something went wrong",
+      },
     });
   }
 };

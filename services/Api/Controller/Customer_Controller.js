@@ -13,22 +13,16 @@ exports.getCustomerById = async (req, res) => {
     let customerId = req.params.custId;
     const customerData = await customerservice.getCustomerById(customerId);
     logger.info(`Server started at http://localhost:8080}`);
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
-      customerData
-    })
+    return res.status(200).send(customerData);
   } catch (err) {
     logger.error("err in the getCustomerById  controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        ErrorMessage: `${err}`,
+        StatusSeverity: "fatal",
+      },
     });
   }
 };
@@ -44,20 +38,11 @@ exports.addCustomer = async (req, res) => {
       delete getData.statusvalue;
       if (req.body.customerdetails.ActionType == "UPDATE") {
         logger.info("update of controller is call=", getData);
-        return res.status(200).json({
-          ststusCode:200,
-          statusvalue:true,
-          statustype:"success",
-          statusmessage:"recordsaved",
-          statusseverity:"information",
-          getData
-        })
+        return res.status(200).send(getData);
       } else {
         let custidDoc = {
           custId: getData.value.Customerid.cust_id,
           listDtlId: 1,
-          acctnum:getData.accountDetail.acctnum,
-          accType:getData.accountDetail.accounttype
         };
         // console.log(custidDoc);
         const payload = await documentService.documentCustomer(custidDoc);
@@ -94,11 +79,12 @@ exports.addCustomer = async (req, res) => {
   } catch (err) {
     logger.error("error from addCustomer controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        ErrorMessage: `${err}`,
+        StatusSeverity: "fatal",
+      },
     });
   }
 };
@@ -108,23 +94,16 @@ exports.getCustomers = async (req, res) => {
   try {
     const customersData = await customerservice.getCustomers();
     logger.info(`Server started at http://localhost:8080}`);
-   
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
-      customersData
-    })
+    return res.status(200).send(customersData);
   } catch (err) {
     logger.error("Error from getCustomers controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        ErrorMessage: `${err}`,
+        StatusSeverity: "fatal",
+      },
     });
   }
 };
@@ -137,23 +116,16 @@ exports.deleteCustomer = async (req, res) => {
     const deletecustomer = await customerservice.deleteCustomer(details);
     logger.info(`Server started at http://localhost:3100}`);
     console.log(deletecustomer);
-    
-    return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"Customer deleted successfully",
-      statusseverity:"information",
-      deletecustomer
-    })
+    return res.status(200).send(deletecustomer);
   } catch (err) {
     logger.error("Error from deleteCustomer controller", err);
     return res.status(500).json({
-      StatusCode: 500,
-      statusvalue:false,
-      StatusType: "error",
-      StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      Status: {
+        StatusCode: 500,
+        StatusType: "error",
+        ErrorMessage: `${err}`,
+        StatusSeverity: "fatal",
+      },
     });
   }
 };

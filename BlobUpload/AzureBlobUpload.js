@@ -6,115 +6,101 @@ const { DefaultAzureCredential } = require("@azure/identity");
 
 
 exports.azureBlobfunction=async(req)=>{
-    console.log(req.files);
+  try {
     let blobName = req.body.blobName.toLowerCase();
     let blobExtension = req.body.blobExtension.toLowerCase();
-    let containerName = req.body.containerName.toLowerCase();
     let file = req.files.file;
+    console.log(file.data,"24")// 
+    // async function upload (params) {
+  // Create a unique name for the blob
+
+
+// Get a block blob client
+const accountName ="storagejktraining";
+  if (!accountName) throw Error('Azure Storage accountName not found');
+  console.log(' container...');
+  const blobServiceClient = new BlobServiceClient(
+    `https://${accountName}.blob.core.windows.net`,
+    new DefaultAzureCredential()
+  );
+
+  // const containerName = 'quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700';
+  const containerName = req.containerName;
+
+  console.log('\connecting container...');
+  console.log('\t', containerName);
+ blobName = blobName + uuidv1() + ''+blobExtension;
+  // Get a reference to a container
+  const containerClient = blobServiceClient.getContainerClient(containerName);
+const blockBlobClient = containerClient.getBlockBlobClient(blobName);
+
+// Display blob name and url
+console.log(
+  `\nUploading to Azure storage as blob\n\tname: ${blobName}:\n\tURL: ${blockBlobClient.url}`
+);
+
+// Upload data to the blob
+
+const data = file.data;
+const uploadBlobResponse = await blockBlobClient.upload(data, data.length);
+console.log(
+  `Blob was uploaded successfully. requestId:,${uploadBlobResponse.clientRequestId}`
+);
+
+res.send({message:"successfully upload ",refrenceId:`${blobName}`
+})
+   } catch (error) {
+    console.log("not able to upload: ",error)
+    throw err
   
-    if (!req.files || Object.keys(req.files).length === 0) {
-      return res.status(400).send("No files were uploaded.");
-    }
-  
-    try {
-      async function setBlob() {
-        const accountName = process.env.AZURE_STORAGE_ACCOUNT_NAME;
-        if (!accountName) throw Error("Azure Storage accountName not found");
-  
-        const blobServiceClient = new BlobServiceClient(
-          `https://${accountName}.blob.core.windows.net`,
-          new DefaultAzureCredential()
-        );
-  
-        const containerClient =
-          blobServiceClient.getContainerClient(containerName);
-  
-        // Create a unique name for the blob
-        blobName += uuidv1() + `${blobExtension}`;
-  
-        // Get a block blob client
-        const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-  
-        // Display blob name and url
-        console.log(
-          `\nUploading to Azure storage as blob\n\tname: ${blobName}:\n\tURL: ${blockBlobClient.url}`
-        );
-  
-        // Upload data to the blob
-        const data = file.data;
-        const uploadBlobResponse = await blockBlobClient.upload(
-          data,
-          data.length
-        );
-        console.log(
-          `Blob was uploaded successfully. requestId: ${uploadBlobResponse.requestId}`
-        );
-  
-        // res
-        //   .status(200)
-        //   .json({
-        //     Message: `Blob created ${blobName} for container ${containerName}`,
-        //   });
-      }
-      setBlob();
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({ error });
-    }
+   }
 }
 
 exports.getBlobStroageFile=async(req)=>{
-    let containerName = req.body.containerName.toLowerCase();
-    let blobName = req.body.blobName.toLowerCase();
+   try {
+    const accountName ="storagejktraining";
+if (!accountName) throw Error('Azure Storage accountName not found');
+console.log(' container...');
+const blobServiceClient = new BlobServiceClient(
+  `https://${accountName}.blob.core.windows.net`,
+  new DefaultAzureCredential()
+);
+
+// const containerName = 'quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700';
+const containerName = req.containerName;
+const  blobName=req.blobName
+console.log('\connecting container...');
+console.log('\t', containerName);
+// blobName = blobName + uuidv1() + ''+blobExtension;
+// Get a reference to a container
+const containerClient = blobServiceClient.getContainerClient(containerName)
+
+
+
+// List the blob(s) in the container.
+for await (const blob of containerClient.listBlobsFlat()) {
+  // Get Blob Client from name, to get the URL
+  const tempBlockBlobClient = containerClient.getBlockBlobClient(blob.name);
+
+  // Display blob name and URL
+  // if(blob.name=="demo_blob085e51c0-a610-11ed-8d33-b97105c922f.txt")
+  if(blob.name==blobName)
+ {
+  console.log(
+    `\n\tname: ${blob.name}\n\tURL: ${tempBlockBlobClient.url}\n`
+  );
+  return tempBlockBlobClient.url
+
+ }
+ else{
   
-    try {
-      async function getBlob() {
-        let count = 0;
-        let url;
+    console.log("not found")
   
-        const accountName = process.env.AZURE_STORAGE_ACCOUNT_NAME;
-        if (!accountName) throw Error("Azure Storage accountName not found");
-  
-        const blobServiceClient = new BlobServiceClient(
-          `https://${accountName}.blob.core.windows.net`,
-          new DefaultAzureCredential()
-        );
-  
-        const containerClient =
-          blobServiceClient.getContainerClient(containerName);
-  
-        console.log("\nListing blobs...");
-  
-        // List the blob(s) in the container.
-        for await (const blob of containerClient.listBlobsFlat()) {
-          // Get Blob Client from name, to get the URL
-          if (blob.name === blobName) {
-            count++;
-            const tempBlockBlobClient = containerClient.getBlockBlobClient(
-              blob.name
-            );
-            url = tempBlockBlobClient.url;
-            // Display blob name and URL
-            console.log(
-              `\n\tname: ${blob.name}\n\tURL: ${tempBlockBlobClient.url}\n`
-            );
-          }
-        }
-  
-        if (count === 1) {
-          res.status(200).json({
-            Message: `Blob found ${blobName}`,
-            Url: `${url}`,
-          });
-        }
-        else if(count === 0){
-          console.log(`No Blobs were found of the name ${blobName}`);
-        //   res.status(500).json({Message: `No Blobs were found of the name ${blobName}`});
-        }
-      }
-      getBlob();
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({ error });
-    }
+ }
+}
+   } catch (err) {
+    console.log("no blob found")
+    throw err
+    
+   }
 }
