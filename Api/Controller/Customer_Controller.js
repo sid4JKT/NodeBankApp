@@ -14,21 +14,21 @@ exports.getCustomerById = async (req, res) => {
     const customerData = await customerservice.getCustomerById(customerId);
     logger.info(`Server started at http://localhost:8080}`);
     return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
+      ststusCode: 200,
+      statusvalue: true,
+      statustype: "success",
+      statusmessage: "recordsaved",
+      statusseverity: "information",
       customerData
-    })
+    });
   } catch (err) {
     logger.error("err in the getCustomerById  controller", err);
     return res.status(500).json({
       StatusCode: 500,
-      statusvalue:false,
+      statusvalue: false,
       StatusType: "error",
       StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      StatusSeverity: "Information"
     });
   }
 };
@@ -45,26 +45,26 @@ exports.addCustomer = async (req, res) => {
       if (req.body.customerdetails.ActionType == "UPDATE") {
         logger.info("update of controller is call=", getData);
         return res.status(200).json({
-          ststusCode:200,
-          statusvalue:true,
-          statustype:"success",
-          statusmessage:"recordsaved",
-          statusseverity:"information",
+          ststusCode: 200,
+          statusvalue: true,
+          statustype: "success",
+          statusmessage: "recordsaved",
+          statusseverity: "information",
           getData
-        })
+        });
       } else {
         let custidDoc = {
           custId: getData.value.Customerid.cust_id,
-          listDtlId: 1,
-          acctnum:getData.accountDetail.acctnum,
-          accType:getData.accountDetail.accounttype
+          listCode: "newcustDoc",
+          acctnum: getData.accountDetail.acctnum,
+          accType: getData.accountDetail.accounttype
         };
         // console.log(custidDoc);
         const payload = await documentService.documentCustomer(custidDoc);
         logger.info("document payload", payload);
 
         //sending payload to publisher
-        let documentData = await doc.newpubdoc(payload)
+        let documentData = await doc.newpubdoc(payload);
         logger.info("get the document data", documentData);
 
         //inserting records into document_customer_master_table
@@ -87,18 +87,18 @@ exports.addCustomer = async (req, res) => {
           StatusCode: 500,
           StatusType: "error",
           ErrorMessage: `${err}`,
-          StatusSeverity: "Information",
-        },
+          StatusSeverity: "Information"
+        }
       });
     }
   } catch (err) {
     logger.error("error from addCustomer controller", err);
     return res.status(500).json({
       StatusCode: 500,
-      statusvalue:false,
+      statusvalue: false,
       StatusType: "error",
       StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      StatusSeverity: "Information"
     });
   }
 };
@@ -108,23 +108,23 @@ exports.getCustomers = async (req, res) => {
   try {
     const customersData = await customerservice.getCustomers();
     logger.info(`Server started at http://localhost:8080}`);
-   
+
     return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"recordsaved",
-      statusseverity:"information",
+      ststusCode: 200,
+      statusvalue: true,
+      statustype: "success",
+      statusmessage: "recordsaved",
+      statusseverity: "information",
       customersData
-    })
+    });
   } catch (err) {
     logger.error("Error from getCustomers controller", err);
     return res.status(500).json({
       StatusCode: 500,
-      statusvalue:false,
+      statusvalue: false,
       StatusType: "error",
       StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      StatusSeverity: "Information"
     });
   }
 };
@@ -137,23 +137,23 @@ exports.deleteCustomer = async (req, res) => {
     const deletecustomer = await customerservice.deleteCustomer(details);
     logger.info(`Server started at http://localhost:3100}`);
     console.log(deletecustomer);
-    
+
     return res.status(200).json({
-      ststusCode:200,
-      statusvalue:true,
-      statustype:"success",
-      statusmessage:"Customer deleted successfully",
-      statusseverity:"information",
+      ststusCode: 200,
+      statusvalue: true,
+      statustype: "success",
+      statusmessage: "Customer deleted successfully",
+      statusseverity: "information",
       deletecustomer
-    })
+    });
   } catch (err) {
     logger.error("Error from deleteCustomer controller", err);
     return res.status(500).json({
       StatusCode: 500,
-      statusvalue:false,
+      statusvalue: false,
       StatusType: "error",
       StatusMessage: `${err}`,
-      StatusSeverity: "Information",
+      StatusSeverity: "Information"
     });
   }
 };
