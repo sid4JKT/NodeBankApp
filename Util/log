@@ -864,3 +864,4701 @@
 [2023-02-07T14:36:07.457] [INFO] default - the Data got :[object Object]}
 [2023-02-07T14:36:07.479] [INFO] default - Generatepdf undefined
 [2023-02-07T14:36:12.497] [INFO] default - get the document data undefined
+[2023-02-07T15:27:24.011] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:27:26.029] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:26.034] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:29.866] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:27:31.881] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:31.883] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:33.289] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:27:35.299] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:35.302] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:36.830] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:27:38.836] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:38.838] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:40.410] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:27:42.418] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:42.420] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:44.163] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:27:46.171] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:46.172] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:53.700] [ERROR] default - Error in documentservice by getDocument Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:53.702] [ERROR] default - err in the controller getalldocuments Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:57.114] [ERROR] default - Error in documentservice by getDocument Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:27:57.115] [ERROR] default - err in the controller getalldocuments Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:28:00.348] [ERROR] default - Error in documentservice by getDocument Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:28:00.351] [ERROR] default - err in the controller getalldocuments Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:28:03.579] [ERROR] default - Error in documentservice by getDocument Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:28:03.580] [ERROR] default - err in the controller getalldocuments Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:28:08.461] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T15:28:10.475] [ERROR] default - err in the service addCustomer Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T15:28:10.477] [ERROR] default - error from addCustomer controller Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T16:07:04.760] [ERROR] default - Error in documentservice by getDocument Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T16:07:04.763] [ERROR] default - err in the controller getalldocuments Error: Connection terminated due to connection timeout
+    at Connection.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\client.js:132:73)
+    at Object.onceWrapper (node:events:627:28)
+    at Connection.emit (node:events:513:28)
+    at Socket.<anonymous> (D:\bank_App\updated\NodeBankApp\node_modules\pg\lib\connection.js:57:12)
+    at Socket.emit (node:events:513:28)
+    at TCP.<anonymous> (node:net:757:14)
+[2023-02-07T16:08:01.258] [INFO] default - Get the data for Querry:SELECT * from document_master}
+[2023-02-07T16:08:01.260] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:08:01.272] [INFO] default - Server started at http://localhost:3100}
+[2023-02-07T16:08:32.833] [ERROR] default - got the err ExtractQuerry function the error is :TypeError: Cannot read properties of undefined (reading 'query')
+[2023-02-07T16:08:32.834] [ERROR] default - error in the getdocumentbyId  TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:40:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:08:32.836] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:40:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12) in the documentservice by getdocumentId
+[2023-02-07T16:08:32.839] [ERROR] default - err in the controller getdocumentMasterbyId TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:40:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:08:38.670] [ERROR] default - got the err ExtractQuerry function the error is :TypeError: Cannot read properties of undefined (reading 'query')
+[2023-02-07T16:08:38.671] [ERROR] default - error in the getdocumentbyId  TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:40:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:08:38.673] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:40:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12) in the documentservice by getdocumentId
+[2023-02-07T16:08:38.676] [ERROR] default - err in the controller getdocumentMasterbyId TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:40:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:15:11.266] [ERROR] default - got the err ExtractQuerry function the error is :TypeError: Cannot read properties of undefined (reading 'query')
+[2023-02-07T16:15:11.268] [ERROR] default - error in the getdocumentbyId  TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:41:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:15:11.272] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:41:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12) in the documentservice by getdocumentId
+[2023-02-07T16:15:11.277] [ERROR] default - err in the controller getdocumentMasterbyId TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:41:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:15:14.474] [ERROR] default - got the err ExtractQuerry function the error is :TypeError: Cannot read properties of undefined (reading 'query')
+[2023-02-07T16:15:14.476] [ERROR] default - error in the getdocumentbyId  TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:41:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:15:14.478] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:41:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12) in the documentservice by getdocumentId
+[2023-02-07T16:15:14.480] [ERROR] default - err in the controller getdocumentMasterbyId TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:41:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:17:46.159] [ERROR] default - got the err ExtractQuerry function the error is :TypeError: Cannot read properties of undefined (reading 'query')
+[2023-02-07T16:17:46.161] [ERROR] default - error in the getdocumentbyId  TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:42:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:17:46.163] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:42:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12) in the documentservice by getdocumentId
+[2023-02-07T16:17:46.164] [ERROR] default - err in the controller getdocumentMasterbyId TypeError: Cannot read properties of undefined (reading 'query')
+    at Object.exports.ExtractQuerry (D:\bank_App\updated\NodeBankApp\Database\dbconnection.js:29:26)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\Database\Repository\Document_repo.js:42:31)
+    at Object.exports.getdocumentbyId (D:\bank_App\updated\NodeBankApp\services\Document_service.js:18:38)
+    at exports.getdocumentMasterbyId (D:\bank_App\updated\NodeBankApp\Api\Controller\Document_Controller.js:38:37)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\layer.js:95:5)
+    at D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\bank_App\updated\NodeBankApp\node_modules\express\lib\router\index.js:346:12)
+[2023-02-07T16:22:37.470] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-07T16:22:37.471] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:22:37.477] [INFO] default - Server started at http://localhost:3100}
+[2023-02-07T16:27:31.461] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-07T16:27:31.463] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:27:31.475] [INFO] default - Server started at http://localhost:3100}
+[2023-02-07T16:28:22.139] [INFO] default - Get the data for Querry:select * from document_master where "doc_id"='14'  }
+[2023-02-07T16:28:22.139] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:28:22.140] [INFO] default - get the data from database= [
+  {
+    doc_id: '14',
+    Doc_Desc: 'Happy Anniversary',
+    Doctype: 'pdf',
+    doc_name: 'Anniversary bonus',
+    doc_statuscode: 'Active',
+    doc_template: 'Header  content Thank you',
+    doc_date: '2023-24-01'
+  }
+]
+[2023-02-07T16:28:55.242] [INFO] default - Get the data for Querry:INSERT INTO public.document_master( doc_id, doc_name,  "Doc_Desc", doc_date, "Doctype", doc_statuscode, doc_template)
+  values('57', 'Anniversary bonus', 'Happy Anniversary', '2023-07-02', 'pdf', 'Active', 'Header  content Thank you')}
+[2023-02-07T16:28:55.243] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:29:15.384] [INFO] default - Get the data for Querry:SELECT * from document_master}
+[2023-02-07T16:29:15.385] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:29:15.405] [INFO] default - Server started at http://localhost:3100}
+[2023-02-07T16:30:01.383] [INFO] default - Get the data for Querry:Delete from document_master where doc_id = '57'}
+[2023-02-07T16:30:01.383] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:30:01.640] [INFO] default - Get the data for Querry:select * from document_master}
+[2023-02-07T16:30:01.640] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:32:46.938] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T16:32:57.886] [INFO] default - the DB is Connected  {
+  FirstName: 'Saravana 108',
+  LastName: 'goga',
+  Address1: 'Hyderabad',
+  Address2: 'Rajajinagar ',
+  EmailId: 'shilpa2.j@jktech.com',
+  Phone: 987564554,
+  Mobile: 985746663,
+  DateOfBirth: '22/03/2000',
+  MaritalStatus: 'Single',
+  ZIPCode: 530068,
+  City: 'Bengalore',
+  State: 'Karnataka',
+  Country: 'India',
+  ActionType: 'ADD'
+}
+[2023-02-07T16:32:58.154] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Saravana 108', 'goga', 'Hyderabad', 'Rajajinagar ', 'shilpa2.j@jktech.com', 987564554, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-07T16:32:58.155] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:32:58.155] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Saravana 108' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='shilpa2.j@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-07T16:32:58.419] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Saravana 108' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='shilpa2.j@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-07T16:32:58.420] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:09.275] [INFO] default - the service  {
+  custId: 1007,
+  accountType: 'saving',
+  accsubtype: 'student',
+  branch_code: 'BOI_1234',
+  transfer_limit: 5000
+}
+[2023-02-07T16:33:09.277] [INFO] default - the accounttypequerry:  SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'
+[2023-02-07T16:33:09.538] [INFO] default - Get the data for Querry:SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'}
+[2023-02-07T16:33:09.539] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:09.540] [INFO] default - the accounttype:  [ { accounttypeID: '1' } ]
+[2023-02-07T16:33:09.800] [INFO] default - the customeraccountsquerry for inserting customeraccounts :  INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (1007,'1','active','Tue Feb 07 2023 16:33:09 GMT+0530 (India Standard Time)')
+[2023-02-07T16:33:10.060] [INFO] default - Get the data for Querry:INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (1007,'1','active','Tue Feb 07 2023 16:33:09 GMT+0530 (India Standard Time)')}
+[2023-02-07T16:33:10.061] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:10.061] [INFO] default - the data is  inserting customer accounts  
+[2023-02-07T16:33:10.061] [INFO] default - the accounttypequerry:  SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=1007  and accounttypeid=1
+[2023-02-07T16:33:10.321] [INFO] default - Get the data for Querry:SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=1007  and accounttypeid=1}
+[2023-02-07T16:33:10.322] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:10.322] [INFO] default - the accounttype:  1000000466
+[2023-02-07T16:33:10.323] [INFO] default - the queryString for inserting saving :  INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000466, 0,5000,'BOI_1234',
+      1,'Active','Tue Feb 07 2023 16:33:10 GMT+0530 (India Standard Time)')
+[2023-02-07T16:33:10.583] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000466, 0,5000,'BOI_1234',
+      1,'Active','Tue Feb 07 2023 16:33:10 GMT+0530 (India Standard Time)')}
+[2023-02-07T16:33:10.584] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:10.585] [INFO] default - the data is  inserting saving  
+[2023-02-07T16:33:10.847] [INFO] default - the data is  inserting saving  2= {
+  value: {
+    acctnum: '1000000466',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-07T16:33:10.850] [INFO] default - saving account created Data: {
+  value: {
+    acctnum: '1000000466',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-07T16:33:10.851] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1007
+[2023-02-07T16:33:11.116] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1007}
+[2023-02-07T16:33:11.117] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:11.118] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1007,
+    firstname: 'Saravana 108',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'shilpa2.j@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000466',
+    accounttypeid: '1',
+    id: null,
+    status: 'Active',
+    date: 'Tue Feb 07 2023 16:33:10 GMT+0530 (India Standard Time)',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234',
+    SavingacctypeId: '1'
+  }
+}
+[2023-02-07T16:33:11.379] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-07T16:33:11.380] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:11.646] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-07T16:33:11.646] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:11.649] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000466',
+    cust_id: 1007,
+    firstname: 'Saravana 108',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'shilpa2.j@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000466',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T16:33:11.652] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000466',
+    cust_id: 1007,
+    firstname: 'Saravana 108',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'shilpa2.j@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000466',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T16:33:11.707] [INFO] default - pdf savings acount
+[2023-02-07T16:33:11.724] [INFO] default - get the document data data is publish and consume
+[2023-02-07T16:33:11.725] [INFO] default - get the data from addCustomer api in Service  {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 1007 } },
+  accountDetail: {
+    acctnum: '1000000466',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-07T16:33:11.727] [INFO] default - Add customer Data: {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 1007 } },
+  accountDetail: {
+    acctnum: '1000000466',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-07T16:33:33.930] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1007}
+[2023-02-07T16:33:33.930] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:33.931] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1007,
+  firstname: 'Saravana 108',
+  lastname: 'goga',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar ',
+  emailid: 'shilpa2.j@jktech.com',
+  phone: '987564554',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-07T16:33:34.202] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-07T16:33:34.202] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:34.476] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-07T16:33:34.476] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:34.479] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000466',
+    accounttype: 'saving',
+    cust_id: 1007,
+    firstname: 'Saravana 108',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'shilpa2.j@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T16:33:34.487] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000466',
+    accounttype: 'saving',
+    cust_id: 1007,
+    firstname: 'Saravana 108',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'shilpa2.j@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T16:33:34.492] [INFO] default - get the document data undefined
+[2023-02-07T16:33:45.687] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (5186,'wel002', '7/2/2023', 'pdf', 1007, 'Active','Tue Feb 07 2023 16:33:45 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-07T16:33:45.688] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:33:45.707] [INFO] default - Generatepdf undefined
+[2023-02-07T16:33:48.760] [INFO] default - get the document data undefined
+[2023-02-07T16:41:21.159] [INFO] default - get loan data by using customer id [object Object]{"CustID":"212","AccountNumber":"1000000033"}
+[2023-02-07T16:41:21.160] [INFO] default - the request body from controller(This is from service)  { CustID: '212', AccountNumber: '1000000033' }
+[2023-02-07T16:41:21.160] [INFO] default - We have elemets in LoanAccountService 
+[2023-02-07T16:41:32.126] [INFO] default - CustomerAccount_Repo -> getCustomerAccounts -> Query String is : SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.cust_id = '212' AND CustomerAccounts.AcctNum = '1000000033'
+[2023-02-07T16:41:32.401] [INFO] default - Get the data for Querry:SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.cust_id = '212' AND CustomerAccounts.AcctNum = '1000000033'}
+[2023-02-07T16:41:32.402] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:41:32.404] [INFO] default - LoanAccount_Service-GetLoanAccountByCustomerID - getAccountType Payload : {"cust_id":212,"acctnum":"1000000033","accounttypeid":"1","id":"34","status":"InActive","date":"Tue Jan 17 2023 12:15:10 GMT+0530 (India Standard Time)"}
+[2023-02-07T16:41:43.355] [INFO] default - AccountType_Repo -> getAccountType -> Query : SELECT accounttype.* FROM public.accounttype WHERE accounttype."accounttypeID" = 1
+[2023-02-07T16:41:43.622] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype."accounttypeID" = 1}
+[2023-02-07T16:41:43.623] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:41:43.623] [INFO] default - AccountType_Repo -> getAccountType -> Results : {"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"1","accounttype":"saving","accsubtype":"student"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}
+[2023-02-07T16:41:43.625] [INFO] default - LoanAccount_Service-GetLoanAccountByCustomerID - accounttype response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"1","accounttype":"saving","accsubtype":"student"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}}
+[2023-02-07T16:43:17.067] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":100,"AccountType":"Loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000}
+[2023-02-07T16:43:28.088] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'Loan' AND accounttype.accsubtype = 'car'  
+[2023-02-07T16:43:28.361] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'Loan' AND accounttype.accsubtype = 'car'  }
+[2023-02-07T16:43:28.363] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:43:28.364] [ERROR] default - LoanAccount_Service -> createLoanAccount -> Error :  Error:  accounttype Data not Found 
+    at Object.exports.getAccountType (D:\bank_App\updated\NodeBankApp\Database\Repository\AccountType_Repo.js:53:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.exports.createLoanAccount (D:\bank_App\updated\NodeBankApp\services\LoanAccount_Service.js:104:30)
+    at async exports.createLoanAccount (D:\bank_App\updated\NodeBankApp\Api\Controller\LoanAccount_Controller.js:96:22)
+[2023-02-07T16:43:28.366] [ERROR] default - err in the controller Error:  accounttype Data not Found 
+    at Object.exports.getAccountType (D:\bank_App\updated\NodeBankApp\Database\Repository\AccountType_Repo.js:53:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.exports.createLoanAccount (D:\bank_App\updated\NodeBankApp\services\LoanAccount_Service.js:104:30)
+    at async exports.createLoanAccount (D:\bank_App\updated\NodeBankApp\Api\Controller\LoanAccount_Controller.js:96:22)
+[2023-02-07T16:45:30.939] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T16:45:41.927] [INFO] default - the DB is Connected  {
+  FirstName: 'udesh09387',
+  LastName: 'Wick',
+  Address1: 'Hyderabad',
+  Address2: 'Rajajinagar',
+  EmailId: 'udesh@gmail.com',
+  Phone: 987564554,
+  Mobile: 985746663,
+  DateOfBirth: '22/03/2000',
+  MaritalStatus: 'Single',
+  ZIPCode: 530068,
+  City: 'Bengalore',
+  State: 'Karnataka',
+  Country: 'India',
+  ActionType: 'ADD'
+}
+[2023-02-07T16:45:42.200] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('udesh09387', 'Wick', 'Hyderabad', 'Rajajinagar', 'udesh@gmail.com', 987564554, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-07T16:45:42.201] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:45:42.201] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='udesh09387' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='udesh@gmail.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-07T16:45:42.467] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='udesh09387' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='udesh@gmail.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-07T16:45:42.468] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:45:42.469] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":967,"AccountType":"loan","AccSubType":"car","BranchCode":"BOI_1234","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":2500000}
+[2023-02-07T16:45:42.469] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":967,"AccountType":"loan","AccSubType":"car","BranchCode":"BOI_1234","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":2500000}
+[2023-02-07T16:45:53.422] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  
+[2023-02-07T16:45:53.681] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  }
+[2023-02-07T16:45:53.682] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:45:53.682] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"2","accounttype":"loan","accsubtype":"car"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 2
+[2023-02-07T16:46:04.631] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":967,"AccountType":"loan","AccSubType":"car","BranchCode":"BOI_1234","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":2500000} <--> 2
+[2023-02-07T16:46:04.899] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('967', '2', 'Active', 'Tue Feb 07 2023 16:46:04 GMT+0530 (India Standard Time)')}
+[2023-02-07T16:46:04.899] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:05.160] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-07T16:46:05.160] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:05.161] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-07T16:46:05.161] [INFO] default - calling createLoanAccount repo program : 1000000467 <===> loan
+[2023-02-07T16:46:16.196] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":967,"AccountType":"loan","AccSubType":"car","BranchCode":"BOI_1234","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":2500000} --> 1000000467 --> 2
+[2023-02-07T16:46:16.197] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000467 -- 1000000467
+[2023-02-07T16:46:16.198] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 200000 --> 4800000 --> 7300000 --> 304166.6666666667 --> 304166.67
+[2023-02-07T16:46:16.198] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000467', '0', 'BOI_1234', '8', '24', '2500000', '2', 'Tue Feb 07 2023 16:46:16 GMT+0530 (India Standard Time)', 'Active', '304166.67')
+[2023-02-07T16:46:16.469] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000467', '0', 'BOI_1234', '8', '24', '2500000', '2', 'Tue Feb 07 2023 16:46:16 GMT+0530 (India Standard Time)', 'Active', '304166.67')}
+[2023-02-07T16:46:16.471] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:16.471] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000467","branchcode":"BOI_1234","Status":"Active","Accounttype":"loan"}}
+[2023-02-07T16:46:16.472] [INFO] default - get the data from addCustomer api in Service  {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 967 } },
+  accountDetail: {
+    AcctNum: '1000000467',
+    branchcode: 'BOI_1234',
+    Accounttype: 'loan'
+  }
+}
+[2023-02-07T16:46:16.474] [INFO] default - Add customer Data: {
+  statusvalue: true,
+  value: { Customerid: { cust_id: 967 } },
+  accountDetail: {
+    AcctNum: '1000000467',
+    branchcode: 'BOI_1234',
+    Accounttype: 'loan'
+  }
+}
+[2023-02-07T16:46:38.654] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=967}
+[2023-02-07T16:46:38.654] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:38.654] [INFO] default - data got from getCustomerbyID {
+  cust_id: 967,
+  firstname: 'udesh09387',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'udesh@gmail.com',
+  phone: '987564554',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-07T16:46:38.918] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-07T16:46:38.919] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:39.195] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-07T16:46:39.195] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:39.198] [INFO] default - document data {
+  customerdetail: {
+    accountnum: undefined,
+    accounttype: undefined,
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T16:46:39.205] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: undefined,
+    accounttype: undefined,
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T16:46:39.208] [INFO] default - get the document data undefined
+[2023-02-07T16:46:50.547] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (3754,'wel002', '7/2/2023', 'pdf', 967, 'Active','Tue Feb 07 2023 16:46:50 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-07T16:46:50.548] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:46:50.572] [INFO] default - Generatepdf undefined
+[2023-02-07T16:46:52.137] [INFO] default - get the document data undefined
+[2023-02-07T16:49:17.056] [INFO] default - get loan data by using customer id [object Object]{"CustID":"967","AccountNumber":"1000000467"}
+[2023-02-07T16:49:17.057] [INFO] default - the request body from controller(This is from service)  { CustID: '967', AccountNumber: '1000000467' }
+[2023-02-07T16:49:17.058] [INFO] default - We have elemets in LoanAccountService 
+[2023-02-07T16:49:28.013] [INFO] default - CustomerAccount_Repo -> getCustomerAccounts -> Query String is : SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.cust_id = '967' AND CustomerAccounts.AcctNum = '1000000467'
+[2023-02-07T16:49:28.282] [INFO] default - Get the data for Querry:SELECT CustomerAccounts.* FROM CustomerAccounts WHERE CustomerAccounts.cust_id = '967' AND CustomerAccounts.AcctNum = '1000000467'}
+[2023-02-07T16:49:28.284] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:49:28.286] [INFO] default - LoanAccount_Service-GetLoanAccountByCustomerID - getAccountType Payload : {"cust_id":967,"acctnum":"1000000467","accounttypeid":"2","id":"468","status":"Active","date":"Tue Feb 07 2023 16:46:04 GMT+0530 (India Standard Time)"}
+[2023-02-07T16:49:39.206] [INFO] default - AccountType_Repo -> getAccountType -> Query : SELECT accounttype.* FROM public.accounttype WHERE accounttype."accounttypeID" = 2
+[2023-02-07T16:49:39.469] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype."accounttypeID" = 2}
+[2023-02-07T16:49:39.470] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:49:39.470] [INFO] default - AccountType_Repo -> getAccountType -> Results : {"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"2","accounttype":"loan","accsubtype":"car"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}
+[2023-02-07T16:49:39.472] [INFO] default - LoanAccount_Service-GetLoanAccountByCustomerID - accounttype response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"2","accounttype":"loan","accsubtype":"car"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}}
+[2023-02-07T16:49:39.474] [INFO] default - accounttype is loan : 
+[2023-02-07T16:49:50.379] [INFO] default - GetLoanAccount_Repo -> getloanAccountByAccountNumber -> gel loanaccount query : SELECT LoanAccountDetail.* FROM LoanAccountDetail WHERE LoanAccountDetail.AcctNum = 1000000467
+[2023-02-07T16:49:50.647] [INFO] default - Get the data for Querry:SELECT LoanAccountDetail.* FROM LoanAccountDetail WHERE LoanAccountDetail.AcctNum = 1000000467}
+[2023-02-07T16:49:50.648] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:49:50.648] [INFO] default - GetLoanAccount_Repo -> getloanAccountByAccountNumber -> Got Loan Account Data from Repo : {"command":"SELECT","rowCount":1,"oid":null,"rows":[{"acctnum":"1000000467","balanceamount":"0","branchcode":"BOI_1234","rateofinterest":"8","loanduration":"24","totalloanamount":"2500000","status":"Active","loancreatedate":"Tue Feb 07 2023 16:46:16 GMT+0530 (India Standard Time)","loanaccounttypeid":"2","emiid":"1094","emiamount":"304166.67"}],"fields":[{"name":"acctnum","tableID":14093831,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"balanceamount","tableID":14093831,"columnID":2,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"branchcode","tableID":14093831,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"rateofinterest","tableID":14093831,"columnID":4,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"loanduration","tableID":14093831,"columnID":5,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"totalloanamount","tableID":14093831,"columnID":6,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"status","tableID":14093831,"columnID":7,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"loancreatedate","tableID":14093831,"columnID":8,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"loanaccounttypeid","tableID":14093831,"columnID":9,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"emiid","tableID":14093831,"columnID":10,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"emiamount","tableID":14093831,"columnID":11,"dataTypeID":1700,"dataTypeSize":-1,"dataTypeModifier":786438,"format":"text"}],"_parsers":[null,null,null,null,null,null,null,null,null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}
+[2023-02-07T16:50:43.259] [ERROR] default - err in the service getLoanAmountByFilterService Error: getaddrinfo ENOTFOUND hansken.db.elephantsql.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'hansken.db.elephantsql.com'
+}
+[2023-02-07T16:50:43.260] [ERROR] default - err in the controller Error: getaddrinfo ENOTFOUND hansken.db.elephantsql.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'hansken.db.elephantsql.com'
+}
+[2023-02-07T16:51:24.740] [INFO] default - final extract querry is  select  public.customerdetail.*, public.loanaccountdetail.*,public.AccountType.accounttype,
+  public.AccountType.accsubtype
+ from public.customerdetail
+     join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
+     join public.AccountType on AccountType."accounttypeID" = customeraccounts.AccountTypeId
+     join public.LoanAccountDetail on LoanAccountDetail.acctnum = customeraccounts.acctnum
+     where public.AccountType.accounttype = 'loan' AND customerdetail.cust_id=967  
+[2023-02-07T16:51:25.016] [INFO] default - Get the data for Querry:select  public.customerdetail.*, public.loanaccountdetail.*,public.AccountType.accounttype,
+  public.AccountType.accsubtype
+ from public.customerdetail
+     join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
+     join public.AccountType on AccountType."accounttypeID" = customeraccounts.AccountTypeId
+     join public.LoanAccountDetail on LoanAccountDetail.acctnum = customeraccounts.acctnum
+     where public.AccountType.accounttype = 'loan' AND customerdetail.cust_id=967  }
+[2023-02-07T16:51:25.019] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:51:25.019] [INFO] default - get the data from database== [
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000432',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 16:44:08 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1068',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000433',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 16:53:54 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1069',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000434',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 16:58:24 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1070',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000435',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 17:06:03 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1071',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000436',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 18:37:17 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1072',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000437',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 18:43:29 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1073',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000438',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 18:49:59 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1074',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000439',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Fri Feb 03 2023 18:58:03 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1075',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000441',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 16:08:42 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1076',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000442',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 16:11:29 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1077',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000443',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 16:13:40 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1078',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000444',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 16:22:51 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1079',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000445',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 16:36:42 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1080',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000446',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 16:42:40 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1081',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000448',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 17:11:47 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1083',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000449',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 18:09:21 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1084',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000450',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 18:15:36 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1085',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000451',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Mon Feb 06 2023 18:17:52 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1086',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000462',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Tue Feb 07 2023 15:53:09 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1091',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000464',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Tue Feb 07 2023 16:03:45 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1092',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000465',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Tue Feb 07 2023 16:05:47 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1093',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  },
+  {
+    cust_id: 967,
+    firstname: 'udesh09387',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'udesh@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000467',
+    balanceamount: '0',
+    branchcode: 'BOI_1234',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '2500000',
+    status: 'Active',
+    loancreatedate: 'Tue Feb 07 2023 16:46:16 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1094',
+    emiamount: '304166.67',
+    accounttype: 'loan',
+    accsubtype: 'car'
+  }
+]
+[2023-02-07T16:51:25.173] [INFO] default - get the data form Repo  of getLoanAmountByFilter [object Object] 
+[2023-02-07T16:51:25.174] [INFO] default - controller {
+  value: [
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000432',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 16:44:08 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1068',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000433',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 16:53:54 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1069',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000434',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 16:58:24 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1070',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000435',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 17:06:03 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1071',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000436',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 18:37:17 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1072',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000437',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 18:43:29 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1073',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000438',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 18:49:59 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1074',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000439',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Fri Feb 03 2023 18:58:03 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1075',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000441',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 16:08:42 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1076',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000442',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 16:11:29 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1077',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000443',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 16:13:40 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1078',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000444',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 16:22:51 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1079',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000445',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 16:36:42 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1080',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000446',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 16:42:40 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1081',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000448',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 17:11:47 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1083',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000449',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 18:09:21 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1084',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000450',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 18:15:36 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1085',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000451',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Mon Feb 06 2023 18:17:52 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1086',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000462',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Tue Feb 07 2023 15:53:09 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1091',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000464',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Tue Feb 07 2023 16:03:45 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1092',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000465',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Tue Feb 07 2023 16:05:47 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1093',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    },
+    {
+      cust_id: 967,
+      firstname: 'udesh09387',
+      lastname: 'Wick',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar',
+      emailid: 'udesh@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      acctnum: '1000000467',
+      balanceamount: '0',
+      branchcode: 'BOI_1234',
+      rateofinterest: '8',
+      loanduration: '24',
+      totalloanamount: '2500000',
+      status: 'Active',
+      loancreatedate: 'Tue Feb 07 2023 16:46:16 GMT+0530 (India Standard Time)',
+      loanaccounttypeid: '2',
+      emiid: '1094',
+      emiamount: '304166.67',
+      accounttype: 'loan',
+      accsubtype: 'car'
+    }
+  ],
+  statusvalue: true
+}
+[2023-02-07T16:53:29.316] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-07T16:53:40.324] [INFO] default - the DB is Connected  {
+  Cust_id: 467,
+  FirstName: 'adarsh Shivamurti',
+  LastName: 'goga',
+  Address1: 'Hyderabad',
+  Address2: 'Rajajinagar ',
+  EmailId: 'Hari@gmail.com',
+  Phone: 987564554,
+  Mobile: 985746663,
+  DateOfBirth: '22/03/2000',
+  MaritalStatus: 'Single',
+  ZIPCode: 530068,
+  City: 'Bengalore',
+  State: 'Karnataka',
+  Country: 'India',
+  ActionType: 'UPDATE'
+}
+[2023-02-07T16:53:40.595] [INFO] default - Get the data for Querry:Select * from customerdetail where cust_id=467}
+[2023-02-07T16:53:40.596] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:53:40.870] [INFO] default - Get the data for Querry:UPDATE public.customerdetail
+
+  SET  firstname='adarsh Shivamurti', lastname='goga', address1='Hyderabad', address2='Rajajinagar ', emailid='Hari@gmail.com', phone=987564554, mobile=985746663, dob='22/03/2000', maritalstatus='Single', zipcode='530068', city='Bengalore', state='Karnataka', country='India'
+
+  WHERE  cust_id=467}
+[2023-02-07T16:53:40.871] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:53:40.872] [INFO] default - Add customer Data: {
+  statusvalue: true,
+  Newvalue: {
+    FirstName: 'adarsh Shivamurti',
+    LastName: 'goga',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar ',
+    EmailId: 'Hari@gmail.com',
+    Phone: 987564554,
+    Mobile: 985746663,
+    DOB: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India'
+  },
+  Oldvalue: [
+    {
+      cust_id: 467,
+      firstname: 'adarsh tiwariii',
+      lastname: 'goga',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar ',
+      emailid: 'Hari@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India'
+    }
+  ]
+}
+[2023-02-07T16:53:40.886] [INFO] default - update of controller is call= {
+  Newvalue: {
+    FirstName: 'adarsh Shivamurti',
+    LastName: 'goga',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar ',
+    EmailId: 'Hari@gmail.com',
+    Phone: 987564554,
+    Mobile: 985746663,
+    DOB: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India'
+  },
+  Oldvalue: [
+    {
+      cust_id: 467,
+      firstname: 'adarsh tiwariii',
+      lastname: 'goga',
+      address1: 'Hyderabad',
+      address2: 'Rajajinagar ',
+      emailid: 'Hari@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India'
+    }
+  ]
+}
+[2023-02-07T16:55:16.259] [INFO] default - get data in the Deposite [object Object]
+[2023-02-07T16:55:27.233] [INFO] default - get the data in the repo= [object Object]
+[2023-02-07T16:55:27.233] [INFO] default - the DB is Connected 
+[2023-02-07T16:55:27.237] [INFO] default - querry for getting balance select balance from public.savingaccountdetail where acctnum=1000000433
+[2023-02-07T16:55:27.503] [INFO] default - Get the data for Querry:select balance from public.savingaccountdetail where acctnum=1000000433}
+[2023-02-07T16:55:27.504] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:55:27.504] [INFO] default -  got the  balance undefined
+[2023-02-07T16:55:27.766] [ERROR] default - in the saving account get the error TypeError: Cannot read properties of undefined (reading 'balance')
+[2023-02-07T16:55:27.767] [ERROR] default - err in the service depositeInAccountByAccNum TypeError: Cannot read properties of undefined (reading 'balance')
+    at Object.exports.depositInAccountByAccountNumber (D:\bank_App\updated\NodeBankApp\Database\Repository\SavingAccount_Repo.js:94:42)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.exports.depositeInAccountByAccNum (D:\bank_App\updated\NodeBankApp\services\SavingAccountTxn_Service.js:25:21)
+    at async exports.depositInAccount (D:\bank_App\updated\NodeBankApp\Api\Controller\SavingAccountTxn_Controller.js:45:15)
+[2023-02-07T16:55:27.769] [ERROR] default - err in the controller TypeError: Cannot read properties of undefined (reading 'balance')
+    at Object.exports.depositInAccountByAccountNumber (D:\bank_App\updated\NodeBankApp\Database\Repository\SavingAccount_Repo.js:94:42)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.exports.depositeInAccountByAccNum (D:\bank_App\updated\NodeBankApp\services\SavingAccountTxn_Service.js:25:21)
+    at async exports.depositInAccount (D:\bank_App\updated\NodeBankApp\Api\Controller\SavingAccountTxn_Controller.js:45:15)
+[2023-02-07T16:56:46.562] [INFO] default - get data in the Deposite [object Object]
+[2023-02-07T16:56:57.560] [INFO] default - get the data in the repo= [object Object]
+[2023-02-07T16:56:57.561] [INFO] default - the DB is Connected 
+[2023-02-07T16:56:57.562] [INFO] default - querry for getting balance select balance from public.savingaccountdetail where acctnum=1000000074
+[2023-02-07T16:56:57.829] [INFO] default - Get the data for Querry:select balance from public.savingaccountdetail where acctnum=1000000074}
+[2023-02-07T16:56:57.829] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:56:57.830] [INFO] default -  got the  balance [object Object]
+[2023-02-07T16:56:57.830] [INFO] default -  updated  balance 1000
+[2023-02-07T16:56:58.092] [INFO] default - txn history insert table querry  INSERT INTO public.savingaccounttxnhistory(
+          txnid, acctnum, txndetail, withdrawamount, depositamount, balance,txndate)
+          VALUES ('58ea8350-096b-41c9-8404-bd4526590661',1000000074,'deposite',0,1000,1000,'Tue Feb 07 2023 16:56:58 GMT+0530 (India Standard Time)');
+[2023-02-07T16:56:58.365] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccounttxnhistory(
+          txnid, acctnum, txndetail, withdrawamount, depositamount, balance,txndate)
+          VALUES ('58ea8350-096b-41c9-8404-bd4526590661',1000000074,'deposite',0,1000,1000,'Tue Feb 07 2023 16:56:58 GMT+0530 (India Standard Time)');}
+[2023-02-07T16:56:58.365] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:56:58.366] [INFO] default -  updated  TXN History 
+[2023-02-07T16:56:58.639] [INFO] default - Get the data for Querry:UPDATE public.savingaccountdetail
+      SET balance=1000
+      WHERE acctnum=1000000074;}
+[2023-02-07T16:56:58.640] [INFO] default - the Data got :[object Object]}
+[2023-02-07T16:56:58.640] [INFO] default -  updated  balance in Db 
+[2023-02-07T16:56:58.915] [INFO] default - the data is save [object Object]
+[2023-02-07T16:56:58.916] [INFO] default - get the data form Repo  of DepositInAccountByAccountNumber [object Object] 
+[2023-02-07T17:00:43.241] [INFO] default - get data in the withdraw [object Object]
+[2023-02-07T17:00:54.243] [INFO] default - the DB is Connected 
+[2023-02-07T17:00:54.243] [INFO] default - querry for getting balance select balance from public.savingaccountdetail where acctnum='1000000074'
+[2023-02-07T17:00:54.508] [INFO] default - Get the data for Querry:select balance from public.savingaccountdetail where acctnum='1000000074'}
+[2023-02-07T17:00:54.509] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:00:54.509] [INFO] default -  got the  balance [object Object]
+[2023-02-07T17:00:54.509] [INFO] default -  updated  balance 0
+[2023-02-07T17:00:54.772] [INFO] default -  updated  TXN History querry INSERT INTO public.savingaccounttxnhistory(
+        txnid, acctnum, txndetail, withdrawamount, depositamount, balance,txndate)
+        VALUES ('972ac4ca-812c-4de4-b223-935a78641831',1000000074,'withdraw',1000,0,0,'Tue Feb 07 2023 17:00:54 GMT+0530 (India Standard Time)');
+[2023-02-07T17:00:55.038] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccounttxnhistory(
+        txnid, acctnum, txndetail, withdrawamount, depositamount, balance,txndate)
+        VALUES ('972ac4ca-812c-4de4-b223-935a78641831',1000000074,'withdraw',1000,0,0,'Tue Feb 07 2023 17:00:54 GMT+0530 (India Standard Time)');}
+[2023-02-07T17:00:55.038] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:00:55.039] [INFO] default -  updated  TXN History 
+[2023-02-07T17:00:55.302] [INFO] default - Get the data for Querry:UPDATE public.savingaccountdetail
+	  SET balance=0
+	  WHERE acctnum='1000000074';}
+[2023-02-07T17:00:55.303] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:00:55.303] [INFO] default -  updated  balance in Db 
+[2023-02-07T17:00:55.572] [INFO] default - the data is save [object Object]
+[2023-02-07T17:00:55.573] [INFO] default - get the data form Repo  of Withdraw  [object Object] 
+[2023-02-07T17:00:55.573] [INFO] default - get data in the withdraw undefined
+[2023-02-07T17:00:55.573] [INFO] default - get data in the Deposite {"value":{"txnid":"972ac4ca-812c-4de4-b223-935a78641831","acctnum":1000000074,"txndetail":"withdraw","withdrawamount":1000,"balance":0}}
+[2023-02-07T17:01:35.608] [INFO] default - Get the data for Querry:select  public.savingaccountdetail.balance, 
+    public.customerdetail.firstname,public.customerdetail.lastname,public.customerdetail.address1,
+    public.customerdetail.emailid,public.customerdetail.phone,public.customerdetail.mobile,
+    public.customerdetail.dob,public.customerdetail.maritalstatus,public.customerdetail.zipcode,
+    public.customerdetail.city,public.customerdetail.state,public.customerdetail.country,public.customeraccounts.status,
+    public.customeraccounts.acctnum
+   from public.customerdetail
+       join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
+       join public.savingaccountdetail on savingaccountdetail.acctnum = customeraccounts.acctnum
+       where customerdetail.cust_id=467  }
+[2023-02-07T17:01:35.609] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:01:35.610] [INFO] default - get the data from database== [
+  {
+    balance: '0',
+    firstname: 'adarsh Shivamurti',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: 'active',
+    acctnum: '1000000055'
+  }
+]
+[2023-02-07T17:01:35.611] [INFO] default - get the data form Repo  of getBalanceAndLoanAmountByFilter [object Object] 
+[2023-02-07T17:01:35.612] [INFO] default - controller {
+  value: [
+    {
+      balance: '0',
+      firstname: 'adarsh Shivamurti',
+      lastname: 'goga',
+      address1: 'Hyderabad',
+      emailid: 'Hari@gmail.com',
+      phone: '987564554',
+      mobile: '985746663',
+      dob: '22/03/2000',
+      maritalstatus: 'Single',
+      zipcode: '530068',
+      city: 'Bengalore',
+      state: 'Karnataka',
+      country: 'India',
+      status: 'active',
+      acctnum: '1000000055'
+    }
+  ]
+}
+[2023-02-07T17:02:02.927] [INFO] default - the getCustInfoQuerry  select public.customerdetail.cust_id ,
+     public.customerdetail.firstname,
+    public.customerdetail.lastname,
+   public.customerdetail.address1,
+    public.customerdetail.address2,
+    public.customerdetail.emailid,
+    public.customerdetail.phone,
+    public.customerdetail.mobile,
+    public.customerdetail.dob,
+    public.customerdetail.maritalstatus,
+    public.customerdetail.zipcode,
+  public.customerdetail.city,
+    public.customerdetail.state,
+    public.customerdetail.country,
+    public.accounttype.accounttype,
+    public.accounttype.accsubtype,
+    public.customeraccounts.acctnum,
+    public.customeraccounts.status
+    from public.customerdetail
+    Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
+    join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer
+[2023-02-07T17:02:03.713] [INFO] default - Get the data for Querry:select public.customerdetail.cust_id ,
+     public.customerdetail.firstname,
+    public.customerdetail.lastname,
+   public.customerdetail.address1,
+    public.customerdetail.address2,
+    public.customerdetail.emailid,
+    public.customerdetail.phone,
+    public.customerdetail.mobile,
+    public.customerdetail.dob,
+    public.customerdetail.maritalstatus,
+    public.customerdetail.zipcode,
+  public.customerdetail.city,
+    public.customerdetail.state,
+    public.customerdetail.country,
+    public.accounttype.accounttype,
+    public.accounttype.accsubtype,
+    public.customeraccounts.acctnum,
+    public.customeraccounts.status
+    from public.customerdetail
+    Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
+    join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer}
+[2023-02-07T17:02:03.715] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:02:03.716] [INFO] default - get the data from database=== [
+  {
+    cust_id: 368,
+    firstname: 'Anusha',
+    lastname: 'sdf',
+    address1: 'wer',
+    address2: 'ser',
+    emailid: 'ram@gmail.com',
+    phone: '231',
+    mobile: '342',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '123',
+    city: 'sfd',
+    state: 'sdf',
+    country: 'dfds',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000032',
+    status: 'active'
+  },
+  {
+    cust_id: 457,
+    firstname: 'sagar',
+    lastname: 'sfdkj',
+    address1: 'wer',
+    address2: 'etrqw',
+    emailid: 'ram@gmail.com',
+    phone: '7975031342',
+    mobile: '23525',
+    dob: '10-7-1998',
+    maritalstatus: 'Single',
+    zipcode: '1245',
+    city: 'sdf',
+    state: 'ka',
+    country: 'fsf',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000048',
+    status: 'active'
+  },
+  {
+    cust_id: 460,
+    firstname: 'adarsh tiwari 1',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000051',
+    status: 'active'
+  },
+  {
+    cust_id: 460,
+    firstname: 'adarsh tiwari 1',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000052',
+    status: 'active'
+  },
+  {
+    cust_id: 465,
+    firstname: 'adarsh tiwari 2',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000053',
+    status: 'active'
+  },
+  {
+    cust_id: 466,
+    firstname: 'adarsh tiwari 3',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000054',
+    status: 'active'
+  },
+  {
+    cust_id: 467,
+    firstname: 'adarsh Shivamurti',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000055',
+    status: 'active'
+  },
+  {
+    cust_id: 212,
+    firstname: 'maadhu',
+    lastname: 'gogago',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000001',
+    status: 'InActive'
+  },
+  {
+    cust_id: 469,
+    firstname: 'sagar',
+    lastname: 'sdfjk',
+    address1: 'sadsa',
+    address2: 'asdd',
+    emailid: 'ram@gmail.com',
+    phone: '213',
+    mobile: '213',
+    dob: 'undefined',
+    maritalstatus: 'Single',
+    zipcode: '1233',
+    city: 'dsf',
+    state: 'sda',
+    country: 'sd',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000057',
+    status: 'active'
+  },
+  {
+    cust_id: 480,
+    firstname: 'Naveen',
+    lastname: 'sdfa',
+    address1: 'sdf',
+    address2: 'sdff',
+    emailid: 'ram@gmail.com',
+    phone: '1234',
+    mobile: '2344',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '12344',
+    city: 'sdf',
+    state: 'dfs',
+    country: 'sfa',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000061',
+    status: 'active'
+  },
+  {
+    cust_id: 213,
+    firstname: 'Pramod',
+    lastname: 'Mahajan',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    acctnum: '1000000034',
+    status: 'InActive'
+  },
+  {
+    cust_id: 213,
+    firstname: 'Pramod',
+    lastname: 'Mahajan',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'loan',
+    accsubtype: 'car',
+    acctnum: '1000000035',
+    status: 'InActive'
+  },
+  {
+    cust_id: 214,
+    firstname: 'Anand',
+    lastname: 'Kumar',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000067',
+    status: 'active'
+  },
+  {
+    cust_id: 214,
+    firstname: 'Anand',
+    lastname: 'Kumar',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000068',
+    status: 'active'
+  },
+  {
+    cust_id: 214,
+    firstname: 'Anand',
+    lastname: 'Kumar',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000069',
+    status: 'active'
+  },
+  {
+    cust_id: 215,
+    firstname: 'saravana',
+    lastname: 'raja',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000070',
+    status: 'active'
+  },
+  {
+    cust_id: 215,
+    firstname: 'saravana',
+    lastname: 'raja',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000071',
+    status: 'active'
+  },
+  {
+    cust_id: 216,
+    firstname: 'Trevisani',
+    lastname: 'Hargrave',
+    address1: 'Germany',
+    address2: 'France',
+    emailid: 'trtwwf@gmail.com',
+    phone: '983647442',
+    mobile: '984477373',
+    dob: '10/12/97',
+    maritalstatus: 'single',
+    zipcode: '586355',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000072',
+    status: 'active'
+  },
+  {
+    cust_id: 217,
+    firstname: 'OBrien',
+    lastname: 'Hill',
+    address1: 'Germany',
+    address2: 'Spain',
+    emailid: 'gdyruend@gmail.com',
+    phone: '947587746',
+    mobile: '93847747',
+    dob: '19/10/1993',
+    maritalstatus: 'married',
+    zipcode: '468387',
+    city: 'tumkur',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000073',
+    status: 'active'
+  },
+  {
+    cust_id: 218,
+    firstname: 'Trevisani',
+    lastname: 'Hargrave',
+    address1: 'Germany',
+    address2: 'France',
+    emailid: 'trtwwf@gmail.com',
+    phone: '983647442',
+    mobile: '984477373',
+    dob: '10/12/97',
+    maritalstatus: 'single',
+    zipcode: '586355',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000074',
+    status: 'active'
+  },
+  {
+    cust_id: 219,
+    firstname: 'OBrien',
+    lastname: 'Hill',
+    address1: 'Germany',
+    address2: 'Spain',
+    emailid: 'gdyruend@gmail.com',
+    phone: '947587746',
+    mobile: '93847747',
+    dob: '19/10/1993',
+    maritalstatus: 'married',
+    zipcode: '468387',
+    city: 'tumkur',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000075',
+    status: 'active'
+  },
+  {
+    cust_id: 220,
+    firstname: 'Trevisani',
+    lastname: 'Hargrave',
+    address1: 'Germany',
+    address2: 'France',
+    emailid: 'trtwwf@gmail.com',
+    phone: '983647442',
+    mobile: '984477373',
+    dob: '10/12/97',
+    maritalstatus: 'single',
+    zipcode: '586355',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000076',
+    status: 'active'
+  },
+  {
+    cust_id: 221,
+    firstname: 'OBrien',
+    lastname: 'Hill',
+    address1: 'Germany',
+    address2: 'Spain',
+    emailid: 'gdyruend@gmail.com',
+    phone: '947587746',
+    mobile: '93847747',
+    dob: '19/10/1993',
+    maritalstatus: 'married',
+    zipcode: '468387',
+    city: 'tumkur',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000077',
+    status: 'active'
+  },
+  {
+    cust_id: 222,
+    firstname: 'Trevisani',
+    lastname: 'Hargrave',
+    address1: 'Germany',
+    address2: 'France',
+    emailid: 'trtwwf@gmail.com',
+    phone: '983647442',
+    mobile: '984477373',
+    dob: '10/12/97',
+    maritalstatus: 'single',
+    zipcode: '586355',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000078',
+    status: 'active'
+  },
+  {
+    cust_id: 222,
+    firstname: 'Trevisani',
+    lastname: 'Hargrave',
+    address1: 'Germany',
+    address2: 'France',
+    emailid: 'trtwwf@gmail.com',
+    phone: '983647442',
+    mobile: '984477373',
+    dob: '10/12/97',
+    maritalstatus: 'single',
+    zipcode: '586355',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000079',
+    status: 'active'
+  },
+  {
+    cust_id: 223,
+    firstname: 'OBrien',
+    lastname: 'Hill',
+    address1: 'Germany',
+    address2: 'Spain',
+    emailid: 'gdyruend@gmail.com',
+    phone: '947587746',
+    mobile: '93847747',
+    dob: '19/10/1993',
+    maritalstatus: 'married',
+    zipcode: '468387',
+    city: 'tumkur',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000080',
+    status: 'active'
+  },
+  {
+    cust_id: 223,
+    firstname: 'OBrien',
+    lastname: 'Hill',
+    address1: 'Germany',
+    address2: 'Spain',
+    emailid: 'gdyruend@gmail.com',
+    phone: '947587746',
+    mobile: '93847747',
+    dob: '19/10/1993',
+    maritalstatus: 'married',
+    zipcode: '468387',
+    city: 'tumkur',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000081',
+    status: 'active'
+  },
+  {
+    cust_id: 225,
+    firstname: 'Yoo',
+    lastname: 'Boni',
+    address1: 'France',
+    address2: 'France',
+    emailid: 'syeesffw@gmail.com',
+    phone: '748747833',
+    mobile: '984654222',
+    dob: '20/02/2003',
+    maritalstatus: 'married',
+    zipcode: '746353',
+    city: 'gulbarga',
+    state: 'karnataka',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000082',
+    status: 'active'
+  },
+  {
+    cust_id: 526,
+    firstname: 'adarsh tiwari 5',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000083',
+    status: 'active'
+  },
+  {
+    cust_id: 526,
+    firstname: 'adarsh tiwari 5',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000084',
+    status: 'active'
+  },
+  {
+    cust_id: 528,
+    firstname: 'adarsh tiwari 67',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000085',
+    status: 'active'
+  },
+  {
+    cust_id: 528,
+    firstname: 'adarsh tiwari 67',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000086',
+    status: 'active'
+  },
+  {
+    cust_id: 530,
+    firstname: 'adarsh tiwari 68',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000087',
+    status: 'active'
+  },
+  {
+    cust_id: 531,
+    firstname: 'adarsh tiwari 69',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000088',
+    status: 'active'
+  },
+  {
+    cust_id: 532,
+    firstname: 'adarsh tiwari 70',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000091',
+    status: 'active'
+  },
+  {
+    cust_id: 533,
+    firstname: 'adarsh tiwari 8',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000092',
+    status: 'active'
+  },
+  {
+    cust_id: 534,
+    firstname: 'adarsh tiwari 9',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000093',
+    status: 'active'
+  },
+  {
+    cust_id: 535,
+    firstname: 'adarsh tiwari 10',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000094',
+    status: 'active'
+  },
+  {
+    cust_id: 536,
+    firstname: 'adarsh tiwari 11',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000095',
+    status: 'active'
+  },
+  {
+    cust_id: 537,
+    firstname: 'adarsh tiwari 12',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000096',
+    status: 'active'
+  },
+  {
+    cust_id: 537,
+    firstname: 'adarsh tiwari 12',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000097',
+    status: 'active'
+  },
+  {
+    cust_id: 539,
+    firstname: 'adarsh tiwari 13',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000098',
+    status: 'active'
+  },
+  {
+    cust_id: 540,
+    firstname: 'adarsh tiwari 14',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000099',
+    status: 'active'
+  },
+  {
+    cust_id: 541,
+    firstname: 'adarsh tiwari 15',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000100',
+    status: 'active'
+  },
+  {
+    cust_id: 541,
+    firstname: 'adarsh tiwari 15',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000101',
+    status: 'active'
+  },
+  {
+    cust_id: 543,
+    firstname: 'adarsh tiwari 16',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000102',
+    status: 'active'
+  },
+  {
+    cust_id: 585,
+    firstname: 'Sharma',
+    lastname: 'singh',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000103',
+    status: 'active'
+  },
+  {
+    cust_id: 585,
+    firstname: 'Sharma',
+    lastname: 'singh',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000104',
+    status: 'active'
+  },
+  {
+    cust_id: 585,
+    firstname: 'Sharma',
+    lastname: 'singh',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000105',
+    status: 'active'
+  },
+  {
+    cust_id: 588,
+    firstname: 'Hanumant',
+    lastname: 'Sharma',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000106',
+    status: 'active'
+  },
+  {
+    cust_id: 588,
+    firstname: 'Hanumant',
+    lastname: 'Sharma',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000107',
+    status: 'active'
+  },
+  {
+    cust_id: 590,
+    firstname: 'adarsh tiwari 34',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000108',
+    status: 'active'
+  },
+  {
+    cust_id: 591,
+    firstname: 'adarsh tiwari 35',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000109',
+    status: 'active'
+  },
+  {
+    cust_id: 592,
+    firstname: 'Nihan',
+    lastname: 'Tonpe',
+    address1: 'Bengalore',
+    address2: 'HSR Layout',
+    emailid: 'Nihan@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000110',
+    status: 'active'
+  },
+  {
+    cust_id: 593,
+    firstname: 'adarsh tiwari 36',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000111',
+    status: 'active'
+  },
+  {
+    cust_id: 594,
+    firstname: 'adarsh tiwari 37',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000112',
+    status: 'active'
+  },
+  {
+    cust_id: 595,
+    firstname: 'adarsh tiwari 38',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000113',
+    status: 'active'
+  },
+  {
+    cust_id: 596,
+    firstname: 'adarsh tiwari 39',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000114',
+    status: 'active'
+  },
+  {
+    cust_id: 597,
+    firstname: 'adarsh tiwari 40',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000115',
+    status: 'active'
+  },
+  {
+    cust_id: 598,
+    firstname: 'adarsh tiwari 41',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000116',
+    status: 'active'
+  },
+  {
+    cust_id: 599,
+    firstname: 'adarsh tiwari 42',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000117',
+    status: 'active'
+  },
+  {
+    cust_id: 600,
+    firstname: 'adarsh tiwari 5',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000118',
+    status: 'active'
+  },
+  {
+    cust_id: 601,
+    firstname: 'adarsh tiwari 43',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000119',
+    status: 'active'
+  },
+  {
+    cust_id: 602,
+    firstname: 'adarsh tiwari 44',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000120',
+    status: 'active'
+  },
+  {
+    cust_id: 603,
+    firstname: 'adarsh tiwari 45',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000121',
+    status: 'active'
+  },
+  {
+    cust_id: 604,
+    firstname: 'adarsh tiwari 46',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000122',
+    status: 'active'
+  },
+  {
+    cust_id: 605,
+    firstname: 'adarsh tiwari 47',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000123',
+    status: 'active'
+  },
+  {
+    cust_id: 606,
+    firstname: 'adarsh tiwari 48',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000124',
+    status: 'active'
+  },
+  {
+    cust_id: 607,
+    firstname: 'adarsh tiwari 49',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000125',
+    status: 'active'
+  },
+  {
+    cust_id: 608,
+    firstname: 'adarsh tiwari 50',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000126',
+    status: 'active'
+  },
+  {
+    cust_id: 609,
+    firstname: 'adarsh tiwari 51',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000127',
+    status: 'active'
+  },
+  {
+    cust_id: 610,
+    firstname: 'adarsh tiwari 52',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000128',
+    status: 'active'
+  },
+  {
+    cust_id: 213,
+    firstname: 'Pramod',
+    lastname: 'Mahajan',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000065',
+    status: 'InActive'
+  },
+  {
+    cust_id: 213,
+    firstname: 'Pramod',
+    lastname: 'Mahajan',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'Nitish@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000066',
+    status: 'InActive'
+  },
+  {
+    cust_id: 611,
+    firstname: 'adarsh tiwari 53',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000129',
+    status: 'active'
+  },
+  {
+    cust_id: 612,
+    firstname: 'adarsh tiwari 54',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000130',
+    status: 'active'
+  },
+  {
+    cust_id: 615,
+    firstname: 'adarsh tiwari 56',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000133',
+    status: 'active'
+  },
+  {
+    cust_id: 616,
+    firstname: 'adarsh tiwari 57',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000134',
+    status: 'active'
+  },
+  {
+    cust_id: 617,
+    firstname: 'adarsh tiwari 58',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000135',
+    status: 'active'
+  },
+  {
+    cust_id: 618,
+    firstname: 'adarsh tiwari 59',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000136',
+    status: 'active'
+  },
+  {
+    cust_id: 619,
+    firstname: 'adarsh tiwari 60',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000137',
+    status: 'active'
+  },
+  {
+    cust_id: 620,
+    firstname: 'adarsh tiwari 61',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000138',
+    status: 'active'
+  },
+  {
+    cust_id: 621,
+    firstname: 'adarsh tiwari 62',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000139',
+    status: 'active'
+  },
+  {
+    cust_id: 622,
+    firstname: 'adarsh tiwari 63',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000140',
+    status: 'active'
+  },
+  {
+    cust_id: 623,
+    firstname: 'adarsh tiwari 64',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000141',
+    status: 'active'
+  },
+  {
+    cust_id: 624,
+    firstname: 'khushbu',
+    lastname: 'singh',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000142',
+    status: 'active'
+  },
+  {
+    cust_id: 625,
+    firstname: 'adarsh tiwari 65',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000143',
+    status: 'active'
+  },
+  {
+    cust_id: 528,
+    firstname: 'adarsh tiwari 67',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000144',
+    status: 'active'
+  },
+  {
+    cust_id: 530,
+    firstname: 'adarsh tiwari 68',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000145',
+    status: 'active'
+  },
+  {
+    cust_id: 532,
+    firstname: 'adarsh tiwari 70',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000146',
+    status: 'active'
+  },
+  {
+    cust_id: 630,
+    firstname: 'adarsh tiwari 100',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000147',
+    status: 'active'
+  },
+  {
+    cust_id: 631,
+    firstname: 'adarsh tiwari 101',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000148',
+    status: 'active'
+  },
+  {
+    cust_id: 632,
+    firstname: 'adarsh tiwari 102',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000149',
+    status: 'active'
+  },
+  {
+    cust_id: 633,
+    firstname: 'adarsh tiwari 103',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000150',
+    status: 'active'
+  },
+  {
+    cust_id: 634,
+    firstname: 'adarsh tiwari 104',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000151',
+    status: 'active'
+  },
+  {
+    cust_id: 635,
+    firstname: 'adarsh tiwari 105',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000152',
+    status: 'active'
+  },
+  {
+    cust_id: 636,
+    firstname: 'adarsh tiwari 106',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000153',
+    status: 'active'
+  },
+  {
+    cust_id: 637,
+    firstname: 'adarsh tiwari 107',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000155',
+    status: 'active'
+  },
+  {
+    cust_id: 638,
+    firstname: 'adarsh tiwari 108',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'Hari@gmail.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000156',
+    status: 'active'
+  },
+  {
+    cust_id: 227,
+    firstname: 'Tsao',
+    lastname: 'Chu',
+    address1: 'Spain',
+    address2: 'Spain',
+    emailid: 'kslldue@gmail.com',
+    phone: '846648393',
+    mobile: '9487463344',
+    dob: '18/02/2001',
+    maritalstatus: 'married',
+    zipcode: '384766',
+    city: 'solapur',
+    state: 'maharashtra',
+    country: 'india',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    acctnum: '1000000157',
+    status: 'active'
+  },
+  ... 298 more items
+]
+[2023-02-07T17:02:03.899] [INFO] default - get the data form Repo  of Customertxn [object Object] 
+[2023-02-07T17:02:44.752] [INFO] default - final extract querry is  select public.customerdetail.cust_id ,
+    public.customerdetail.firstname,
+    public.customerdetail.lastname,
+    public.customerdetail.address1,
+    public.customerdetail.address2,
+    public.customerdetail.emailid,
+    public.customerdetail.phone,
+    public.customerdetail.mobile,
+    public.customerdetail.dob,
+    public.customerdetail.maritalstatus,
+    public.customerdetail.zipcode,
+    public.customerdetail.city,
+    public.customerdetail.state,
+    public.customerdetail.country,
+    public.accounttype.accounttype,
+    public.accounttype.accsubtype,
+    public.customeraccounts.status,
+    public.customeraccounts.acctnum,
+    
+    public.savingaccountdetail.balance as savingbalance
+    from public.customerdetail Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
+    join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer
+    join public.savingaccountdetail on savingaccountdetail.acctnum=customeraccounts."acctnum"
+   where customerdetail.cust_id=368      
+[2023-02-07T17:02:45.012] [INFO] default - Get the data for Querry:select public.customerdetail.cust_id ,
+    public.customerdetail.firstname,
+    public.customerdetail.lastname,
+    public.customerdetail.address1,
+    public.customerdetail.address2,
+    public.customerdetail.emailid,
+    public.customerdetail.phone,
+    public.customerdetail.mobile,
+    public.customerdetail.dob,
+    public.customerdetail.maritalstatus,
+    public.customerdetail.zipcode,
+    public.customerdetail.city,
+    public.customerdetail.state,
+    public.customerdetail.country,
+    public.accounttype.accounttype,
+    public.accounttype.accsubtype,
+    public.customeraccounts.status,
+    public.customeraccounts.acctnum,
+    
+    public.savingaccountdetail.balance as savingbalance
+    from public.customerdetail Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
+    join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer
+    join public.savingaccountdetail on savingaccountdetail.acctnum=customeraccounts."acctnum"
+   where customerdetail.cust_id=368      }
+[2023-02-07T17:02:45.016] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:02:45.017] [INFO] default - get the data from database== [
+  {
+    cust_id: 368,
+    firstname: 'Anusha',
+    lastname: 'sdf',
+    address1: 'wer',
+    address2: 'ser',
+    emailid: 'ram@gmail.com',
+    phone: '231',
+    mobile: '342',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '123',
+    city: 'sfd',
+    state: 'sdf',
+    country: 'dfds',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    status: 'active',
+    acctnum: '1000000032',
+    savingbalance: '100'
+  }
+]
+[2023-02-07T17:02:45.019] [INFO] default - get the data form Repo  of CustomerTxnHistoryByFilter [object Object] 
+[2023-02-07T17:02:45.020] [INFO] default - controller {
+  value: [
+    {
+      cust_id: 368,
+      firstname: 'Anusha',
+      lastname: 'sdf',
+      address1: 'wer',
+      address2: 'ser',
+      emailid: 'ram@gmail.com',
+      phone: '231',
+      mobile: '342',
+      dob: 'undefined',
+      maritalstatus: 'Married',
+      zipcode: '123',
+      city: 'sfd',
+      state: 'sdf',
+      country: 'dfds',
+      accounttype: 'saving',
+      accsubtype: 'student',
+      status: 'active',
+      acctnum: '1000000032',
+      savingbalance: '100'
+    }
+  ]
+}
+[2023-02-07T17:03:12.797] [INFO] default - the customertxnquerry  select public.customerdetail.cust_id ,
+    public.customerdetail.firstname,
+       public.customerdetail.lastname,
+       public.customerdetail.address1,
+       public.customerdetail.address2,
+       public.customerdetail.emailid,
+       public.customerdetail.phone,
+       public.customerdetail.mobile,
+       public.customerdetail.dob,
+       public.customerdetail.maritalstatus,
+       public.customerdetail.zipcode,
+       public.customerdetail.city,
+       public.customerdetail.state,
+       public.customerdetail.country,
+           public.accounttype.accounttype,
+           public.accounttype.accsubtype,
+           public.customeraccounts.acctnum,
+           public.customeraccounts.status
+              from public.customerdetail
+              Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
+              join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer 
+              where customerdetail.firstname like 'Anusha%'
+[2023-02-07T17:03:13.068] [INFO] default - Get the data for Querry:select public.customerdetail.cust_id ,
+    public.customerdetail.firstname,
+       public.customerdetail.lastname,
+       public.customerdetail.address1,
+       public.customerdetail.address2,
+       public.customerdetail.emailid,
+       public.customerdetail.phone,
+       public.customerdetail.mobile,
+       public.customerdetail.dob,
+       public.customerdetail.maritalstatus,
+       public.customerdetail.zipcode,
+       public.customerdetail.city,
+       public.customerdetail.state,
+       public.customerdetail.country,
+           public.accounttype.accounttype,
+           public.accounttype.accsubtype,
+           public.customeraccounts.acctnum,
+           public.customeraccounts.status
+              from public.customerdetail
+              Join public.customeraccounts on customerdetail.cust_id=customeraccounts.cust_id
+              join public.accounttype on accounttype."accounttypeID"=(customeraccounts.accounttypeid)::integer 
+              where customerdetail.firstname like 'Anusha%'}
+[2023-02-07T17:03:13.070] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:03:13.070] [INFO] default - get the data form Repo  of getcCustomerTxnByCustIdServiceData [object Object] 
+[2023-02-07T17:03:13.070] [INFO] default - controller {
+  statusvalue: true,
+  value: [
+    {
+      cust_id: 368,
+      firstname: 'Anusha',
+      lastname: 'sdf',
+      address1: 'wer',
+      address2: 'ser',
+      emailid: 'ram@gmail.com',
+      phone: '231',
+      mobile: '342',
+      dob: 'undefined',
+      maritalstatus: 'Married',
+      zipcode: '123',
+      city: 'sfd',
+      state: 'sdf',
+      country: 'dfds',
+      accounttype: 'saving',
+      accsubtype: 'student',
+      acctnum: '1000000032',
+      status: 'active'
+    },
+    {
+      cust_id: 674,
+      firstname: 'Anusha',
+      lastname: 'K',
+      address1: 'abc',
+      address2: 'xyz',
+      emailid: 'sagar@jktech.com',
+      phone: '9876543210',
+      mobile: '8765432109',
+      dob: 'undefined',
+      maritalstatus: 'Single',
+      zipcode: '585103',
+      city: 'GLB',
+      state: 'Ka',
+      country: 'IND',
+      accounttype: 'saving',
+      accsubtype: 'student',
+      acctnum: '1000000178',
+      status: 'active'
+    },
+    {
+      cust_id: 916,
+      firstname: 'Anusha',
+      lastname: 'K',
+      address1: 'abc',
+      address2: 'xyz',
+      emailid: 'xyz@gmail.com',
+      phone: '123456',
+      mobile: '6543',
+      dob: 'undefined',
+      maritalstatus: 'Single',
+      zipcode: '585101',
+      city: 'GLB',
+      state: 'Ka',
+      country: 'IND',
+      accounttype: 'saving',
+      accsubtype: 'student',
+      acctnum: '1000000391',
+      status: 'active'
+    }
+  ]
+}
+[2023-02-07T17:03:32.038] [INFO] default - Get the data for Querry:select  public.savingaccountdetail.acctnum, public.savingaccountdetail.balance,
+    public.savingaccountdetail.transfer_limit,  public.savingaccountdetail.branch_code,  public.savingaccountdetail.status,   
+    public.accounttype.accounttype, public.accounttype.accsubtype,
+    public.customerdetail.firstname,public.customerdetail.lastname,public.customerdetail.address1,
+    public.customerdetail.emailid,public.customerdetail.phone,public.customerdetail.mobile,
+    public.customerdetail.dob,public.customerdetail.maritalstatus,public.customerdetail.zipcode,
+    public.customerdetail.city,public.customerdetail.state,public.customerdetail.country,public.customeraccounts.status,
+    public.customeraccounts.acctnum
+   from public.customerdetail
+       join public.customeraccounts on customeraccounts.cust_id = customerdetail.cust_id
+       join public.savingaccountdetail on savingaccountdetail.acctnum = customeraccounts.acctnum
+       join public.accounttype on accounttype."accounttypeID"=customeraccounts.accounttypeId
+       where accounttypeID=1 AND  customerdetail.cust_id=368  }
+[2023-02-07T17:03:32.040] [INFO] default - the Data got :[object Object]}
+[2023-02-07T17:03:32.040] [INFO] default - get the data from database== [
+  {
+    acctnum: '1000000032',
+    balance: '100',
+    transfer_limit: '543',
+    branch_code: 'sd',
+    status: 'active',
+    accounttype: 'saving',
+    accsubtype: 'student',
+    firstname: 'Anusha',
+    lastname: 'sdf',
+    address1: 'wer',
+    emailid: 'ram@gmail.com',
+    phone: '231',
+    mobile: '342',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '123',
+    city: 'sfd',
+    state: 'sdf',
+    country: 'dfds'
+  }
+]
+[2023-02-07T17:03:32.043] [INFO] default - get the data form Repo  of getSavingDataFilter [object Object] 
+[2023-02-07T17:03:32.043] [INFO] default - controller {
+  value: [
+    {
+      acctnum: '1000000032',
+      balance: '100',
+      transfer_limit: '543',
+      branch_code: 'sd',
+      status: 'active',
+      accounttype: 'saving',
+      accsubtype: 'student',
+      firstname: 'Anusha',
+      lastname: 'sdf',
+      address1: 'wer',
+      emailid: 'ram@gmail.com',
+      phone: '231',
+      mobile: '342',
+      dob: 'undefined',
+      maritalstatus: 'Married',
+      zipcode: '123',
+      city: 'sfd',
+      state: 'sdf',
+      country: 'dfds'
+    }
+  ],
+  statusvalue: true
+}

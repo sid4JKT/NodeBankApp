@@ -158,8 +158,8 @@ exports.insert_Document_Customer = async (data) => {
 exports.insertDocCustomerData = async (data) => {
   const client = await DB.dbConnection();
   try {
-    let doc_id = data.doc_id;
-    let cust_id = data.cust_id;
+    let doc_id = data.Documents.doc_id;
+    let cust_id = data.customerdetail.cust_id;
     let ref_id = data.ref_id;
     let sqlQuerry = `SELECT  "Docid",cust_id
 	FROM public.document_customer_master where "Docid" = '${doc_id}' and cust_id = '${cust_id}'`;

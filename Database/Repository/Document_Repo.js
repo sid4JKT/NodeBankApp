@@ -25,14 +25,13 @@ exports.getDocument = async () => {
   }
 };
 //document_repo
-exports.getdocumentbyId = async (data, client) => {
-  // console.log(data)
-  // const client = await DB.dbConnection();
+exports.getdocumentbyId = async (data,client) => { 
+ 
+  
   try {
     let getDocumentbyidquery;
     if (data != "") {
-      // console.log(`select * from document_master where doc_id = '${data}' `);
-      getDocumentbyidquery = `select * from document_master where doc_id = '${data}'`;
+      getDocumentbyidquery = `select * from document_master where doc_id = '${data}'`;      
     } else {
       throw (err = "Fill Id");
     }

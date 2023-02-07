@@ -13,7 +13,7 @@ exports.dbConnection = async () => {
       connectionString: conString,
       max: 10,
       idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 2000,
+      connectionTimeoutMillis: 20000,
     });
      client = pool.connect();
     return client;
