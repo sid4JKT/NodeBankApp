@@ -268,3 +268,175 @@ exports.getDetailIdbydesc = async (val, client) => {
 //     client.release();
 //   }
 // };
+
+exports.getDocumentMasterbyRapidfilter = async (filterData) => {
+  const client = await DB.dbConnection();
+  try {
+    let req = {};
+    for (const key in filterData) {
+      if (filterData[key] != "") {
+        console.log("key", filterData[key]);
+        req[key] = filterData[key];
+      }
+    }
+    let getDocumentinfoquery = `select * from document_master where `;
+
+    let v = 0;
+    let finaldata = "";
+    for (const key in req) {
+      let appenddata = "";
+      console.log("the key=", key);
+      if (key == "doc_date") {
+        appenddata = appenddata + `"${key}"`;
+        appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
+        v++;
+      } else if (key == "doc_id") {
+        appenddata = appenddata + `"${key}"`;
+        appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
+        v++;
+      } else if(key == "doc_name") {
+        appenddata = appenddata + `"${key}"`;
+        appenddata = appenddata + " ILIKE" + " " + `'${req[key]}%'` + "";
+        v++;
+      }
+
+      logger.info("Document_Repo -> getDocumentMasterbyRapidfilter -> appenddata Value : " + appenddata)
+
+      if (Object.keys(req).length != v) {
+        finaldata = finaldata + appenddata + " AND ";
+        //    console.log(appenddata,Object.keys(req).length,v)
+      } else {
+        finaldata = finaldata + appenddata + "  ";
+      }
+    }
+    logger.info("Document_Repo -> getDocumentMasterbyRapidfilter -> final extract querry is ", getDocumentinfoquery + finaldata);
+
+    let finalextractquerry = getDocumentinfoquery + finaldata;
+    let getDocInfoData = await DB.ExtractQuerry(client, finalextractquerry);
+    let getDocInfoFinalData = {};
+    if (getDocInfoData.rows.length > 0) {
+      getDocInfoFinalData.value = getDocInfoData.rows;
+    } else {
+      throw new Error("no data found");
+    }
+    getDocInfoFinalData.statusvalue = true;
+
+    logger.info("get the data from database=", getDocInfoFinalData.value);
+    return getDocInfoFinalData;
+  } catch (err) {
+    logger.error("error in the getDocumentMasterbyfilter ", err);
+    throw err;
+  } finally {
+    client.release();
+  }
+};
+
+exports.getDocumentCustomerMasterbyfilter = async (filterData) => {
+  const client = await DB.dbConnection();
+  try {
+    let req = {};
+    for (const key in filterData) {
+      if (filterData[key] != "") {
+        console.log("key", filterData[key]);
+        req[key] = filterData[key];
+      }
+    }
+    let getDocumentinfoquery = `select * from public."document_cutomer_master _table" where `;
+
+    let v = 0;
+    let finaldata = "";
+    for (const key in req) {
+      let appenddata = "";
+      console.log("the key=", key);
+      if (key == "cust_id" || key == "Docname") {
+        appenddata = appenddata + `"${key}"`;
+        appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
+        v++;
+      }
+
+      logger.info("Document_Repo -> getDocumentCustomerMasterbyfilter -> appenddata Value : " + appenddata)
+
+      if (Object.keys(req).length != v) {
+        finaldata = finaldata + appenddata + " AND ";
+      } else {
+        finaldata = finaldata + appenddata + "  ";
+      }
+    }
+    logger.info("Document_Repo -> getDocumentCustomerMasterbyfilter -> final extract querry is ", getDocumentinfoquery + finaldata);
+
+    let finalextractquerry = getDocumentinfoquery + finaldata;
+    let getDocInfoData = await DB.ExtractQuerry(client, finalextractquerry);
+    let getDocInfoFinalData = {};
+    if (getDocInfoData.rows.length > 0) {
+      getDocInfoFinalData.value = getDocInfoData.rows;
+    } else {
+      throw new Error("no data found");
+    }
+    getDocInfoFinalData.statusvalue = true;
+
+    logger.info("get the data from database=", getDocInfoFinalData.value);
+    return getDocInfoFinalData;
+  } catch (err) {
+    logger.error("error in the getDocumentMasterbyfilter ", err);
+    throw err;
+  } finally {
+    client.release();
+  }
+};
+
+exports.getDocumentCustomerMasterbyRapidfilter = async (filterData) => {
+  const client = await DB.dbConnection();
+  try {
+    let req = {};
+    for (const key in filterData) {
+      if (filterData[key] != "") {
+        console.log("key", filterData[key]);
+        req[key] = filterData[key];
+      }
+    }
+    let getDocumentinfoquery = `select * from public."document_cutomer_master _table" where `;
+
+    let v = 0;
+    let finaldata = "";
+    for (const key in req) {
+      let appenddata = "";
+      console.log("the key=", key);
+      if (key == "cust_id") {
+        appenddata = appenddata + `"${key}"`;
+        appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
+        v++;
+      } else if(key == "Docname") {
+        appenddata = appenddata + `"${key}"`;
+        appenddata = appenddata + " ILIKE" + " " + `'${req[key]}%'` + "";
+        v++;
+      }
+
+      logger.info("Document_Repo -> getDocumentCustomerMasterbyRapidfilter -> appenddata Value : " + appenddata)
+
+      if (Object.keys(req).length != v) {
+        finaldata = finaldata + appenddata + " AND ";
+      } else {
+        finaldata = finaldata + appenddata + "  ";
+      }
+    }
+    logger.info("Document_Repo -> getDocumentCustomerMasterbyRapidfilter -> final extract querry is ", getDocumentinfoquery + finaldata);
+
+    let finalextractquerry = getDocumentinfoquery + finaldata;
+    let getDocInfoData = await DB.ExtractQuerry(client, finalextractquerry);
+    let getDocInfoFinalData = {};
+    if (getDocInfoData.rows.length > 0) {
+      getDocInfoFinalData.value = getDocInfoData.rows;
+    } else {
+      throw new Error("no data found");
+    }
+    getDocInfoFinalData.statusvalue = true;
+
+    logger.info("get the data from database=", getDocInfoFinalData.value);
+    return getDocInfoFinalData;
+  } catch (err) {
+    logger.error("error in the getDocumentMasterbyfilter ", err);
+    throw err;
+  } finally {
+    client.release();
+  }
+};

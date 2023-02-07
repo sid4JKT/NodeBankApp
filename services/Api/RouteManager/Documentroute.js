@@ -23,4 +23,8 @@ const Router= express.Router();
   Router.post('/createdocument',Communication.InsertIntoDocument)
   Router.get('/document',documentcontroller.getalldocuments)
 
+  Router.post('/docRapidfilter',documentcontroller.getDocumentMasterbyRapidfilter)
+  Router.post('/docCustfilter',documentcontroller.getDocumentCustomerMasterbyfilter)
+  Router.post('/docCustRapidfilter',documentcontroller.getDocumentCustomerMasterbyRapidfilter)
+
 module.exports = Router;

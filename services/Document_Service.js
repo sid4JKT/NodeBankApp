@@ -74,3 +74,44 @@ exports.Delete_Document_Master_Document = async (data) => {
     throw err;
   }
 };
+exports.getDocumentMasterbyRapidfilter = async (data) => {
+  try{
+  logger.info("Document_Service -> getDocumentMasterbyRapidfilter -> Input Data : " + JSON.stringify(data));
+  const getdata = await repodocument.getDocumentMasterbyRapidfilter(data);
+  logger.info("Document_Service -> getDocumentMasterbyRapidfilter -> Output Data : " + JSON.stringify(getdata));
+  return getdata;
+  }catch(err){
+    
+    logger.error(err, "in the documentservice by getDocumentMasterbyRapidfilter");
+    throw err;
+    
+  }
+};
+
+exports.getDocumentCustomerMasterbyfilter = async (data) => {
+  try{
+  logger.info("Document_Service -> getDocumentCustomerMasterbyfilter -> Input Data : " + JSON.stringify(data));
+  const getdata = await repodocument.getDocumentCustomerMasterbyfilter(data);
+  logger.info("Document_Service -> getDocumentCustomerMasterbyfilter -> Output Data : " + JSON.stringify(getdata));
+  return getdata;
+  }catch(err){
+    
+    logger.error(err, "in the documentservice by getDocumentCustomerMasterbyfilter");
+    throw err;
+    
+  }
+};
+
+exports.getDocumentCustomerMasterbyRapidfilter = async (data) => {
+  try{
+  logger.info("Document_Service -> getDocumentCustomerMasterbyRapidfilter -> Input Data : " + JSON.stringify(data));
+  const getdata = await repodocument.getDocumentCustomerMasterbyRapidfilter(data);
+  logger.info("Document_Service -> getDocumentCustomerMasterbyRapidfilter -> Output Data : " + JSON.stringify(getdata));
+  return getdata;
+  }catch(err){
+    
+    logger.error(err, "in the documentservice by getDocumentCustomerMasterbyRapidfilter");
+    throw err;
+    
+  }
+};
