@@ -5562,3 +5562,155 @@
   ],
   statusvalue: true
 }
+[2023-02-07T18:03:15.288] [INFO] default - controller createSavingAccountController  [object Object]
+[2023-02-07T18:03:26.509] [INFO] default - the service  {
+  custId: 227,
+  accountType: 'saving',
+  accsubtype: 'student',
+  branch_code: 'BOI_1234',
+  transfer_limit: 5000
+}
+[2023-02-07T18:03:26.511] [INFO] default - the accounttypequerry:  SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'
+[2023-02-07T18:03:26.802] [INFO] default - Get the data for Querry:SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'}
+[2023-02-07T18:03:26.804] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:26.804] [INFO] default - the accounttype:  [ { accounttypeID: '1' } ]
+[2023-02-07T18:03:27.077] [INFO] default - the customeraccountsquerry for inserting customeraccounts :  INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (227,'1','active','Tue Feb 07 2023 18:03:27 GMT+0530 (India Standard Time)')
+[2023-02-07T18:03:27.355] [INFO] default - Get the data for Querry:INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (227,'1','active','Tue Feb 07 2023 18:03:27 GMT+0530 (India Standard Time)')}
+[2023-02-07T18:03:27.356] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:27.357] [INFO] default - the data is  inserting customer accounts  
+[2023-02-07T18:03:27.357] [INFO] default - the accounttypequerry:  SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=227  and accounttypeid=1
+[2023-02-07T18:03:27.634] [INFO] default - Get the data for Querry:SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=227  and accounttypeid=1}
+[2023-02-07T18:03:27.634] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:27.635] [INFO] default - the accounttype:  1000000469
+[2023-02-07T18:03:27.635] [INFO] default - the queryString for inserting saving :  INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000469, 0,5000,'BOI_1234',
+      1,'Active','Tue Feb 07 2023 18:03:27 GMT+0530 (India Standard Time)')
+[2023-02-07T18:03:27.908] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000469, 0,5000,'BOI_1234',
+      1,'Active','Tue Feb 07 2023 18:03:27 GMT+0530 (India Standard Time)')}
+[2023-02-07T18:03:27.909] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:27.909] [INFO] default - the data is  inserting saving  
+[2023-02-07T18:03:28.186] [INFO] default - the data is  inserting saving  2= {
+  value: {
+    acctnum: '1000000469',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-07T18:03:28.188] [INFO] default - saving account created Data: {
+  value: {
+    acctnum: '1000000469',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-07T18:03:28.190] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=227
+[2023-02-07T18:03:28.466] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=227}
+[2023-02-07T18:03:28.466] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:28.467] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 227,
+    firstname: 'Tsao',
+    lastname: 'Chu',
+    address1: 'Spain',
+    address2: 'Spain',
+    emailid: 'kslldue@gmail.com',
+    phone: '846648393',
+    mobile: '9487463344',
+    dob: '18/02/2001',
+    maritalstatus: 'married',
+    zipcode: '384766',
+    city: 'solapur',
+    state: 'maharashtra',
+    country: 'india',
+    acctnum: '1000000469',
+    accounttypeid: '1',
+    id: null,
+    status: 'Active',
+    date: 'Tue Feb 07 2023 18:03:27 GMT+0530 (India Standard Time)',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234',
+    SavingacctypeId: '1'
+  }
+}
+[2023-02-07T18:03:28.740] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-07T18:03:28.741] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:29.015] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-07T18:03:29.016] [INFO] default - the Data got :[object Object]}
+[2023-02-07T18:03:29.018] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000469',
+    cust_id: 227,
+    firstname: 'Tsao',
+    lastname: 'Chu',
+    address1: 'Spain',
+    address2: 'Spain',
+    emailid: 'kslldue@gmail.com',
+    phone: '846648393',
+    mobile: '9487463344',
+    dob: '18/02/2001',
+    maritalstatus: 'married',
+    zipcode: '384766',
+    city: 'solapur',
+    state: 'maharashtra',
+    country: 'india',
+    status: '1000000469',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T18:03:29.021] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000469',
+    cust_id: 227,
+    firstname: 'Tsao',
+    lastname: 'Chu',
+    address1: 'Spain',
+    address2: 'Spain',
+    emailid: 'kslldue@gmail.com',
+    phone: '846648393',
+    mobile: '9487463344',
+    dob: '18/02/2001',
+    maritalstatus: 'married',
+    zipcode: '384766',
+    city: 'solapur',
+    state: 'maharashtra',
+    country: 'india',
+    status: '1000000469',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-07T18:03:29.082] [INFO] default - pdf savings acount
+[2023-02-07T18:03:29.099] [INFO] default - get the document data data is publish and consume

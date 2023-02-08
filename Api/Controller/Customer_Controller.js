@@ -6,6 +6,7 @@ const doc = require("../../RabbitMQ/Publisher");
 const pdfGenerate = require("../../pdf/pdfgenerate");
 //importing send_email
 const email = require("../../send_email");
+const blob = require("../../BlobUpload/AzureBlobUpload")
 
 exports.getCustomerById = async (req, res) => {
   try {
@@ -73,6 +74,8 @@ exports.addCustomer = async (req, res) => {
         //creating pdf
         let pdfData = await pdfGenerate.pdfgenernate(payload);
         logger.info("Generatepdf", pdfData);
+
+        blob.azureBlobfunction();
 
         // sending emails
         let data = payload.customerdetail.emailid;

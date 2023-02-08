@@ -2,12 +2,14 @@ require("dotenv").config();
 const { v1: uuidv1 } = require("uuid");
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { DefaultAzureCredential } = require("@azure/identity");
-
+const fs = require('fs');
+let file_content = fs.readFileSync('./ada.txt')
+console.log(file_content)
 exports.azureBlobfunction = async (req) => {
   try {
     let blobName = req.body.blobName.toLowerCase();
     let blobExtension = req.body.blobExtension.toLowerCase();
-    let file = req.files.file;
+    let file = file_content;
     console.log(file.data, "24"); //
     // async function upload (params) {
     // Create a unique name for the blob
@@ -21,8 +23,8 @@ exports.azureBlobfunction = async (req) => {
       new DefaultAzureCredential()
     );
 
-    // const containerName = 'quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700';
-    const containerName = req.containerName;
+    const containerName = 'quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700';
+   // const containerName = req.containerName;
 
     console.log("connecting container...");
     console.log("\t", containerName);
@@ -38,7 +40,7 @@ exports.azureBlobfunction = async (req) => {
 
     // Upload data to the blob
 
-    const data = file.data;
+    const data = file_content;
     const uploadBlobResponse = await blockBlobClient.upload(data, data.length);
     console.log(
       `Blob was uploaded successfully. requestId:,${uploadBlobResponse.clientRequestId}`

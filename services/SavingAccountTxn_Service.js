@@ -6,6 +6,8 @@ const doc = require("../RabbitMQ/Publisher");
 const { Client } = require("pg");
 const DB = require("../Database/dbconnection");
 const pdf = require("../pdf/savingsPdf");
+const email = require("../send_email");
+const blob = require("../BlobUpload/AzureBlobUpload");
 exports.withDrawByAccountNum = async (withdrawJson) => {
   try {
     let getData =
@@ -74,8 +76,7 @@ exports.createSavingAccountService = async (savingData) => {
     logger.info("saving account created Data:", savingAccountCreatedData);
     if (savingAccountCreatedData.statusvalue == true) {
       let custidDoc = {
-        cust_id: savingData.custId,
-        
+        cust_id: savingData.custId,        
         AccountType:savingData.accountType,
         accountnum:savingAccountCreatedData.value.acctnum,
         listCode: "newcustDoc",
@@ -95,6 +96,15 @@ exports.createSavingAccountService = async (savingData) => {
         "Saving_account_que"
       );
       logger.info("get the document data", documentData);
+
+      
+      //blob part
+      blob.azureBlobfunction("demo_blob");
+         // sending emails 
+         let data = documentData.customerdetail.emailid;
+         const Emails = await email.main(data);
+
+      
 
       return savingAccountCreatedData;
     }
