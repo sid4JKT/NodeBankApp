@@ -75,14 +75,21 @@ exports.addCustomer = async (req, res) => {
         let pdfData = await pdfGenerate.pdfgenernate(payload);
         logger.info("Generatepdf", pdfData);
 
-        blob.azureBlobfunction();
+        // blob.azureBlobfunction();
 
         // sending emails
         let data = payload.customerdetail.emailid;
         const Emails = await email.main(data);
         logger.info("get the document data", Emails);
 
-        return res.status(200).send(getData);
+        return res.status(200).json({
+          ststusCode: 200,
+          statusvalue: true,
+          statustype: "success",
+          statusmessage: "recordsaved",
+          statusseverity: "information",
+          getData
+        });
       }
     } else {
       return res.status(500).json({

@@ -1,127 +1,22 @@
-[2023-02-02T10:22:55.324] [INFO] default - from Consumer.log file with process Id 31612 
+[2023-02-08T10:54:52.270] [INFO] default - from Consumer.log file with process Id 17880 
 
-[2023-02-02T10:26:56.396] [INFO] default - from Consumer.log file with process Id 16004 
+[2023-02-08T10:57:12.598] [INFO] default - from Consumer.log file with process Id 19984 
 
-[2023-02-02T10:43:19.258] [INFO] default - from Consumer.log file with process Id 26548 
+[2023-02-08T11:01:55.572] [INFO] default - from Consumer.log file with process Id 13708 
 
-[2023-02-02T10:44:19.287] [INFO] default - from Consumer.log file with process Id 42224 
+[2023-02-08T11:03:57.986] [INFO] default - from Consumer.log file with process Id 12604 
 
-[2023-02-02T11:23:34.407] [INFO] default - from Consumer.log file with process Id 30940 
+[2023-02-08T11:04:37.024] [INFO] default - from Consumer.log file with process Id 3412 
 
-[2023-02-02T12:23:39.271] [INFO] default - from Consumer.log file with process Id 40680 
+[2023-02-08T11:06:39.684] [INFO] default - from Consumer.log file with process Id 8024 
 
-[2023-02-02T12:24:11.364] [INFO] default - from Consumer.log file with process Id 30128 
+[2023-02-08T11:07:15.818] [INFO] default - from Consumer.log file with process Id 14952 
 
-[2023-02-02T12:25:14.312] [INFO] default - from Consumer.log file with process Id 40676 
+[2023-02-08T11:07:34.908] [INFO] default - from Consumer.log file with process Id 17080 
 
-[2023-02-02T12:26:28.535] [INFO] default - from Consumer.log file with process Id 33284 
+[2023-02-08T11:07:55.923] [INFO] default - from Consumer.log file with process Id 18192 
 
-[2023-02-02T12:28:25.952] [INFO] default - from Consumer.log file with process Id 10448 
+[2023-02-08T11:08:09.209] [INFO] default - from Consumer.log file with process Id 20184 
 
-[2023-02-02T12:30:00.274] [INFO] default - from Consumer.log file with process Id 37756 
-
-[2023-02-02T12:30:21.108] [INFO] default - from Consumer.log file with process Id 11168 
-
-[2023-02-02T12:31:13.035] [INFO] default - from Consumer.log file with process Id 18184 
-
-[2023-02-02T12:32:44.040] [INFO] default - from Consumer.log file with process Id 42060 
-
-[2023-02-02T12:35:04.965] [INFO] default - from Consumer.log file with process Id 30220 
-
-[2023-02-02T12:38:55.168] [INFO] default - from Consumer.log file with process Id 35372 
-
-[2023-02-02T12:39:13.756] [INFO] default - from Consumer.log file with process Id 44484 
-
-[2023-02-02T12:41:23.287] [INFO] default - from Consumer.log file with process Id 46908 
-
-[2023-02-02T12:41:43.922] [INFO] default - from Consumer.log file with process Id 28244 
-
-[2023-02-02T12:42:41.514] [INFO] default - from Consumer.log file with process Id 26848 
-
-[2023-02-02T12:43:38.568] [INFO] default - from Consumer.log file with process Id 33672 
-
-[2023-02-02T12:48:25.395] [INFO] default - from Consumer.log file with process Id 39904 
-
-[2023-02-02T12:49:58.837] [INFO] default - from Consumer.log file with process Id 27988 
-
-[2023-02-02T12:52:43.173] [INFO] default - from Consumer.log file with process Id 2464 
-
-[2023-02-02T12:54:32.034] [INFO] default - from Consumer.log file with process Id 11608 
-
-[2023-02-02T12:56:23.999] [INFO] default - from Consumer.log file with process Id 21984 
-
-[2023-02-02T12:56:45.407] [INFO] default - from Consumer.log file with process Id 42420 
-
-[2023-02-02T12:58:37.308] [INFO] default - from Consumer.log file with process Id 17028 
-
-[2023-02-02T13:01:19.884] [INFO] default - from Consumer.log file with process Id 35592 
-
-[2023-02-02T13:26:10.366] [INFO] default - from Consumer.log file with process Id 40936 
-
-[2023-02-02T13:27:03.606] [INFO] default - from Consumer.log file with process Id 1096 
-
-[2023-02-02T13:33:32.070] [INFO] default - from Consumer.log file with process Id 17864 
-
-[2023-02-02T13:35:57.790] [INFO] default - from Consumer.log file with process Id 22348 
-
-[2023-02-02T13:37:59.309] [INFO] default - from Consumer.log file with process Id 44056 
-
-[2023-02-02T13:40:48.168] [INFO] default - from Consumer.log file with process Id 44800 
-
-[2023-02-02T13:44:08.811] [INFO] default - from Consumer.log file with process Id 15820 
-
-[2023-02-02T13:45:17.062] [INFO] default - from Consumer.log file with process Id 33628 
-
-[2023-02-02T13:57:07.340] [INFO] default - from Consumer.log file with process Id 47324 
-
-[2023-02-02T14:01:46.710] [INFO] default - from Consumer.log file with process Id 39884 
-
-[2023-02-02T14:02:52.040] [INFO] default - from Consumer.log file with process Id 1708 
-
-[2023-02-02T14:04:31.244] [INFO] default - from Consumer.log file with process Id 47808 
-
-[2023-02-02T14:04:41.995] [INFO] default - Generatepdf Promise { undefined }
-[2023-02-02T14:06:37.194] [INFO] default - from Consumer.log file with process Id 26376 
-
-[2023-02-02T14:07:22.787] [INFO] default - from Consumer.log file with process Id 21980 
-
-[2023-02-02T14:08:19.147] [INFO] default - from Consumer.log file with process Id 16264 
-
-[2023-02-02T14:08:55.616] [INFO] default - from Consumer.log file with process Id 24336 
-
-[2023-02-02T14:09:36.481] [INFO] default - from Consumer.log file with process Id 37636 
-
-[2023-02-02T14:13:39.460] [INFO] default - from Consumer.log file with process Id 39976 
-
-[2023-02-02T14:17:14.251] [INFO] default - from Consumer.log file with process Id 23864 
-
-[2023-02-02T14:28:53.552] [INFO] default - from Consumer.log file with process Id 30848 
-
-[2023-02-02T14:30:11.035] [INFO] default - from Consumer.log file with process Id 32512 
-
-[2023-02-02T15:24:45.613] [INFO] default - from Consumer.log file with process Id 15112 
-
-[2023-02-02T15:38:29.837] [INFO] default - from Consumer.log file with process Id 7560 
-
-[2023-02-02T15:47:27.312] [INFO] default - from Consumer.log file with process Id 4528 
-
-[2023-02-07T18:12:24.202] [INFO] default - from Consumer.log file with process Id 14196 
-
-[2023-02-07T18:12:42.346] [INFO] default - from Consumer.log file with process Id 23312 
-
-[2023-02-07T18:13:10.784] [INFO] default - from Consumer.log file with process Id 2640 
-
-[2023-02-07T18:13:54.577] [INFO] default - from Consumer.log file with process Id 15704 
-
-[2023-02-07T18:15:53.694] [INFO] default - from Consumer.log file with process Id 8196 
-
-[2023-02-07T18:16:01.243] [INFO] default - from Consumer.log file with process Id 21636 
-
-[2023-02-07T18:16:33.902] [INFO] default - from Consumer.log file with process Id 21272 
-
-[2023-02-07T18:16:47.821] [INFO] default - from Consumer.log file with process Id 21732 
-
-[2023-02-07T18:16:58.587] [INFO] default - from Consumer.log file with process Id 13160 
-
-[2023-02-07T18:23:51.343] [INFO] default - from Consumer.log file with process Id 23376 
+[2023-02-08T11:08:39.572] [INFO] default - from Consumer.log file with process Id 22196 
 

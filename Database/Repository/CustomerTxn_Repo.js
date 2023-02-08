@@ -245,7 +245,7 @@ exports.getcCustomerTxnByName = async (req) => {
 
     return resultData;
   } catch (err) {
-    let resultdata = {};
+   
     logger.error("get the error in the getAllCustomerTxn ", err);
     throw err
   } finally {
@@ -328,9 +328,7 @@ exports.getLoanAmountByFilter = async (filterReq) => {
     if (getCustInfoData.rows.length > 0) {
       getCustInfoFinalData.value = getCustInfoData.rows;
     } else {
-      let value = [];
-      value[0] = "No data Match";
-      getCustInfoFinalData.value = value;
+      throw new Error("no data found")
     }
     getCustInfoFinalData.statusvalue = true;
     logger.info("get the data from database==", getCustInfoFinalData.value);
@@ -394,19 +392,14 @@ exports.getSavingDetailsByFilter = async (filterReq) => {
     if (getCustInfoData.rows.length > 0) {
       getCustInfoFinalData.value = getCustInfoData.rows;
     } else {
-      let value = [];
-      value[0] = "No data Match";
-      getCustInfoFinalData.value = value;
+      throw new Error("no data found")
     }
     getCustInfoFinalData.statusvalue = true;
     logger.info("get the data from database==", getCustInfoFinalData.value);
     return getCustInfoFinalData;
   } catch (err) {
-    let resultdata = {};
     logger.error("get the error in the getSavingDetailsByFilter ", err);
-    resultdata.statusvalue = false;
-    resultdata.message = "something Went Wrong " + err;
-    return resultdata;
+    throw err;
   } finally {
     client.release();
   }

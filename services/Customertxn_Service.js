@@ -80,14 +80,11 @@ exports.getSavingDetailsByFilterService = async (req) => {
       req
     );
     logger.info(
-      `get the data form Repo  of getSavingDataFilter ${getSavingDataFilter} `
+      `get the data form Repo of getSavingDataFilter ${getSavingDataFilter} `
     );
     return getSavingDataFilter;
   } catch (err) {
-    logger.error("err in the service getSavingDataFilterService", err);
-    let resultData = {};
-    resultData.statusvalue = false;
-    resultData.message = "something went wrong " + err;
-    return resultData;
+    logger.error("err in the service getSavingDetailsByFilterService", err);
+    throw err;
   }
 };

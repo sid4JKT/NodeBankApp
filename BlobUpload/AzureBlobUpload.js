@@ -2,9 +2,9 @@ require("dotenv").config();
 const { v1: uuidv1 } = require("uuid");
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { DefaultAzureCredential } = require("@azure/identity");
-const fs = require('fs');
-let file_content = fs.readFileSync('./ada.txt')
-console.log(file_content)
+// const fs = require('fs');
+// let file_content = fs.readFileSync('./ada.txt')
+// console.log(file_content)
 exports.azureBlobfunction = async (req) => {
   try {
     let blobName = req.body.blobName.toLowerCase();
