@@ -6,9 +6,7 @@ const { logger } = require("../Util/logeer");
 const DB = require("../Database/dbconnection");
 
 exports.documentCustomer = async (custidDoc) => {
-  console.log("**********")
-  console.log(custidDoc.acctnum)
-  console.log(custidDoc.accType)
+  
   const client = await DB.dbConnection();
   try {
     // console.log(custidDoc,"************")
@@ -79,7 +77,6 @@ exports.documentCustomerForSaving = async (custidDoc, client) => {
       customerDetail = customerDetail.value;
       let val = custidDoc.listCode;
       let docid_array = await Document_Repo.getDetailIdbydesc(val, client);
-      
     
 
       let Document_Details = await Document_Repo.getdocumentbyId(

@@ -2,15 +2,18 @@ require("dotenv").config();
 const { v1: uuidv1 } = require("uuid");
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { DefaultAzureCredential } = require("@azure/identity");
-// const fs = require('fs');
-// let file_content = fs.readFileSync('./ada.txt')
-// console.log(file_content)
+const fs = require("fs");
+let val = "D:\\bank_App\\updated\\NodeBankApp\\pdfdocuments\\Welcome.pdf";
+let file_content = fs.readFileSync(val);
+
 exports.azureBlobfunction = async (req) => {
   try {
-    let blobName = req.body.blobName.toLowerCase();
-    let blobExtension = req.body.blobExtension.toLowerCase();
+    let blobName = req.blobName
+    let blobExtension = req.blobExtension
     let file = file_content;
-    console.log(file.data, "24"); //
+//     let file = req.body.file;
+// let test = fs.readFileSync(file)
+    console.log(file.data, "24"); 
     // async function upload (params) {
     // Create a unique name for the blob
 
@@ -23,12 +26,14 @@ exports.azureBlobfunction = async (req) => {
       new DefaultAzureCredential()
     );
 
-    const containerName = 'quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700';
-   // const containerName = req.containerName;
+    const containerName = "quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700";
+    // const containerName = req.containerName;
 
     console.log("connecting container...");
     console.log("\t", containerName);
     blobName = blobName + uuidv1() + "" + blobExtension;
+   
+
     // Get a reference to a container
     const containerClient = blobServiceClient.getContainerClient(containerName);
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
@@ -40,18 +45,20 @@ exports.azureBlobfunction = async (req) => {
 
     // Upload data to the blob
 
-    const data = file_content;
+    const data = file;
     const uploadBlobResponse = await blockBlobClient.upload(data, data.length);
     console.log(
       `Blob was uploaded successfully. requestId:,${uploadBlobResponse.clientRequestId}`
     );
 
     let datafinal = {};
-    datafinal.refrenceId = blobNamedatafinal.url = uploadBlobResponse.url;
+    datafinal.refrenceId = blobName;
+    datafinal.url = blockBlobClient.url;
+    console.log(datafinal);
     return datafinal;
   } catch (error) {
     console.log("not able to upload: ", error);
-    throw err;
+    throw error;
   }
 };
 

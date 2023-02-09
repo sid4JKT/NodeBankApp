@@ -347,7 +347,7 @@ exports.getSaving_Transactionhistory = async (data) => {
   try{
       let Savingdetaildata = {};
       let LoanDetail = {};
-      
+
       if (data.accountType == "saving") {
         let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
         let accnum = await DB.ExtractQuerry(client, Accnumber);
@@ -357,7 +357,6 @@ exports.getSaving_Transactionhistory = async (data) => {
         }
         logger.info(`the acctnum  ${accnum.rows[0].acctnum}`); 
         for (let index = 0; index < accnum.rows.length; index++) {
-          
           let Savingdetailquerry = `select savingaccounttxnhistory.*,
           accounttype.accounttype,accounttype.accsubtype
           from savingaccounttxnhistory
@@ -368,11 +367,13 @@ exports.getSaving_Transactionhistory = async (data) => {
           let Savingdetail = await DB.ExtractQuerry(client, Savingdetailquerry);
           logger.info("Saving detail==", Savingdetail.rows);
           Savingdetaildata.statusvalue = true;
-          Savingdetaildata.value = Savingdetail.rows
+          
           if(Savingdetail.rows.length > 0){
-            return Savingdetaildata; 
+             
+            Savingdetaildata.value = Savingdetail.rows 
           }
         } 
+        return Savingdetaildata; 
       }else if (data.accountType == "loan") {
         let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
         let accnum = await DB.ExtractQuerry(client, Accnumber);
@@ -380,23 +381,34 @@ exports.getSaving_Transactionhistory = async (data) => {
         {
         throw new Error("acctnum not found with custid: ",data.custId)
         }
-        logger.info("acctnum==", accnum.rows[0].acctnum);
-          console.log("acctype==",data.accountType) 
-          let LoanDetailQuery = `select emiid from  public.loanaccountdetail where acctnum=${accnum.rows[0].acctnum}`;
-          let Emiid = await DB.ExtractQuerry(client, LoanDetailQuery);
-          logger.info("emiid===", Emiid.rows);
-
-          let EMiDetailquerry2 = `select loanaccountdetail.acctnum,loanemidetail.*,accounttype.accounttype,
-          accounttype.accsubtype from  public.loanemidetail  
-          join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
-          join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
-          where loanemidetail.emiid='${Emiid.rows[0].emiid}'`;
-          let getrecord = await DB.ExtractQuerry(client, EMiDetailquerry2);
-          logger.info("loandetail===", LoanDetail.rows);
-
-          LoanDetail.statusvalue = true;  
-          LoanDetail.value = getrecord.rows;
-          return LoanDetail;
+          console.log("acctype==",data.accountType)
+          for (let index = 0; index < accnum.rows.length; index++) {
+            logger.info("acctnum==", accnum.rows[index].acctnum);
+            let LoanDetailQuery = `select emiid from  public.loanaccountdetail where acctnum=${accnum.rows[index].acctnum}`;
+            let Emiid = await DB.ExtractQuerry(client, LoanDetailQuery);
+            logger.info("emiid===", Emiid.rows);
+            if(Emiid.rows.length> 0){
+              let EMiDetailquerry2 = `select loanaccountdetail.acctnum,loanemidetail.*,accounttype.accounttype,
+              accounttype.accsubtype from  public.loanemidetail  
+              join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+              join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+              where loanemidetail.emiid='${Emiid.rows[0].emiid}'`;
+              let getrecord = await DB.ExtractQuerry(client, EMiDetailquerry2);
+              logger.info("loandetail===", LoanDetail.rows);
+              LoanDetail.statusvalue = true;  
+              
+              if(getrecord.rows.length > 0){
+                LoanDetail.value = getrecord.rows;
+              }
+              else{
+                throw new Error("Data not found")
+              }
+            }
+          }
+          return LoanDetail; 
+      }
+      else{
+        throw new Error("fill accountType carefully")
       }
   }
   catch(err){

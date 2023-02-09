@@ -34,8 +34,7 @@ module.exports.newpubdoc = async (payloadDetail) => {
   // newpubdoc(queName)
   exports.savingDocumentPublisher = async (payloadDetail, queName) => {
     try {
-      console.log("AK");
-      console.log(payloadDetail);
+      
       amqpconn.connect(Url).then(async (channel) => {
         try {
           channel.assertQueue(queName);

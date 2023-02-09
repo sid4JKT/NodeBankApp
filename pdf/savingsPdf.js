@@ -11,16 +11,13 @@ const doc_name = path.join(__dirname, '..','pdfdocuments','savingaccount.pdf');
 console.log('line 13')
 const date = payload.Documents.doc_date;
 const firstname = payload.customerdetail.firstname;
-const lastname = payload.customerdetail.lastname ;
+
 const address1 = payload.customerdetail.address1;
-const address2 = payload.customerdetail.address2;
-const phone = payload.customerdetail.phone;
-const dob = payload.customerdetail.dob;
-const maritalstatus = payload.customerdetail.maritalstatus;
+
+
 const zipcode = payload.customerdetail.zipcode;
-const city = payload.customerdetail.city;
+
 const state = payload.customerdetail.state;
-const country = payload.customerdetail.country;
 const accountnum = payload.customerdetail.accountnum;
 const accounttype = payload.customerdetail.AccountType;
 const doc = new PDFDocument();

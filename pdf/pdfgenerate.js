@@ -14,16 +14,13 @@ const doc_name = path.join(__dirname, '..','pdfdocuments','Welcome.pdf');
 console.log('line 13')
 const date = payload.Documents.doc_date;
 const firstname = payload.customerdetail.firstname;
-const lastname = payload.customerdetail.lastname ;
+
 const address1 = payload.customerdetail.address1;
-const address2 = payload.customerdetail.address2;
-const phone = payload.customerdetail.phone;
-const dob = payload.customerdetail.dob;
-const maritalstatus = payload.customerdetail.maritalstatus;
+
 const zipcode = payload.customerdetail.zipcode;
-const city = payload.customerdetail.city;
+
 const state = payload.customerdetail.state;
-const country = payload.customerdetail.country;
+
 const doc = new PDFDocument();
 
 // Pipe its output somewhere, like to a file or HTTP response

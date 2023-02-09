@@ -75,7 +75,7 @@ exports.addCustomer = async (req, res) => {
         let pdfData = await pdfGenerate.pdfgenernate(payload);
         logger.info("Generatepdf", pdfData);
 
-        // blob.azureBlobfunction();
+        blob.azureBlobfunction();
 
         // sending emails
         let data = payload.customerdetail.emailid;

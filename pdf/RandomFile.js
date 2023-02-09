@@ -1,3 +1,4 @@
+const azureBlobUpload = require('../BlobUpload/AzureBlobUpload');
 async function getRandomFileName(){
     var timestamp = new Date().toISOString().replace(/[-:.]/g, "");
     var random = ("" + Math.random()).substring(2, 8);
@@ -13,7 +14,7 @@ try {
             console.log(filename);
             var getfilename = await getRandomFileName()
            // var src ='D:\\New folder\\nodesession\\Tempfolder\\uploads\\';
-            var srcPath = 'pdfdocuments\\'+filename
+            var srcPath = 'pdfdocuments\\'+filename;
             var desPath = path.join(__dirname+'/archive/'+getfilename+'.pdf')
             // var des = getfilname+'.pdf'
             console.log(srcPath,desPath)
@@ -26,11 +27,16 @@ try {
                     if(err){
                         console.log(err,"while moving file");
                     }
-                    else
+                    else{
                     console.log(`Moved ${srcPath} to ${desPath}`);
+                    req = { body : { blobName: "demo_blob",
+                        blobExtension: ".pdf",
+                        file:desPath}}
+                    azureBlobUpload.azureBlobfunction(req);
+                    }
                 });
          }
     })
 } catch (error) {
-    console.log(error)
+    console.log(error,"from fs.watch");
 }

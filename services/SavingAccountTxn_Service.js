@@ -8,6 +8,7 @@ const DB = require("../Database/dbconnection");
 const pdf = require("../pdf/savingsPdf");
 const email = require("../send_email");
 const blob = require("../BlobUpload/AzureBlobUpload");
+const Communication_Repo = require("../Database/Repository/Communication_Repo");
 exports.withDrawByAccountNum = async (withdrawJson) => {
   try {
     let getData =
@@ -76,10 +77,10 @@ exports.createSavingAccountService = async (savingData) => {
     logger.info("saving account created Data:", savingAccountCreatedData);
     if (savingAccountCreatedData.statusvalue == true) {
       let custidDoc = {
-        cust_id: savingData.custId,        
-        AccountType:savingData.accountType,
-        accountnum:savingAccountCreatedData.value.acctnum,
-        listCode: "newcustDoc",
+        cust_id: savingData.custId,
+        AccountType: savingData.accountType,
+        accountnum: savingAccountCreatedData.value.acctnum,
+        listCode: "newcustDoc"
       };
 
       const payload = await documentService.documentCustomerForSaving(
@@ -97,15 +98,20 @@ exports.createSavingAccountService = async (savingData) => {
       );
       logger.info("get the document data", documentData);
 
-      
+      await Communication_Repo.insert_Document_Customer(payload);
+      let datas = {};
+      datas.blobName = "demo_blob";
+      datas.blobExtension = ".pdf";
       //blob part
-      blob.azureBlobfunction("demo_blob");
-         // sending emails 
-         let data = documentData.customerdetail.emailid;
-         const Emails = await email.main(data);
+      let blobValue = blob.azureBlobfunction(datas);
 
-      
-
+      let blobURL = (await blobValue).url;
+      let doc_id = payload.Documents.doc_id;
+      let cust_id = payload.customerdetail.cust_id;
+      Communication_Repo.insertDocCustomerData(blobURL,doc_id,cust_id);
+      // sending emails
+      let data = payload.customerdetail.emailid;
+      const Emails = await email.main(data);
       return savingAccountCreatedData;
     }
     return savingAccountCreatedData;
@@ -131,42 +137,46 @@ exports.deleteSavingAccountService = async (acctnum) => {
 };
 exports.getSaving_Transactionhistory = async (depositeJson) => {
   try {
-   
-    const getData =
-      await SavingAccountTxn_Repo.getSaving_Transactionhistory(depositeJson);
+    const getData = await SavingAccountTxn_Repo.getSaving_Transactionhistory(
+      depositeJson
+    );
     logger.info(
       `get the data from Repo  of getTransactionHistory ${getData} in the service`
     );
-   
+
     return getData;
   } catch (err) {
     logger.error("err in the service getTransactionHistory", err);
     throw err;
   }
 };
-exports.getTransactionByfilter=async(depositeJson)=>{
-    
+exports.getTransactionByfilter = async (depositeJson) => {
   try {
-      let getData=await SavingAccountTxn_Repo.getTransactionsByfilter(depositeJson);
-      logger.info(`get the data form Repo  of CustomerTxnHistoryByFilter ${getData} `)
-      
-      return getData;
-  } catch (err) {
-   logger.error("err in the service getTransactionHistory",err)
-   throw err;
-  }
+    let getData = await SavingAccountTxn_Repo.getTransactionsByfilter(
+      depositeJson
+    );
+    logger.info(
+      `get the data form Repo  of CustomerTxnHistoryByFilter ${getData} `
+    );
 
-}
-exports.getloanaccountTransactionByfilter=async(depositeJson)=>{
-    
+    return getData;
+  } catch (err) {
+    logger.error("err in the service getTransactionHistory", err);
+    throw err;
+  }
+};
+exports.getloanaccountTransactionByfilter = async (depositeJson) => {
   try {
-      let getData=await SavingAccountTxn_Repo.getLoan_TransactionsByfilter(depositeJson);
-      logger.info(`get the data form Repo  of CustomerLoanTxnHistoryByFilter ${getData} `)
-      
-      return getData;
-  } catch (err) {
-   logger.error("err in the service getloanaccountTransactionByfilter",err)
-   throw err;
-  }
+    let getData = await SavingAccountTxn_Repo.getLoan_TransactionsByfilter(
+      depositeJson
+    );
+    logger.info(
+      `get the data form Repo  of CustomerLoanTxnHistoryByFilter ${getData} `
+    );
 
-}
+    return getData;
+  } catch (err) {
+    logger.error("err in the service getloanaccountTransactionByfilter", err);
+    throw err;
+  }
+};
