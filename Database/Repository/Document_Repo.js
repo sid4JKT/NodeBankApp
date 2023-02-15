@@ -74,7 +74,7 @@ exports.getDocumentMasterbyfilter = async (filterData) => {
       console.log("the key=", key);
       if (key == "doc_date" || key == "doc_name") {
         appenddata = appenddata + `"${key}"`;
-        appenddata = appenddata + "=" + "" + `'${req[key]}'` + "";
+        appenddata = appenddata + "ILIKE" + "" + `'${req[key]}%'` + "";
         v++;
       } else if (key == "doc_id") {
         appenddata = appenddata + `"${key}"`;
@@ -215,8 +215,7 @@ exports.delete_DocumentBy_Id = async (data) => {
 };
 
 exports.getDetailIdbydesc = async (val, client) => {
-  console.log("AKKK");
-  console.log(val);
+ 
   // const client = await DB.dbConnection();
   try {
     let getDocumentbyidquery;

@@ -144,6 +144,7 @@ exports.insert_Document_Customer = async (data) => {
         VALUES (${id},'${data.Documents.doc_id}', '${date}', '${data.Documents.Doctype}', ${data.customerdetail.cust_id}, '${data.Documents.doc_statuscode}','${timestamp}', '${data.Documents.Doc_Desc}', '${data.Documents.doc_name}')`
     );    
     getData.value = resultdata.rows;
+    
     getData.statusvalue = true;
     return getData;
   } catch (err) {
@@ -157,18 +158,19 @@ exports.insert_Document_Customer = async (data) => {
 
 exports.insertDocCustomerData = async (cust_id,doc_id,blobURL) => {  
   const client = await DB.dbConnection();
-  try {    
-    
+  try {      
     let ref_id = blobURL;
     let sqlQuerry = `SELECT  "Docid",cust_id
 	FROM "public"."document_cutomer_master _table" where "Docid" = '${doc_id}' and cust_id = '${cust_id}'`;
+  
     let val = await DB.ExtractQuerry(client, sqlQuerry);
     let getData = {};
     // console.log(val.rows);
     if (val.rows.length != 0) {
-      let sqlQuerry = `UPDATE public"."document_cutomer_master _table
+      let sqlQuerry = `UPDATE "public"."document_cutomer_master _table"
         SET referid='${ref_id}'
         WHERE cust_id = ${cust_id};`;
+        
       await DB.ExtractQuerry(client, sqlQuerry);
       getData.commnicationData = {
         Docid: doc_id,

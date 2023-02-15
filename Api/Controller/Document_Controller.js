@@ -192,27 +192,35 @@ exports.getDocumentMasterbyRapidfilter= async (req,res)=>{
     const getData = await documentservice.getDocumentMasterbyRapidfilter(filterjson)
     logger.info("Document_Controller -> getDocumentMasterbyRapidfilter -> Final Data : " + JSON.stringify(getData))
     if (getData.statusvalue) { 
-        return res.status(200).send(getData.value);
+        let value = getData.value
+        return res.status(200).json({
+          ststusCode:200,
+          statusvalue:true,
+          statustype:"success",
+          statusmessage:"recordsaved",
+          statusseverity:"information",
+          value
+        })
       } else {
         return res.status(500).json({
-          Status: {
+         
             StatusCode: 500,
             StatusType: "error",
             StatusMessage: getData.message,
             StatusSeverity: "Information",
-          },
+       
         });
       }
     }
     catch(err){
       logger.error("err in the controller getDocumentMasterbyRapidfilter",err)
       return res.status(500).json({
-        Status: {
+        
           StatusCode: 500,
           StatusType: "error",
           StatusMessage: `${err}`,
           StatusSeverity: "something went wrong",
-        },
+    
       });    
     }
 } 
@@ -224,27 +232,35 @@ exports.getDocumentCustomerMasterbyfilter= async (req,res)=>{
     const getData = await documentservice.getDocumentCustomerMasterbyfilter(filterjson)
     logger.info("Document_Controller -> getDocumentCustomerMasterbyfilter -> Final Data : " + JSON.stringify(getData))
     if (getData.statusvalue) { 
-        return res.status(200).send(getData.value);
+        let value = getData.value
+        return res.status(200).json({
+          ststusCode:200,
+          statusvalue:true,
+          statustype:"success",
+          statusmessage:"recordsaved",
+          statusseverity:"information",
+          value
+        })
       } else {
         return res.status(500).json({
-          Status: {
+         
             StatusCode: 500,
             StatusType: "error",
             StatusMessage: getData.message,
             StatusSeverity: "Information",
-          },
+     
         });
       }
     }
     catch(err){
       logger.error("err in the controller getDocumentCustomerMasterbyfilter",err)
       return res.status(500).json({
-        Status: {
+       
           StatusCode: 500,
           StatusType: "error",
           StatusMessage: `${err}`,
           StatusSeverity: "something went wrong",
-        },
+   
       });    
     }
 }
@@ -255,32 +271,36 @@ exports.getDocumentCustomerMasterbyRapidfilter= async (req,res)=>{
     const getData = await documentservice.getDocumentCustomerMasterbyRapidfilter(filterjson)
     logger.info("Document_Controller -> getDocumentCustomerMasterbyRapidfilter -> Final Data : " + JSON.stringify(getData))
     if (getData.statusvalue) { 
-        return res.status(200).send(getData.value);
+        let value = getData.value
+        return res.status(200).json({
+          ststusCode:200,
+          statusvalue:true,
+          statustype:"success",
+          statusmessage:"recordsaved",
+          statusseverity:"information",
+          value
+        });
       } else {
         return res.status(500).json({
-          Status: {
+         
             StatusCode: 500,
             StatusType: "error",
             StatusMessage: getData.message,
             StatusSeverity: "Information",
-          },
+     
         });
       }
     }
     catch(err){
       logger.error("err in the controller getDocumentCustomerMasterbyRapidfilter",err)
       return res.status(500).json({
-        Status: {
+       
           StatusCode: 500,
           StatusType: "error",
           StatusMessage: `${err}`,
           StatusSeverity: "something went wrong",
-        },
+     
       });    
     }
 }
-
-
-
- 
 

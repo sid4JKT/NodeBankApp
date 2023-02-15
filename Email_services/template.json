@@ -1,0 +1,6 @@
+{
+    "welcome":{
+       
+        "template":"<html><body>Dear %s,<br> <br> Welcome to JKT Bank and thank you for choosing us. <br><br>We are pleased to inform you that your %s Account has been created and your Account Number %d. <br><br> If you require further details on your account, please contact us at any of the telephone numbers given below. Our customer service representatives will be glad to assist you. <br><br>We value your relationship with us and assure you of our best services always. <br><br> Best Regards <br><h4> JKT Bank </h4>This is a computer generated letter hence does not require any signature. </body></html>"
+    }
+}

@@ -8,15 +8,11 @@ const doc_name = path.join(__dirname, '..','pdfdocuments','savingaccount.pdf');
 
  // Create a document
  exports.SavingsPDF = async(payload) =>{
-console.log('line 13')
+
 const date = payload.Documents.doc_date;
 const firstname = payload.customerdetail.firstname;
-
 const address1 = payload.customerdetail.address1;
-
-
 const zipcode = payload.customerdetail.zipcode;
-
 const state = payload.customerdetail.state;
 const accountnum = payload.customerdetail.accountnum;
 const accounttype = payload.customerdetail.AccountType;
@@ -26,9 +22,6 @@ const doc = new PDFDocument();
 // See below for browser usage
 
 doc.pipe(fs.createWriteStream(doc_name));
-
-
-
 
   doc.image('pdf\\images\\JKTech.png',50,50,{scale:0.10})
   doc.text(`Date:${date}`,70,70,{align:'right',scale:0.10})
@@ -44,17 +37,14 @@ doc.pipe(fs.createWriteStream(doc_name));
   doc.text(`Once again we thank you for your patronage and look forward to mutually beneficial relationship.`,100,430,{align:'up-left',scale:0.5});
   doc.text("Thank you",100,500,{align:'up-left',scale:0.5});
   //doc.text(`Accountnum:${accountnum}`,100,520,{align:'up-left',scale:0.5});
-  //doc.text(`Accounttype:${accounttype}`,100,550,{align:'up-left',scale:0.5});
-
-
- 
-  
+  //doc.text(`Accounttype:${accounttype}`,100,550,{align:'up-left',scale:0.5});  
 
   doc
   .fontSize(20).text("Welcome to Savings Account", 90, 90,{align:'center'});
  
-
- 
 doc.end();
 // doc.text("Date:19-01-23",70,70,{align:'right',scale:0.10})
+let getdata = {}
+getdata.statusvalue = true
+return getdata
  } 

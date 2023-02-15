@@ -3,6 +3,7 @@ const { logger } = require("../../Util/logeer");
 const { getdate, randomNumberInt } = require("../../Util/util");
 const { v4: uuidv4 } = require("uuid");
 
+
 exports.withDrawFromAccountByAccountNumber = async (data) => {
   const client = await DB.dbConnection();
   try {
@@ -324,7 +325,7 @@ exports.createSavingAccount = async (savingData, client) => {
 };
 
 exports.deleteSavingAccount = async (acctnum) => {
-  const client = DB.dbConnection();
+  const client = await DB.dbConnection();
   try {
     let statusInActiveQuerry = `update "public"."savingaccountdetail"  set  status='InActive' where acctnum=${acctnum}`;
 
@@ -368,12 +369,12 @@ exports.getSaving_Transactionhistory = async (data) => {
           logger.info("Saving detail==", Savingdetail.rows);
           Savingdetaildata.statusvalue = true;
           
-          if(Savingdetail.rows.length > 0){
-             
+          if(Savingdetail.rows.length > 0){             
             Savingdetaildata.value = Savingdetail.rows 
+            return Savingdetaildata; 
           }
         } 
-        return Savingdetaildata; 
+        
       }else if (data.accountType == "loan") {
         let Accnumber = `select acctnum from  public.customeraccounts where cust_id=${data.custId}`;
         let accnum = await DB.ExtractQuerry(client, Accnumber);
@@ -388,24 +389,22 @@ exports.getSaving_Transactionhistory = async (data) => {
             let Emiid = await DB.ExtractQuerry(client, LoanDetailQuery);
             logger.info("emiid===", Emiid.rows);
             if(Emiid.rows.length> 0){
-              let EMiDetailquerry2 = `select loanaccountdetail.acctnum,loanemidetail.*,accounttype.accounttype,
-              accounttype.accsubtype from  public.loanemidetail  
-              join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
-              join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
-              where loanemidetail.emiid='${Emiid.rows[0].emiid}'`;
-              let getrecord = await DB.ExtractQuerry(client, EMiDetailquerry2);
-              logger.info("loandetail===", LoanDetail.rows);
-              LoanDetail.statusvalue = true;  
-              
-              if(getrecord.rows.length > 0){
-                LoanDetail.value = getrecord.rows;
-              }
-              else{
-                throw new Error("Data not found")
+              for (let index = 0; index < Emiid.rows.length; index++) {
+                let EMiDetailquerry2 = `select loanaccountdetail.acctnum,loanemidetail.*,accounttype.accounttype,
+                accounttype.accsubtype from  public.loanemidetail  
+                join loanaccountdetail on loanaccountdetail.emiid = loanemidetail.emiid
+                join accounttype on accounttype."accounttypeID" = loanaccountdetail.loanaccounttypeid
+                where loanemidetail.emiid='${Emiid.rows[index].emiid}'`;
+                let getrecord = await DB.ExtractQuerry(client, EMiDetailquerry2);
+                logger.info("loandetail===", getrecord.rows);
+                LoanDetail.statusvalue = true;  
+                if(getrecord.rows.length > 0){
+                  LoanDetail.value = getrecord.rows;
+                  return LoanDetail;
+                }
               }
             }
-          }
-          return LoanDetail; 
+          } 
       }
       else{
         throw new Error("fill accountType carefully")

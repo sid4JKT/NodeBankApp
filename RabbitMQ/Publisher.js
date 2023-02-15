@@ -14,7 +14,7 @@ for (let key in data) {
   i++
 }
 var Url = connectionName;
-console.log(Url,queName)
+console.log(Url)
 var queName = queu1[0];
 // console.log(queName);
 

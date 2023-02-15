@@ -3,17 +3,24 @@ const { v1: uuidv1 } = require("uuid");
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { DefaultAzureCredential } = require("@azure/identity");
 const fs = require("fs");
-let val = "D:\\bank_App\\updated\\NodeBankApp\\pdfdocuments\\Welcome.pdf";
-let file_content = fs.readFileSync(val);
-
+// let val = "\pdfdocuments\\savingaccount.pdf";
+// let file_content = fs.readFileSync(val);
+let datafinal = {};
 exports.azureBlobfunction = async (req) => {
   try {
-    let blobName = req.blobName
-    let blobExtension = req.blobExtension
-    let file = file_content;
-//     let file = req.body.file;
-// let test = fs.readFileSync(file)
-    console.log(file.data, "24"); 
+    
+    let blobName = req.body.blobName;
+    let blobExtension = req.body.blobExtension;
+    // let file =req.body.file;
+    //     let file = req.body.file;
+    if(!req.body.file){
+      throw new Error("")
+    }else{
+
+    
+    let file = fs.readFileSync(req.body.file);   
+     
+    // console.log(file.data, "24");
     // async function upload (params) {
     // Create a unique name for the blob
 
@@ -32,7 +39,6 @@ exports.azureBlobfunction = async (req) => {
     console.log("connecting container...");
     console.log("\t", containerName);
     blobName = blobName + uuidv1() + "" + blobExtension;
-   
 
     // Get a reference to a container
     const containerClient = blobServiceClient.getContainerClient(containerName);
@@ -46,22 +52,23 @@ exports.azureBlobfunction = async (req) => {
     // Upload data to the blob
 
     const data = file;
-    const uploadBlobResponse = await blockBlobClient.upload(data, data.length);
+  
+    const uploadBlobResponse =  blockBlobClient.upload(data, data.length);
     console.log(
       `Blob was uploaded successfully. requestId:,${uploadBlobResponse.clientRequestId}`
     );
 
-    let datafinal = {};
+   
     datafinal.refrenceId = blobName;
-    datafinal.url = blockBlobClient.url;
-    console.log(datafinal);
+    datafinal.url = blockBlobClient.url;     
     return datafinal;
+    }
   } catch (error) {
     console.log("not able to upload: ", error);
     throw error;
   }
 };
-
+exports.datafinal = datafinal;
 exports.getBlobStroageFile = async (req) => {
   try {
     const accountName = "storagejktraining";

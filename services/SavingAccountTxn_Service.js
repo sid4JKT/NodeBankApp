@@ -6,9 +6,10 @@ const doc = require("../RabbitMQ/Publisher");
 const { Client } = require("pg");
 const DB = require("../Database/dbconnection");
 const pdf = require("../pdf/savingsPdf");
-const email = require("../send_email");
+const email = require("../Email_services/send_email");
 const blob = require("../BlobUpload/AzureBlobUpload");
 const Communication_Repo = require("../Database/Repository/Communication_Repo");
+
 exports.withDrawByAccountNum = async (withdrawJson) => {
   try {
     let getData =
@@ -88,30 +89,30 @@ exports.createSavingAccountService = async (savingData) => {
         client
       );
       logger.info("document payload", payload);
+      if (payload.statusvalue == true) {       
+        const pdfvalue = pdf.SavingsPDF(payload);
+        logger.info("pdf savings acount");
+        if((await pdfvalue).statusvalue = true){
+          let documentData = await doc.savingDocumentPublisher(
+            payload,
+            "Saving_account_que"
+          );
+          logger.info("get the document data", documentData);
+        }
+      }
 
-      pdf.SavingsPDF(payload);
-      logger.info("pdf savings acount");
-
-      let documentData = await doc.savingDocumentPublisher(
-        payload,
-        "Saving_account_que"
-      );
-      logger.info("get the document data", documentData);
-
-      await Communication_Repo.insert_Document_Customer(payload);
-      let datas = {};
-      datas.blobName = "demo_blob";
-      datas.blobExtension = ".pdf";
-      //blob part
-      let blobValue = blob.azureBlobfunction(datas);
-
-      let blobURL = (await blobValue).url;
+      //sending emails
+      let data = payload.customerdetail;
+      const Emails = await email.main(data);
+      if (Emails.statusvalue == true) {
+        await Communication_Repo.insert_Document_Customer(payload);
+      }
+      let blobURL = blob.datafinal.url;
       let doc_id = payload.Documents.doc_id;
       let cust_id = payload.customerdetail.cust_id;
-      Communication_Repo.insertDocCustomerData(blobURL,doc_id,cust_id);
-      // sending emails
-      let data = payload.customerdetail.emailid;
-      const Emails = await email.main(data);
+
+      await Communication_Repo.insertDocCustomerData(cust_id, doc_id, blobURL);
+
       return savingAccountCreatedData;
     }
     return savingAccountCreatedData;

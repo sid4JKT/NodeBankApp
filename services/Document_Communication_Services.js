@@ -82,9 +82,7 @@ exports.documentCustomerForSaving = async (custidDoc, client) => {
       let Document_Details = await Document_Repo.getdocumentbyId(
         docid_array,
         client
-      );
-
-    
+      );  
 
       let payloadDetail = {
         customerdetail: {
@@ -119,6 +117,7 @@ exports.documentCustomerForSaving = async (custidDoc, client) => {
           doc_statuscode: Document_Details.value[0].doc_statuscode,
           doc_template: Document_Details.value[0].doc_template,
         },
+        statusvalue : true
       };
       logger.info("document data", payloadDetail);
       return payloadDetail;

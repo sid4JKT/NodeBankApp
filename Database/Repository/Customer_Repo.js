@@ -77,7 +77,7 @@ exports.addCustomer = async (data) => {
       let val = await DB.ExtractQuerry(client, Custid);
       resultdata.statusvalue = true;
       resultdata.value = {
-        Customerid: val.rows[0],
+        Customerid: val.rows[0]
       };
       console.log("inthe  ADD ", resultdata);
       return resultdata;
@@ -107,7 +107,7 @@ exports.addCustomer = async (data) => {
 
         State: data.State,
 
-        Country: data.Country,
+        Country: data.Country
       };
 
       resultdata.Oldvalue = beforeUpdate.rows;
@@ -130,7 +130,7 @@ function readFile() {
     {
       input: "C:/Users/Shivamurti/Downloads/Demo.xlsx",
 
-      output: "output.json",
+      output: "output.json"
     },
     async function (err, result) {
       if (err) {
@@ -184,6 +184,9 @@ function readFile() {
 //readFile();
 
 async function Add(data) {
+  if (data.Mobile.length > 0) {
+    data.Mobile = 0;
+  }
   let AddCust = `INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
 
   values('${data.FirstName}', '${data.LastName}', '${data.Address1}', '${data.Address2}', '${data.EmailId}', ${data.Phone}, ${data.Mobile}, '${data.DateOfBirth}', '${data.MaritalStatus}', '${data.ZIPCode}', '${data.City}', '${data.State}', '${data.Country}')`;
@@ -218,12 +221,10 @@ exports.deleteCustomer = async (data) => {
     resultfinaldata.values =
       " customer account status is updated  and customer account deleted for custId ";
     return resultfinaldata;
-  } 
-  catch (err) {
+  } catch (err) {
     logger.error("get the error in the deleteCustomer ", err);
     throw err;
-  }
-  finally {
+  } finally {
     client.release();
   }
 };

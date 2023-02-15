@@ -8,6 +8,7 @@ async function getRandomFileName(){
 var fs = require('fs')
 var path = require('path')
 try {
+    
     fs.watch('pdfdocuments/', async function(event, filename) {
         if (filename) {
             data = filename
@@ -23,7 +24,7 @@ try {
             //         console.log(err,"while copying file")
             //     }
             // })
-                fs.rename(srcPath, desPath,(err)=>{   //to move file
+                fs.rename(srcPath, desPath,async (err)=>{   //to move file
                     if(err){
                         console.log(err,"while moving file");
                     }
@@ -32,7 +33,8 @@ try {
                     req = { body : { blobName: "demo_blob",
                         blobExtension: ".pdf",
                         file:desPath}}
-                    azureBlobUpload.azureBlobfunction(req);
+                    await azureBlobUpload.azureBlobfunction(req);
+                    
                     }
                 });
          }
@@ -40,3 +42,4 @@ try {
 } catch (error) {
     console.log(error,"from fs.watch");
 }
+

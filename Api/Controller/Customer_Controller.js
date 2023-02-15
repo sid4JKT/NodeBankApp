@@ -5,9 +5,8 @@ const Communication_Repo = require("../../Database/Repository/Communication_Repo
 const doc = require("../../RabbitMQ/Publisher");
 const pdfGenerate = require("../../pdf/pdfgenerate");
 //importing send_email
-const email = require("../../send_email");
-const blob = require("../../BlobUpload/AzureBlobUpload")
-
+const blob = require("../../BlobUpload/AzureBlobUpload");
+const email = require("../../Email_services/send_email");
 exports.getCustomerById = async (req, res) => {
   try {
     logger.info("get the data send to service", req.body);
@@ -75,10 +74,19 @@ exports.addCustomer = async (req, res) => {
         let pdfData = await pdfGenerate.pdfgenernate(payload);
         logger.info("Generatepdf", pdfData);
 
-        blob.azureBlobfunction();
+//         let blobURL = blob.datafinal.url;
+// console.log(blobURL,"873523489y5782349yr7823")
+//         let doc_id = payload.Documents.doc_id;
+//         let cust_id = payload.customerdetail.cust_id;
+
+//         await Communication_Repo.insertDocCustomerData(
+//           cust_id,
+//           doc_id,
+//           blobURL
+//         );
 
         // sending emails
-        let data = payload.customerdetail.emailid;
+        let data = payload.customerdetail;
         const Emails = await email.main(data);
         logger.info("get the document data", Emails);
 
