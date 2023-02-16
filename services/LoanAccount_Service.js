@@ -1,13 +1,15 @@
 const loanData = require("../Database/Repository/GetLoanAccount_Repo");
 const accountTypeData = require("../Database/Repository/AccountType_Repo");
 const customerAccountData = require("../Database/Repository/CustomerAccount_Repo");
+const documentService = require("./Document_Communication_Services");
 const { logger } = require("../Util/logeer");
-
+const doc = require("../RabbitMQ/Publisher");
+const DB = require("../Database/dbconnection");
+const pdf = require("../pdf/loanpdf");
 exports.getLoanAccountByDateRange = async (loanDataRequest) => {
   try {
     if (
-      loanDataRequest.hasOwnProperty("FromDate") &&
-      loanDataRequest.hasOwnProperty("ToDate")
+      loanDataRequest.hasOwnProperty("FromDate") &&      loanDataRequest.hasOwnProperty("ToDate")
     ) {
       console.log(
         "We have from and to dates : " + loanDataRequest.FromDate.toString()
@@ -31,7 +33,6 @@ exports.getLoanAccountByDateRange = async (loanDataRequest) => {
     throw err;
   }
 };
-
 exports.getLoanAccountByCustomerId = async (loanDataRequest) => {
   try {
     logger.info(
@@ -42,10 +43,8 @@ exports.getLoanAccountByCustomerId = async (loanDataRequest) => {
     requestBody = loanDataRequest;
     let responseWithData = {};
     let customerAccount;
-
     if (
-      requestBody.hasOwnProperty("CustID") &&
-      requestBody.hasOwnProperty("AccountNumber")
+      requestBody.hasOwnProperty("CustID") &&      requestBody.hasOwnProperty("AccountNumber")
     ) {
       logger.info("We have elemets in LoanAccountService ");
       let customerAccounts = await customerAccountData.getCustomerAccounts(
@@ -90,8 +89,8 @@ exports.getLoanAccountByCustomerId = async (loanDataRequest) => {
     throw err;
   }
 };
-
 exports.createLoanAccount = async (loanDataRequest) => {
+  const client = await DB.dbConnection();
   try {
     let responseWithData = {};
     let resultdata = {};
@@ -104,7 +103,11 @@ exports.createLoanAccount = async (loanDataRequest) => {
     let getAccountTypeData = await accountTypeData.getAccountType(
       loanDataRequest
     );
+    console.log("===============================")
+    console.log(getAccountTypeData.value.rows[0])
     accountTypeId = getAccountTypeData.value.rows[0].accounttypeID;
+    console.log("######################################")
+    console.log(accountTypeId)
     logger.info(
       "LoanAccount_Service-createLoanAccount - getAccountType Response : " +
         JSON.stringify(getAccountTypeData) +
@@ -115,6 +118,8 @@ exports.createLoanAccount = async (loanDataRequest) => {
       loanDataRequest,
       accountTypeId
     );
+    console.log("===============================")
+    console.log(customerAccounts)
     if (customerAccounts.statusvalue) {
       logger.info(
         "LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)"
@@ -142,7 +147,32 @@ exports.createLoanAccount = async (loanDataRequest) => {
         );
         resultdata.statusvalue = true;
         resultdata.value = responseWithData;
-        return resultdata;
+       
+        console.log(responseWithData);
+        if (responseWithData.statusvalue == true) {
+          let custidDoc = {
+            cust_id: loanDataRequest.CustId,
+            AccountType:loanDataRequest.AccountType,
+            accountnum:responseWithData.value.AcctNum,
+            listCode: "newcustDoc",
+          };
+          console.log("*************************************")
+          console.log(custidDoc);
+          const payload = await documentService.documentCustomerForLoan(
+            custidDoc,
+            client
+          );
+          logger.info("document payload", payload);
+          await pdf.LoanPDF(payload);
+          logger.info("pdf Loan acount");
+          let documentData = await doc.loanDocumentPublisher(
+            payload,
+            "Loan_account_que"
+          );
+          logger.info("get the document data", documentData);
+          return responseWithData;
+        }
+        return responseWithData;
       } else {
         logger.info("Current Accounts or Validation should be add");
       }
@@ -157,7 +187,6 @@ exports.createLoanAccount = async (loanDataRequest) => {
     throw err;
   }
 };
-
 exports.deactivateLoanAccount = async (accountNum) => {
   try {
     logger.info(

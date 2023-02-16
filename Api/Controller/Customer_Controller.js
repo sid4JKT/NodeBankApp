@@ -53,26 +53,40 @@ exports.addCustomer = async (req, res) => {
           getData
         });
       } else {
+        let accountType;
+        let accountNum;
+      
+        if (req.body.Account.accountType == "Loan" || req.body.Account.accountType == "loan" ){
+          accountNum = getData.accountDetail.AcctNum
+          accountType = getData.accountDetail.Accounttype
+        } else {
+          accountNum = getData.accountDetail.acctnum
+          accountType = getData.accountDetail.accounttype
+        }
+      
         let custidDoc = {
           custId: getData.value.Customerid.cust_id,
           listCode: "newcustDoc",
-          acctnum: getData.accountDetail.acctnum,
-          accType: getData.accountDetail.accounttype
+          acctnum: accountNum,
+          accType: accountType
+        
         };
         // console.log(custidDoc);
         const payload = await documentService.documentCustomer(custidDoc);
         logger.info("document payload", payload);
 
         //sending payload to publisher
-        let documentData = await doc.newpubdoc(payload);
-        logger.info("get the document data", documentData);
+        if(payload.statusvalue == true){
+          let documentData = await doc.newpubdoc(payload);
+          logger.info("get the document data", documentData);
+        }
+        //creating pdf
+        let pdfData =  await pdfGenerate.pdfgenernate(payload);
+        logger.info("Generatepdf", pdfData);
 
         //inserting records into document_customer_master_table
         await Communication_Repo.insert_Document_Customer(payload);
 
-        //creating pdf
-        let pdfData = await pdfGenerate.pdfgenernate(payload);
-        logger.info("Generatepdf", pdfData);
 
 //         let blobURL = blob.datafinal.url;
 // console.log(blobURL,"873523489y5782349yr7823")

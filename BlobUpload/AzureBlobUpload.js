@@ -51,9 +51,8 @@ exports.azureBlobfunction = async (req) => {
 
     // Upload data to the blob
 
-    const data = file;
-  
-    const uploadBlobResponse =  blockBlobClient.upload(data, data.length);
+    const data = file;  
+    const uploadBlobResponse =  await blockBlobClient.upload(data, data.length);    
     console.log(
       `Blob was uploaded successfully. requestId:,${uploadBlobResponse.clientRequestId}`
     );

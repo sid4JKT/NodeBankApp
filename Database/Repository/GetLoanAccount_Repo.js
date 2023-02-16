@@ -275,3 +275,37 @@ exports.deactivateLoanAccount = async (accountNum) => {
   }
 };
 
+exports.getCustomerLoanAccountbyCustId = async (req,client) => {
+  // const client = await DB.dbConnection();
+  try {
+    let resultData = {};
+    let getCustomerLoanAccountbyCustIdQueery = `SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=${req.cust_id}`;
+    logger.info(
+      "the getCustomerSavingAccountbyCustIdQueery ",
+      getCustomerLoanAccountbyCustIdQueery
+    );
+    let getCustInfoData = await DB.ExtractQuerry(
+      client,
+      getCustomerLoanAccountbyCustIdQueery
+    );
+    if (getCustInfoData.rows.length > 0) {
+      resultData.statusvalue = true;
+      resultData.value = getCustInfoData.rows[0];
+      return resultData
+    } else {
+      resultData.statusvalue = true;
+      resultData.value = "no data match";
+      throw new Error("no data match in saving account with this cust_id",req.cust_id)
+    }
+  } catch (err) {
+    logger.error("get the error in the getCustomerLoanAccountbyCustId ", err);
+    throw err
+  } finally {
+    // client.release();
+  }
+};
+
+
+
+

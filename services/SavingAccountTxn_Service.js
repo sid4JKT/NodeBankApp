@@ -81,7 +81,7 @@ exports.createSavingAccountService = async (savingData) => {
         cust_id: savingData.custId,
         AccountType: savingData.accountType,
         accountnum: savingAccountCreatedData.value.acctnum,
-        listCode: "newcustDoc"
+        listCode: "newcustDoc",
       };
 
       const payload = await documentService.documentCustomerForSaving(
@@ -89,17 +89,15 @@ exports.createSavingAccountService = async (savingData) => {
         client
       );
       logger.info("document payload", payload);
-      if (payload.statusvalue == true) {       
-        const pdfvalue = pdf.SavingsPDF(payload);
-        logger.info("pdf savings acount");
-        if((await pdfvalue).statusvalue = true){
-          let documentData = await doc.savingDocumentPublisher(
-            payload,
-            "Saving_account_que"
-          );
-          logger.info("get the document data", documentData);
-        }
-      }
+      
+      const pdfvalue = await pdf.SavingsPDF(payload);
+      logger.info("pdf savings acount");
+
+      let documentData = await doc.savingDocumentPublisher(
+        payload,
+        "Saving_account_que"
+      );
+      logger.info("get the document data", documentData);
 
       //sending emails
       let data = payload.customerdetail;

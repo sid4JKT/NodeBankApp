@@ -55,11 +55,12 @@ exports.addCustomer = async (data) => {
             createLoanAccountPayload
           );
           if (responseFormLoan.statusvalue) {
-          delete responseFormLoan.value.statusvalue
-          delete responseFormLoan.value.message
-          delete responseFormLoan.value.value.Status
+            
+          delete responseFormLoan.statusvalue
+          delete responseFormLoan.message
+          delete responseFormLoan.value.Status
          
-            getdata.accountDetail = responseFormLoan.value.value;
+            getdata.accountDetail = responseFormLoan.value;
           } else {
             getdata.accountDetail = responseFormLoan.message;
           }
