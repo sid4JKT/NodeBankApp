@@ -49,6 +49,7 @@ exports.documentCustomer = async (custidDoc) => {
         doc_statuscode: Document_Details.value[0].doc_statuscode,
         doc_template: Document_Details.value[0].doc_template,
       },
+      statusvalue : true
     };
     logger.info("document data", payloadDetail);
     console.log(payloadDetail)

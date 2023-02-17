@@ -14,7 +14,7 @@ exports.azureBlobfunction = async (req) => {
     // let file =req.body.file;
     //     let file = req.body.file;
     if(!req.body.file){
-      throw new Error("")
+      throw new Error("Pdf file not uploaded properly")
     }else{
 
     
@@ -52,11 +52,10 @@ exports.azureBlobfunction = async (req) => {
     // Upload data to the blob
 
     const data = file;  
-    const uploadBlobResponse =  await blockBlobClient.upload(data, data.length);    
+    const uploadBlobResponse =  blockBlobClient.upload(data, data.length);    
     console.log(
       `Blob was uploaded successfully. requestId:,${uploadBlobResponse.clientRequestId}`
     );
-
    
     datafinal.refrenceId = blobName;
     datafinal.url = blockBlobClient.url;     

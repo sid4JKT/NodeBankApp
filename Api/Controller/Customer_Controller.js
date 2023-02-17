@@ -77,27 +77,25 @@ exports.addCustomer = async (req, res) => {
 
         //sending payload to publisher
         if(payload.statusvalue == true){
-          let documentData = await doc.newpubdoc(payload);
-          logger.info("get the document data", documentData);
+         await doc.newpubdoc(payload);
+          logger.info("get the document data");
         }
         //creating pdf
-        let pdfData =  await pdfGenerate.pdfgenernate(payload);
-        logger.info("Generatepdf", pdfData);
+         await pdfGenerate.pdfgenernate(payload);
+        logger.info("Generatepdf in customer controller");
 
         //inserting records into document_customer_master_table
         await Communication_Repo.insert_Document_Customer(payload);
 
+        let blobURL = blob.datafinal.url;
+        let doc_id = payload.Documents.doc_id;
+        let cust_id = payload.customerdetail.cust_id;
 
-//         let blobURL = blob.datafinal.url;
-// console.log(blobURL,"873523489y5782349yr7823")
-//         let doc_id = payload.Documents.doc_id;
-//         let cust_id = payload.customerdetail.cust_id;
-
-//         await Communication_Repo.insertDocCustomerData(
-//           cust_id,
-//           doc_id,
-//           blobURL
-//         );
+        await Communication_Repo.insertDocCustomerData(
+          cust_id,
+          doc_id,
+          blobURL
+        );
 
         // sending emails
         let data = payload.customerdetail;

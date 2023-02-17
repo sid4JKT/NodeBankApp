@@ -6,6 +6,8 @@ const { logger } = require("../Util/logeer");
 const doc = require("../RabbitMQ/Publisher");
 const DB = require("../Database/dbconnection");
 const pdf = require("../pdf/loanpdf");
+const Communication_Repo = require("../Database/Repository/Communication_Repo")
+const blob = require("../BlobUpload/AzureBlobUpload");
 exports.getLoanAccountByDateRange = async (loanDataRequest) => {
   try {
     if (
@@ -165,11 +167,24 @@ exports.createLoanAccount = async (loanDataRequest) => {
           logger.info("document payload", payload);
           await pdf.LoanPDF(payload);
           logger.info("pdf Loan acount");
+
           let documentData = await doc.loanDocumentPublisher(
             payload,
             "Loan_account_que"
           );
           logger.info("get the document data", documentData);
+
+          await Communication_Repo.insert_Document_Customer(payload);
+
+          let blobURL = blob.datafinal.url;
+          let doc_id = payload.Documents.doc_id;
+          let cust_id = payload.customerdetail.cust_id;
+  
+          await Communication_Repo.insertDocCustomerData(
+            cust_id,
+            doc_id,
+            blobURL
+          );
           return responseWithData;
         }
         return responseWithData;
