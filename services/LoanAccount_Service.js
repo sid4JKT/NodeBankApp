@@ -6,12 +6,14 @@ const { logger } = require("../Util/logeer");
 const doc = require("../RabbitMQ/Publisher");
 const DB = require("../Database/dbconnection");
 const pdf = require("../pdf/loanpdf");
-const Communication_Repo = require("../Database/Repository/Communication_Repo")
+const Communication_Repo = require("../Database/Repository/Communication_Repo");
 const blob = require("../BlobUpload/AzureBlobUpload");
+const email = require("../Email_services/send_email");
 exports.getLoanAccountByDateRange = async (loanDataRequest) => {
   try {
     if (
-      loanDataRequest.hasOwnProperty("FromDate") &&      loanDataRequest.hasOwnProperty("ToDate")
+      loanDataRequest.hasOwnProperty("FromDate") &&
+      loanDataRequest.hasOwnProperty("ToDate")
     ) {
       console.log(
         "We have from and to dates : " + loanDataRequest.FromDate.toString()
@@ -46,7 +48,8 @@ exports.getLoanAccountByCustomerId = async (loanDataRequest) => {
     let responseWithData = {};
     let customerAccount;
     if (
-      requestBody.hasOwnProperty("CustID") &&      requestBody.hasOwnProperty("AccountNumber")
+      requestBody.hasOwnProperty("CustID") &&
+      requestBody.hasOwnProperty("AccountNumber")
     ) {
       logger.info("We have elemets in LoanAccountService ");
       let customerAccounts = await customerAccountData.getCustomerAccounts(
@@ -92,6 +95,8 @@ exports.getLoanAccountByCustomerId = async (loanDataRequest) => {
   }
 };
 exports.createLoanAccount = async (loanDataRequest) => {
+  console.log("line 98")
+  console.log(loanDataRequest)
   const client = await DB.dbConnection();
   try {
     let responseWithData = {};
@@ -105,11 +110,11 @@ exports.createLoanAccount = async (loanDataRequest) => {
     let getAccountTypeData = await accountTypeData.getAccountType(
       loanDataRequest
     );
-    console.log("===============================")
-    console.log(getAccountTypeData.value.rows[0])
+    console.log("===============================");
+    console.log(getAccountTypeData.value.rows[0]);
     accountTypeId = getAccountTypeData.value.rows[0].accounttypeID;
-    console.log("######################################")
-    console.log(accountTypeId)
+    console.log("######################################");
+    console.log(accountTypeId);
     logger.info(
       "LoanAccount_Service-createLoanAccount - getAccountType Response : " +
         JSON.stringify(getAccountTypeData) +
@@ -120,8 +125,8 @@ exports.createLoanAccount = async (loanDataRequest) => {
       loanDataRequest,
       accountTypeId
     );
-    console.log("===============================")
-    console.log(customerAccounts)
+    console.log("===============================");
+    console.log(customerAccounts);
     if (customerAccounts.statusvalue) {
       logger.info(
         "LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)"
@@ -149,16 +154,16 @@ exports.createLoanAccount = async (loanDataRequest) => {
         );
         resultdata.statusvalue = true;
         resultdata.value = responseWithData;
-       
+
         console.log(responseWithData);
         if (responseWithData.statusvalue == true) {
           let custidDoc = {
             cust_id: loanDataRequest.CustId,
-            AccountType:loanDataRequest.AccountType,
-            accountnum:responseWithData.value.AcctNum,
+            AccountType: loanDataRequest.accountType,
+            accountnum: responseWithData.value.AcctNum,
             listCode: "newcustDoc",
           };
-          console.log("*************************************")
+          console.log("*************************************");
           console.log(custidDoc);
           const payload = await documentService.documentCustomerForLoan(
             custidDoc,
@@ -174,12 +179,16 @@ exports.createLoanAccount = async (loanDataRequest) => {
           );
           logger.info("get the document data", documentData);
 
-          await Communication_Repo.insert_Document_Customer(payload);
-
+          // await Communication_Repo.insert_Document_Customer(payload);
+          let data = payload.customerdetail;
+          const Emails = await email.main(data);
+          if (Emails.statusvalue == true) {
+            await Communication_Repo.insert_Document_Customer(payload);
+          }
           let blobURL = blob.datafinal.url;
           let doc_id = payload.Documents.doc_id;
           let cust_id = payload.customerdetail.cust_id;
-  
+
           await Communication_Repo.insertDocCustomerData(
             cust_id,
             doc_id,

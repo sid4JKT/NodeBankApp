@@ -1,63 +1,2693 @@
-[2023-02-17T09:44:48.823] [INFO] default - get the data in the Add customer [object Object]
-[2023-02-17T09:44:50.314] [INFO] default - the DB is Connected  {
-  FirstName: 'Karthi 015',
-  LastName: 'Wick',
-  Address1: 'Hyderabad',
-  Address2: 'Rajajinagar',
-  EmailId: 'udesh696@gmail.com',
-  Phone: 94712935778,
-  Mobile: 985746663,
-  DateOfBirth: '22/03/2000',
-  MaritalStatus: 'Single',
-  ZIPCode: 530068,
-  City: 'Bengalore',
-  State: 'Karnataka',
-  Country: 'India',
-  ActionType: 'ADD'
-}
-[2023-02-17T09:44:50.585] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
-
-  values('Karthi 015', 'Wick', 'Hyderabad', 'Rajajinagar', 'udesh696@gmail.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
-[2023-02-17T09:44:50.586] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:50.587] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 015' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='udesh696@gmail.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
-[2023-02-17T09:44:50.840] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 015' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='udesh696@gmail.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
-[2023-02-17T09:44:50.841] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:50.843] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1256,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
-[2023-02-17T09:44:51.588] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1256,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
-[2023-02-17T09:44:52.324] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
-[2023-02-17T09:44:52.573] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
-[2023-02-17T09:44:52.573] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:52.574] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
-[2023-02-17T09:44:53.305] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1256,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
-[2023-02-17T09:44:53.561] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1256', '3', 'Active', 'Fri Feb 17 2023 09:44:53 GMT+0530 (India Standard Time)')}
-[2023-02-17T09:44:53.562] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:53.813] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
-[2023-02-17T09:44:53.813] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:53.815] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
-[2023-02-17T09:44:53.816] [INFO] default - calling createLoanAccount repo program : 1000000786 <===> loan
-[2023-02-17T09:44:54.551] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1256,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000786 --> 3
-[2023-02-17T09:44:54.552] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000786 -- 1000000786
-[2023-02-17T09:44:54.552] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
-[2023-02-17T09:44:54.553] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000786', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Fri Feb 17 2023 09:44:54 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
-[2023-02-17T09:44:54.809] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000786', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Fri Feb 17 2023 09:44:54 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
-[2023-02-17T09:44:54.809] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:54.809] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000786","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
-[2023-02-17T09:44:54.813] [INFO] default - {
-  cust_id: 1256,
+[2023-02-22T10:09:28.538] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1224,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000}
+[2023-02-22T10:09:29.272] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  
+[2023-02-22T10:09:29.519] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  }
+[2023-02-22T10:09:29.520] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:29.522] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"2","accounttype":"loan","accsubtype":"car"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 2
+[2023-02-22T10:09:30.265] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1224,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000} <--> 2
+[2023-02-22T10:09:30.519] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1224', '2', 'Active', 'Wed Feb 22 2023 10:09:30 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:09:30.520] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:30.768] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:09:30.769] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:30.771] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:09:30.771] [INFO] default - calling createLoanAccount repo program : 1000000951 <===> loan
+[2023-02-22T10:09:31.504] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1224,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000} --> 1000000951 --> 2
+[2023-02-22T10:09:31.505] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000951 -- 1000000951
+[2023-02-22T10:09:31.505] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 80000 --> 1920000 --> 2920000 --> 121666.66666666667 --> 121666.67
+[2023-02-22T10:09:31.505] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000951', '0', '12345678', '8', '24', '1000000', '2', 'Wed Feb 22 2023 10:09:31 GMT+0530 (India Standard Time)', 'Active', '121666.67')
+[2023-02-22T10:09:31.754] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000951', '0', '12345678', '8', '24', '1000000', '2', 'Wed Feb 22 2023 10:09:31 GMT+0530 (India Standard Time)', 'Active', '121666.67')}
+[2023-02-22T10:09:31.755] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:31.756] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000951","branchcode":"12345678","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T10:09:31.759] [INFO] default - {
+  cust_id: 1224,
   AccountType: 'loan',
-  accountnum: '1000000786',
+  accountnum: '1000000951',
   listCode: 'newcustDoc'
 }
-[2023-02-17T09:44:54.814] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
-    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1256
-[2023-02-17T09:44:55.064] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
-    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1256}
-[2023-02-17T09:44:55.065] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:55.065] [INFO] default - data got from getcCustomerTxnByCustId {
+[2023-02-22T10:09:31.760] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1224
+[2023-02-22T10:09:32.009] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1224}
+[2023-02-22T10:09:32.010] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:32.010] [INFO] default - data got from getcCustomerTxnByCustId {
   statusvalue: true,
   value: {
-    cust_id: 1256,
-    firstname: 'Karthi 015',
+    cust_id: 1224,
+    firstname: 'virat 404',
+    lastname: 'k',
+    address1: 'abc',
+    address2: 'xyz',
+    emailid: 'sagar4@jktech.com',
+    phone: '7975031342',
+    mobile: '0',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '585101',
+    city: 'GLB',
+    state: 'Ka',
+    country: 'IND',
+    acctnum: '1000000951',
+    accounttypeid: '2',
+    id: '952',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:09:30 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: '12345678',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '1000000',
+    loancreatedate: 'Wed Feb 22 2023 10:09:31 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1293',
+    emiamount: '121666.67'
+  }
+}
+[2023-02-22T10:09:32.259] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:09:32.259] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:32.506] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:09:32.507] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:32.510] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'loan',
+    accountnum: '1000000951',
+    cust_id: 1224,
+    firstname: 'virat 404',
+    lastname: 'k',
+    address1: 'abc',
+    address2: 'xyz',
+    emailid: 'sagar4@jktech.com',
+    phone: '7975031342',
+    mobile: '0',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '585101',
+    city: 'GLB',
+    state: 'Ka',
+    country: 'IND'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:09:32.513] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'loan',
+    accountnum: '1000000951',
+    cust_id: 1224,
+    firstname: 'virat 404',
+    lastname: 'k',
+    address1: 'abc',
+    address2: 'xyz',
+    emailid: 'sagar4@jktech.com',
+    phone: '7975031342',
+    mobile: '0',
+    dob: 'undefined',
+    maritalstatus: 'Married',
+    zipcode: '585101',
+    city: 'GLB',
+    state: 'Ka',
+    country: 'IND'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:09:32.604] [INFO] default - pdf Loan acount
+[2023-02-22T10:09:32.616] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:09:37.683] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (1869,'wel002', '22/2/2023', 'pdf', 1224, 'Active','Wed Feb 22 2023 10:09:37 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:09:37.685] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:38.662] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1224'}
+[2023-02-22T10:09:38.663] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:38.912] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2e6cfa9c0-b26a-11ed-9277-2bd2ae7a5d0e.pdf'
+        WHERE cust_id = 1224;}
+[2023-02-22T10:09:38.913] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:09:38.914] [INFO] default - the create loan account  {
+  statusvalue: true,
+  message: 'LoanAccountDetail Records Created',
+  value: {
+    AcctNum: '1000000951',
+    branchcode: '12345678',
+    Status: 'Active',
+    Accounttype: 'loan'
+  }
+}
+[2023-02-22T10:18:53.514] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1225,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000}
+[2023-02-22T10:18:54.251] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  
+[2023-02-22T10:18:54.498] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  }
+[2023-02-22T10:18:54.499] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:54.504] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"2","accounttype":"loan","accsubtype":"car"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 2
+[2023-02-22T10:18:55.236] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1225,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000} <--> 2
+[2023-02-22T10:18:55.485] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1225', '2', 'Active', 'Wed Feb 22 2023 10:18:55 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:18:55.486] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:55.728] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:18:55.729] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:55.733] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:18:55.734] [INFO] default - calling createLoanAccount repo program : 1000000952 <===> loan
+[2023-02-22T10:18:56.463] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1225,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000} --> 1000000952 --> 2
+[2023-02-22T10:18:56.464] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000952 -- 1000000952
+[2023-02-22T10:18:56.465] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 80000 --> 1920000 --> 2920000 --> 121666.66666666667 --> 121666.67
+[2023-02-22T10:18:56.465] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000952', '0', '12345678', '8', '24', '1000000', '2', 'Wed Feb 22 2023 10:18:56 GMT+0530 (India Standard Time)', 'Active', '121666.67')
+[2023-02-22T10:18:56.736] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000952', '0', '12345678', '8', '24', '1000000', '2', 'Wed Feb 22 2023 10:18:56 GMT+0530 (India Standard Time)', 'Active', '121666.67')}
+[2023-02-22T10:18:56.737] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:56.737] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000952","branchcode":"12345678","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T10:18:56.739] [INFO] default - {
+  cust_id: 1225,
+  AccountType: 'loan',
+  accountnum: '1000000952',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T10:18:56.740] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1225
+[2023-02-22T10:18:56.987] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1225}
+[2023-02-22T10:18:56.987] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:56.988] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1225,
+    firstname: 'Shilpa',
+    lastname: 'K',
+    address1: 'Bangalore',
+    address2: 'Bangalore',
+    emailid: 'Shilpa.j@jktech.com',
+    phone: '9740646193',
+    mobile: '0',
+    dob: 'undefined',
+    maritalstatus: 'Single',
+    zipcode: '560033',
+    city: 'Bangalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000952',
+    accounttypeid: '2',
+    id: '953',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:18:55 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: '12345678',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '1000000',
+    loancreatedate: 'Wed Feb 22 2023 10:18:56 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1294',
+    emiamount: '121666.67'
+  }
+}
+[2023-02-22T10:18:57.233] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:18:57.234] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:57.477] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:18:57.477] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:18:57.479] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'loan',
+    accountnum: '1000000952',
+    cust_id: 1225,
+    firstname: 'Shilpa',
+    lastname: 'K',
+    address1: 'Bangalore',
+    address2: 'Bangalore',
+    emailid: 'Shilpa.j@jktech.com',
+    phone: '9740646193',
+    mobile: '0',
+    dob: 'undefined',
+    maritalstatus: 'Single',
+    zipcode: '560033',
+    city: 'Bangalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:18:57.482] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'loan',
+    accountnum: '1000000952',
+    cust_id: 1225,
+    firstname: 'Shilpa',
+    lastname: 'K',
+    address1: 'Bangalore',
+    address2: 'Bangalore',
+    emailid: 'Shilpa.j@jktech.com',
+    phone: '9740646193',
+    mobile: '0',
+    dob: 'undefined',
+    maritalstatus: 'Single',
+    zipcode: '560033',
+    city: 'Bangalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:18:57.527] [INFO] default - pdf Loan acount
+[2023-02-22T10:18:57.542] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:19:01.135] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (3845,'wel002', '22/2/2023', 'pdf', 1225, 'Active','Wed Feb 22 2023 10:19:00 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:19:01.136] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:02.108] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1225'}
+[2023-02-22T10:19:02.109] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:02.357] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2378d4290-b26c-11ed-a6ee-cbb7e67ff6db.pdf'
+        WHERE cust_id = 1225;}
+[2023-02-22T10:19:02.358] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:02.358] [INFO] default - the create loan account  {
+  statusvalue: true,
+  message: 'LoanAccountDetail Records Created',
+  value: {
+    AcctNum: '1000000952',
+    branchcode: '12345678',
+    Status: 'Active',
+    Accounttype: 'loan'
+  }
+}
+[2023-02-22T10:19:37.695] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T10:19:38.508] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 029',
+    LastName: 'Wick',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar',
+    EmailId: 'anand.kumar1@jktech.com',
+    Phone: 94712935778,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'loan',
+    AccSubType: 'home',
+    BranchCode: 'BOI_1235',
+    RateOfInterest: '18',
+    LoanDuration: '30',
+    TotalLoanAmount: 43500000
+  }
+}
+[2023-02-22T10:19:38.763] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 029', 'Wick', 'Hyderabad', 'Rajajinagar', 'anand.kumar1@jktech.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T10:19:38.764] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:38.764] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 029' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T10:19:39.008] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 029' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T10:19:39.010] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:39.011] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1434,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:19:39.740] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1434,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:19:40.475] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
+[2023-02-22T10:19:40.720] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
+[2023-02-22T10:19:40.722] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:40.723] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
+[2023-02-22T10:19:41.466] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1434,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
+[2023-02-22T10:19:41.717] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1434', '3', 'Active', 'Wed Feb 22 2023 10:19:41 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:19:41.717] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:41.964] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:19:41.964] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:41.966] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:19:41.966] [INFO] default - calling createLoanAccount repo program : 1000000953 <===> loan
+[2023-02-22T10:19:43.401] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1434,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000953 --> 3
+[2023-02-22T10:19:43.401] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000953 -- 1000000953
+[2023-02-22T10:19:43.402] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
+[2023-02-22T10:19:43.402] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000953', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:19:43 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
+[2023-02-22T10:19:43.650] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000953', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:19:43 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
+[2023-02-22T10:19:43.650] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:43.651] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000953","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:19:43.653] [INFO] default - {
+  cust_id: 1434,
+  AccountType: undefined,
+  accountnum: '1000000953',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T10:19:43.655] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1434
+[2023-02-22T10:19:43.898] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1434}
+[2023-02-22T10:19:43.899] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:43.899] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1434,
+    firstname: 'Karthi 029',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000953',
+    accounttypeid: '3',
+    id: '954',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:19:41 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: 'BOI_1235',
+    rateofinterest: '18',
+    loanduration: '30',
+    totalloanamount: '43500000',
+    loancreatedate: 'Wed Feb 22 2023 10:19:43 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '3',
+    emiid: '1295',
+    emiamount: '9280000.00'
+  }
+}
+[2023-02-22T10:19:44.142] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:19:44.142] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:44.385] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:19:44.385] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:44.387] [INFO] default - document data {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000953',
+    cust_id: 1434,
+    firstname: 'Karthi 029',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:19:44.390] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000953',
+    cust_id: 1434,
+    firstname: 'Karthi 029',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:19:44.412] [INFO] default - pdf Loan acount
+[2023-02-22T10:19:44.414] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:19:45.911] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (1825,'wel002', '22/2/2023', 'pdf', 1434, 'Active','Wed Feb 22 2023 10:19:45 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:19:45.912] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:46.891] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1434'}
+[2023-02-22T10:19:46.892] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:47.138] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob25372adb0-b26c-11ed-a6ee-cbb7e67ff6db.pdf'
+        WHERE cust_id = 1434;}
+[2023-02-22T10:19:47.140] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:47.140] [INFO] default - Customer_Service -> addCustomer -> loan account created  {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000953","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:19:47.141] [INFO] default - Customer_Service -> addCustomer -> loan account created 2 {"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000953","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:19:47.143] [INFO] default - *********** {
+  cust_id: 1434,
+  accountDetail: {
+    AcctNum: '1000000953',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1434,
+    listCode: 'newcustDoc',
+    acctnum: '1000000953',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:19:48.962] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1434}
+[2023-02-22T10:19:48.963] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:48.963] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1434,
+  firstname: 'Karthi 029',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'anand.kumar1@jktech.com',
+  phone: '94712935778',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T10:19:49.207] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:19:49.207] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:49.450] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:19:49.450] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:49.452] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000953',
+    accounttype: undefined,
+    cust_id: 1434,
+    firstname: 'Karthi 029',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:19:49.459] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000953',
+    accounttype: undefined,
+    cust_id: 1434,
+    firstname: 'Karthi 029',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:19:49.463] [INFO] default - get the document data undefined
+[2023-02-22T10:19:50.442] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (2197,'wel002', '22/2/2023', 'pdf', 1434, 'Active','Wed Feb 22 2023 10:19:50 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:19:50.443] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:19:50.468] [INFO] default - Generatepdf
+[2023-02-22T10:19:50.888] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1434,
+  accountDetail: {
+    AcctNum: '1000000953',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1434,
+    listCode: 'newcustDoc',
+    acctnum: '1000000953',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:19:50.891] [INFO] default - Add customer Data: {
+  cust_id: 1434,
+  accountDetail: {
+    AcctNum: '1000000953',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1434,
+    listCode: 'newcustDoc',
+    acctnum: '1000000953',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:33:50.628] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T10:33:51.522] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 030',
+    LastName: 'Wick',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar',
+    EmailId: 'anand.kumar1@jktech.com',
+    Phone: 94712935778,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'loan',
+    AccSubType: 'home',
+    BranchCode: 'BOI_1235',
+    RateOfInterest: '18',
+    LoanDuration: '30',
+    TotalLoanAmount: 43500000
+  }
+}
+[2023-02-22T10:33:51.783] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 030', 'Wick', 'Hyderabad', 'Rajajinagar', 'anand.kumar1@jktech.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T10:33:51.785] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:51.785] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 030' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T10:33:52.032] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 030' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T10:33:52.033] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:52.034] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1436,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:33:52.772] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1436,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:33:53.508] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
+[2023-02-22T10:33:53.753] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
+[2023-02-22T10:33:53.754] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:53.757] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
+[2023-02-22T10:33:54.493] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1436,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
+[2023-02-22T10:33:54.739] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1436', '3', 'Active', 'Wed Feb 22 2023 10:33:54 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:33:54.740] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:54.983] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:33:54.983] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:54.985] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:33:54.985] [INFO] default - calling createLoanAccount repo program : 1000000956 <===> loan
+[2023-02-22T10:33:55.717] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1436,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000956 --> 3
+[2023-02-22T10:33:55.717] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000956 -- 1000000956
+[2023-02-22T10:33:55.717] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
+[2023-02-22T10:33:55.718] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000956', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:33:55 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
+[2023-02-22T10:33:55.964] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000956', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:33:55 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
+[2023-02-22T10:33:55.964] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:55.965] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000956","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:33:55.967] [INFO] default - {
+  cust_id: 1436,
+  AccountType: undefined,
+  accountnum: '1000000956',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T10:33:55.967] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1436
+[2023-02-22T10:33:56.215] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1436}
+[2023-02-22T10:33:56.216] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:56.216] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1436,
+    firstname: 'Karthi 030',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000956',
+    accounttypeid: '3',
+    id: '957',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:33:54 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: 'BOI_1235',
+    rateofinterest: '18',
+    loanduration: '30',
+    totalloanamount: '43500000',
+    loancreatedate: 'Wed Feb 22 2023 10:33:55 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '3',
+    emiid: '1297',
+    emiamount: '9280000.00'
+  }
+}
+[2023-02-22T10:33:56.464] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:33:56.464] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:56.710] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:33:56.710] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:33:56.712] [INFO] default - document data {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000956',
+    cust_id: 1436,
+    firstname: 'Karthi 030',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:33:56.714] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000956',
+    cust_id: 1436,
+    firstname: 'Karthi 030',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:33:56.764] [INFO] default - pdf Loan acount
+[2023-02-22T10:33:56.779] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:33:59.261] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (7584,'wel002', '22/2/2023', 'pdf', 1436, 'Active','Wed Feb 22 2023 10:33:59 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:33:59.262] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:00.251] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1436'}
+[2023-02-22T10:34:00.252] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:00.500] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob24f881b20-b26e-11ed-8a95-c7cee0b62369.pdf'
+        WHERE cust_id = 1436;}
+[2023-02-22T10:34:00.501] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:00.501] [INFO] default - Customer_Service -> addCustomer -> loan account created  {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000956","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:34:00.501] [INFO] default - Customer_Service -> addCustomer -> loan account created 2 {"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000956","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:34:00.502] [INFO] default - *********** {
+  cust_id: 1436,
+  accountDetail: {
+    AcctNum: '1000000956',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1436,
+    listCode: 'newcustDoc',
+    acctnum: '1000000956',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:34:02.284] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1436}
+[2023-02-22T10:34:02.284] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:02.284] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1436,
+  firstname: 'Karthi 030',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'anand.kumar1@jktech.com',
+  phone: '94712935778',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T10:34:02.529] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:34:02.530] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:02.774] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:34:02.775] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:02.777] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000956',
+    accounttype: undefined,
+    cust_id: 1436,
+    firstname: 'Karthi 030',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:34:02.781] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000956',
+    accounttype: undefined,
+    cust_id: 1436,
+    firstname: 'Karthi 030',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:34:02.787] [INFO] default - get the document data undefined
+[2023-02-22T10:34:03.764] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (6295,'wel002', '22/2/2023', 'pdf', 1436, 'Active','Wed Feb 22 2023 10:34:03 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:34:03.765] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:34:03.785] [INFO] default - Generatepdf
+[2023-02-22T10:34:04.199] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1436,
+  accountDetail: {
+    AcctNum: '1000000956',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1436,
+    listCode: 'newcustDoc',
+    acctnum: '1000000956',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:34:04.202] [INFO] default - Add customer Data: {
+  cust_id: 1436,
+  accountDetail: {
+    AcctNum: '1000000956',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1436,
+    listCode: 'newcustDoc',
+    acctnum: '1000000956',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:44:20.201] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T10:44:21.429] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 031',
+    LastName: 'Wick',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar',
+    EmailId: 'anand.kumar1@jktech.com',
+    Phone: 94712935778,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'loan',
+    AccSubType: 'home',
+    BranchCode: 'BOI_1235',
+    RateOfInterest: '18',
+    LoanDuration: '30',
+    TotalLoanAmount: 43500000
+  }
+}
+[2023-02-22T10:44:21.686] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 031', 'Wick', 'Hyderabad', 'Rajajinagar', 'anand.kumar1@jktech.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T10:44:21.687] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:21.688] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 031' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T10:44:21.931] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 031' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T10:44:21.933] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:21.934] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1437,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:44:22.663] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1437,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:44:23.398] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
+[2023-02-22T10:44:23.647] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
+[2023-02-22T10:44:23.648] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:23.651] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
+[2023-02-22T10:44:24.387] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1437,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
+[2023-02-22T10:44:24.636] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1437', '3', 'Active', 'Wed Feb 22 2023 10:44:24 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:44:24.637] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:24.883] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:44:24.883] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:24.885] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:44:24.886] [INFO] default - calling createLoanAccount repo program : 1000000957 <===> loan
+[2023-02-22T10:44:25.645] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1437,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000957 --> 3
+[2023-02-22T10:44:25.646] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000957 -- 1000000957
+[2023-02-22T10:44:25.646] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
+[2023-02-22T10:44:25.647] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000957', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:44:25 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
+[2023-02-22T10:44:25.894] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000957', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:44:25 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
+[2023-02-22T10:44:25.895] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:25.896] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000957","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:44:25.905] [INFO] default - {
+  cust_id: 1437,
+  AccountType: undefined,
+  accountnum: '1000000957',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T10:44:25.907] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1437
+[2023-02-22T10:44:26.160] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1437}
+[2023-02-22T10:44:26.161] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:26.162] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1437,
+    firstname: 'Karthi 031',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000957',
+    accounttypeid: '3',
+    id: '958',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:44:24 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: 'BOI_1235',
+    rateofinterest: '18',
+    loanduration: '30',
+    totalloanamount: '43500000',
+    loancreatedate: 'Wed Feb 22 2023 10:44:25 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '3',
+    emiid: '1298',
+    emiamount: '9280000.00'
+  }
+}
+[2023-02-22T10:44:26.421] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:44:26.422] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:26.666] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:44:26.667] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:26.670] [INFO] default - document data {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000957',
+    cust_id: 1437,
+    firstname: 'Karthi 031',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:44:26.675] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000957',
+    cust_id: 1437,
+    firstname: 'Karthi 031',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:44:26.751] [INFO] default - pdf Loan acount
+[2023-02-22T10:44:26.792] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:44:30.493] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (3745,'wel002', '22/2/2023', 'pdf', 1437, 'Active','Wed Feb 22 2023 10:44:30 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:44:30.494] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:31.473] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1437'}
+[2023-02-22T10:44:31.474] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:31.720] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2c7268da0-b26f-11ed-b79b-e7181e48bd6f.pdf'
+        WHERE cust_id = 1437;}
+[2023-02-22T10:44:31.721] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:31.721] [INFO] default - Customer_Service -> addCustomer -> loan account created  {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000957","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:44:31.722] [INFO] default - Customer_Service -> addCustomer -> loan account created 2 {"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000957","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:44:31.724] [INFO] default - *********** {
+  cust_id: 1437,
+  accountDetail: {
+    AcctNum: '1000000957',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1437,
+    listCode: 'newcustDoc',
+    acctnum: '1000000957',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:44:33.450] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1437}
+[2023-02-22T10:44:33.451] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:33.452] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1437,
+  firstname: 'Karthi 031',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'anand.kumar1@jktech.com',
+  phone: '94712935778',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T10:44:33.698] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:44:33.699] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:33.944] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:44:33.945] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:33.947] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000957',
+    accounttype: undefined,
+    cust_id: 1437,
+    firstname: 'Karthi 031',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:44:33.955] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000957',
+    accounttype: undefined,
+    cust_id: 1437,
+    firstname: 'Karthi 031',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:44:33.961] [INFO] default - get the document data undefined
+[2023-02-22T10:44:34.959] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (3815,'wel002', '22/2/2023', 'pdf', 1437, 'Active','Wed Feb 22 2023 10:44:34 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:44:34.960] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:44:34.985] [INFO] default - Generatepdf
+[2023-02-22T10:44:35.437] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1437,
+  accountDetail: {
+    AcctNum: '1000000957',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1437,
+    listCode: 'newcustDoc',
+    acctnum: '1000000957',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:44:35.443] [INFO] default - Add customer Data: {
+  cust_id: 1437,
+  accountDetail: {
+    AcctNum: '1000000957',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1437,
+    listCode: 'newcustDoc',
+    acctnum: '1000000957',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:50:31.658] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T10:50:32.507] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 032',
+    LastName: 'Wick',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar',
+    EmailId: 'anand.kumar@jktech.com',
+    Phone: 94712935778,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'loan',
+    AccSubType: 'home',
+    BranchCode: 'BOI_1235',
+    RateOfInterest: '18',
+    LoanDuration: '30',
+    TotalLoanAmount: 43500000
+  }
+}
+[2023-02-22T10:50:32.765] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 032', 'Wick', 'Hyderabad', 'Rajajinagar', 'anand.kumar@jktech.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T10:50:32.766] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:32.767] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 032' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T10:50:33.012] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 032' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T10:50:33.014] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:33.015] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1438,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:50:33.753] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1438,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:50:34.488] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
+[2023-02-22T10:50:34.732] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
+[2023-02-22T10:50:34.732] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:34.735] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
+[2023-02-22T10:50:35.472] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1438,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
+[2023-02-22T10:50:35.721] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1438', '3', 'Active', 'Wed Feb 22 2023 10:50:35 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:50:35.721] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:35.965] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:50:35.966] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:35.968] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:50:35.968] [INFO] default - calling createLoanAccount repo program : 1000000958 <===> loan
+[2023-02-22T10:50:36.700] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1438,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000958 --> 3
+[2023-02-22T10:50:36.700] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000958 -- 1000000958
+[2023-02-22T10:50:36.701] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
+[2023-02-22T10:50:36.701] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000958', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:50:36 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
+[2023-02-22T10:50:36.948] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000958', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:50:36 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
+[2023-02-22T10:50:36.949] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:36.949] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000958","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:50:36.953] [INFO] default - {
+  cust_id: 1438,
+  AccountType: undefined,
+  accountnum: '1000000958',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T10:50:36.954] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1438
+[2023-02-22T10:50:37.200] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1438}
+[2023-02-22T10:50:37.200] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:37.201] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1438,
+    firstname: 'Karthi 032',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000958',
+    accounttypeid: '3',
+    id: '959',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:50:35 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: 'BOI_1235',
+    rateofinterest: '18',
+    loanduration: '30',
+    totalloanamount: '43500000',
+    loancreatedate: 'Wed Feb 22 2023 10:50:36 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '3',
+    emiid: '1299',
+    emiamount: '9280000.00'
+  }
+}
+[2023-02-22T10:50:37.447] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:50:37.448] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:37.693] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:50:37.694] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:37.696] [INFO] default - document data {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000958',
+    cust_id: 1438,
+    firstname: 'Karthi 032',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:50:37.699] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000958',
+    cust_id: 1438,
+    firstname: 'Karthi 032',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:50:37.741] [INFO] default - pdf Loan acount
+[2023-02-22T10:50:37.756] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:50:40.591] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (9217,'wel002', '22/2/2023', 'pdf', 1438, 'Active','Wed Feb 22 2023 10:50:40 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:50:40.592] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:41.578] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1438'}
+[2023-02-22T10:50:41.578] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:41.824] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2a42d8000-b270-11ed-ae21-67f45a816302.pdf'
+        WHERE cust_id = 1438;}
+[2023-02-22T10:50:41.825] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:41.825] [INFO] default - Customer_Service -> addCustomer -> loan account created  {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000958","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:50:41.825] [INFO] default - Customer_Service -> addCustomer -> loan account created 2 {"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000958","branchcode":"BOI_1235","Status":"Active"}}
+[2023-02-22T10:50:41.829] [INFO] default - *********** {
+  cust_id: 1438,
+  accountDetail: {
+    AcctNum: '1000000958',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1438,
+    listCode: 'newcustDoc',
+    acctnum: '1000000958',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:50:43.624] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1438}
+[2023-02-22T10:50:43.624] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:43.625] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1438,
+  firstname: 'Karthi 032',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'anand.kumar@jktech.com',
+  phone: '94712935778',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T10:50:43.871] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:50:43.872] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:44.116] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:50:44.117] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:44.119] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000958',
+    accounttype: undefined,
+    cust_id: 1438,
+    firstname: 'Karthi 032',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:50:44.125] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000958',
+    accounttype: undefined,
+    cust_id: 1438,
+    firstname: 'Karthi 032',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:50:44.131] [INFO] default - get the document data undefined
+[2023-02-22T10:50:45.108] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (1397,'wel002', '22/2/2023', 'pdf', 1438, 'Active','Wed Feb 22 2023 10:50:44 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:50:45.109] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:50:45.134] [INFO] default - Generatepdf
+[2023-02-22T10:50:45.559] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1438,
+  accountDetail: {
+    AcctNum: '1000000958',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1438,
+    listCode: 'newcustDoc',
+    acctnum: '1000000958',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:50:45.569] [INFO] default - Add customer Data: {
+  cust_id: 1438,
+  accountDetail: {
+    AcctNum: '1000000958',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: undefined
+  },
+  custidDoc: {
+    custId: 1438,
+    listCode: 'newcustDoc',
+    acctnum: '1000000958',
+    accType: undefined
+  },
+  statusvalue: true
+}
+[2023-02-22T10:58:36.861] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T10:58:37.751] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 033',
+    LastName: 'Wick',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar',
+    EmailId: 'anand.kumar@jktech.com',
+    Phone: 94712935778,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'loan',
+    AccSubType: 'home',
+    BranchCode: 'BOI_1235',
+    RateOfInterest: '18',
+    LoanDuration: '30',
+    TotalLoanAmount: 43500000
+  }
+}
+[2023-02-22T10:58:38.015] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 033', 'Wick', 'Hyderabad', 'Rajajinagar', 'anand.kumar@jktech.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T10:58:38.016] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:38.017] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 033' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T10:58:38.262] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 033' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T10:58:38.263] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:38.264] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1439,"accountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:58:39.000] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1439,"accountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T10:58:39.734] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
+[2023-02-22T10:58:39.975] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
+[2023-02-22T10:58:39.976] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:39.979] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
+[2023-02-22T10:58:40.719] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1439,"accountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
+[2023-02-22T10:58:40.967] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1439', '3', 'Active', 'Wed Feb 22 2023 10:58:40 GMT+0530 (India Standard Time)')}
+[2023-02-22T10:58:40.968] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:41.212] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T10:58:41.212] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:41.213] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T10:58:41.213] [INFO] default - calling createLoanAccount repo program : 1000000959 <===> loan
+[2023-02-22T10:58:41.943] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1439,"accountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000959 --> 3
+[2023-02-22T10:58:41.943] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000959 -- 1000000959
+[2023-02-22T10:58:41.943] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
+[2023-02-22T10:58:41.944] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000959', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:58:41 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
+[2023-02-22T10:58:42.193] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000959', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 10:58:41 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
+[2023-02-22T10:58:42.194] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:42.194] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000959","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T10:58:42.197] [INFO] default - {
+  cust_id: 1439,
+  AccountType: 'loan',
+  accountnum: '1000000959',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T10:58:42.198] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1439
+[2023-02-22T10:58:42.445] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1439}
+[2023-02-22T10:58:42.446] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:42.447] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1439,
+    firstname: 'Karthi 033',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000959',
+    accounttypeid: '3',
+    id: '960',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 10:58:40 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: 'BOI_1235',
+    rateofinterest: '18',
+    loanduration: '30',
+    totalloanamount: '43500000',
+    loancreatedate: 'Wed Feb 22 2023 10:58:41 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '3',
+    emiid: '1300',
+    emiamount: '9280000.00'
+  }
+}
+[2023-02-22T10:58:42.697] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:58:42.698] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:42.950] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:58:42.951] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:42.954] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'loan',
+    accountnum: '1000000959',
+    cust_id: 1439,
+    firstname: 'Karthi 033',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:58:42.961] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'loan',
+    accountnum: '1000000959',
+    cust_id: 1439,
+    firstname: 'Karthi 033',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T10:58:43.032] [INFO] default - pdf Loan acount
+[2023-02-22T10:58:43.052] [INFO] default - get the document data data is publish and consume
+[2023-02-22T10:58:45.848] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (7862,'wel002', '22/2/2023', 'pdf', 1439, 'Active','Wed Feb 22 2023 10:58:45 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:58:45.849] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:46.835] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1439'}
+[2023-02-22T10:58:46.836] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:47.086] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2c57485f0-b271-11ed-81b4-c555f9d1ed50.pdf'
+        WHERE cust_id = 1439;}
+[2023-02-22T10:58:47.087] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:47.087] [INFO] default - Customer_Service -> addCustomer -> loan account created  {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000959","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T10:58:47.088] [INFO] default - Customer_Service -> addCustomer -> loan account created 2 {"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000959","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T10:58:47.089] [INFO] default - *********** {
+  cust_id: 1439,
+  accountDetail: {
+    AcctNum: '1000000959',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: 'loan'
+  },
+  custidDoc: {
+    custId: 1439,
+    listCode: 'newcustDoc',
+    acctnum: '1000000959',
+    accType: 'loan'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:58:48.959] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1439}
+[2023-02-22T10:58:48.960] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:48.960] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1439,
+  firstname: 'Karthi 033',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'anand.kumar@jktech.com',
+  phone: '94712935778',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T10:58:49.205] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T10:58:49.206] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:49.450] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T10:58:49.451] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:49.454] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000959',
+    accounttype: 'loan',
+    cust_id: 1439,
+    firstname: 'Karthi 033',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:58:49.463] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000959',
+    accounttype: 'loan',
+    cust_id: 1439,
+    firstname: 'Karthi 033',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:58:49.469] [INFO] default - get the document data undefined
+[2023-02-22T10:58:50.446] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (6791,'wel002', '22/2/2023', 'pdf', 1439, 'Active','Wed Feb 22 2023 10:58:50 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T10:58:50.447] [INFO] default - the Data got :[object Object]}
+[2023-02-22T10:58:50.473] [INFO] default - Generatepdf
+[2023-02-22T10:58:50.897] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1439,
+  accountDetail: {
+    AcctNum: '1000000959',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: 'loan'
+  },
+  custidDoc: {
+    custId: 1439,
+    listCode: 'newcustDoc',
+    acctnum: '1000000959',
+    accType: 'loan'
+  },
+  statusvalue: true
+}
+[2023-02-22T10:58:50.902] [INFO] default - Add customer Data: {
+  cust_id: 1439,
+  accountDetail: {
+    AcctNum: '1000000959',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: 'loan'
+  },
+  custidDoc: {
+    custId: 1439,
+    listCode: 'newcustDoc',
+    acctnum: '1000000959',
+    accType: 'loan'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:06:21.903] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T11:06:22.811] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 035',
+    LastName: 'goga',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar ',
+    EmailId: 'anand.kumar1@jktech.com',
+    Phone: 987564554,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'saving',
+    accsubtype: 'student',
+    branch_code: 'BOI_1234',
+    transfer_limit: 5000
+  }
+}
+[2023-02-22T11:06:23.067] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 035', 'goga', 'Hyderabad', 'Rajajinagar ', 'anand.kumar1@jktech.com', 987564554, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T11:06:23.069] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:23.069] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 035' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='anand.kumar1@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T11:06:23.315] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 035' and lastname='goga' and address1='Hyderabad' and address2='Rajajinagar ' and emailid='anand.kumar1@jktech.com' and phone=987564554 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T11:06:23.316] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:24.049] [INFO] default - the service  {
+  custId: 1440,
+  accountType: 'saving',
+  accsubtype: 'student',
+  branch_code: 'BOI_1234',
+  transfer_limit: 5000
+}
+[2023-02-22T11:06:24.051] [INFO] default - the accounttypequerry:  SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'
+[2023-02-22T11:06:24.293] [INFO] default - Get the data for Querry:SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'}
+[2023-02-22T11:06:24.294] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:24.295] [INFO] default - the accounttype:  [ { accounttypeID: '1' } ]
+[2023-02-22T11:06:24.539] [INFO] default - the customeraccountsquerry for inserting customeraccounts :  INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (1440,'1','active','Wed Feb 22 2023 11:06:24 GMT+0530 (India Standard Time)')
+[2023-02-22T11:06:24.782] [INFO] default - Get the data for Querry:INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (1440,'1','active','Wed Feb 22 2023 11:06:24 GMT+0530 (India Standard Time)')}
+[2023-02-22T11:06:24.783] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:24.784] [INFO] default - the data is  inserting customer accounts  
+[2023-02-22T11:06:24.785] [INFO] default - the accounttypequerry:  SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=1440  and accounttypeid=1
+[2023-02-22T11:06:25.033] [INFO] default - Get the data for Querry:SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=1440  and accounttypeid=1}
+[2023-02-22T11:06:25.034] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:25.035] [INFO] default - the accounttype:  1000000960
+[2023-02-22T11:06:25.035] [INFO] default - the queryString for inserting saving :  INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000960, 0,5000,'BOI_1234',
+      1,'Active','Wed Feb 22 2023 11:06:25 GMT+0530 (India Standard Time)')
+[2023-02-22T11:06:25.278] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000960, 0,5000,'BOI_1234',
+      1,'Active','Wed Feb 22 2023 11:06:25 GMT+0530 (India Standard Time)')}
+[2023-02-22T11:06:25.280] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:25.280] [INFO] default - the data is  inserting saving  
+[2023-02-22T11:06:25.526] [INFO] default - the data is  inserting saving  2= {
+  value: {
+    acctnum: '1000000960',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-22T11:06:25.528] [INFO] default - saving account created Data: {
+  value: {
+    acctnum: '1000000960',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:06:25.531] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1440
+[2023-02-22T11:06:25.774] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1440}
+[2023-02-22T11:06:25.776] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:25.776] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1440,
+    firstname: 'Karthi 035',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000960',
+    accounttypeid: '1',
+    id: null,
+    status: 'Active',
+    date: 'Wed Feb 22 2023 11:06:25 GMT+0530 (India Standard Time)',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234',
+    SavingacctypeId: '1'
+  }
+}
+[2023-02-22T11:06:26.021] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T11:06:26.022] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:26.266] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T11:06:26.267] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:26.269] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000960',
+    cust_id: 1440,
+    firstname: 'Karthi 035',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000960',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T11:06:26.273] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000960',
+    cust_id: 1440,
+    firstname: 'Karthi 035',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    status: '1000000960',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T11:06:26.307] [INFO] default - pdf savings acount
+[2023-02-22T11:06:26.318] [INFO] default - get the document data data is publish and consume
+[2023-02-22T11:06:29.500] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (4135,'wel002', '22/2/2023', 'pdf', 1440, 'Active','Wed Feb 22 2023 11:06:29 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T11:06:29.501] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:30.477] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1440'}
+[2023-02-22T11:06:30.478] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:30.940] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2d98e4930-b272-11ed-89b7-2596d6cf002e.pdf'
+        WHERE cust_id = 1440;}
+[2023-02-22T11:06:30.941] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:30.943] [INFO] default - *********** {
+  cust_id: 1440,
+  accountDetail: {
+    acctnum: '1000000960',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  custidDoc: {
+    custId: 1440,
+    listCode: 'newcustDoc',
+    acctnum: '1000000960',
+    accType: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:06:32.785] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1440}
+[2023-02-22T11:06:32.785] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:32.786] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1440,
+  firstname: 'Karthi 035',
+  lastname: 'goga',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar ',
+  emailid: 'anand.kumar1@jktech.com',
+  phone: '987564554',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T11:06:33.031] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T11:06:33.032] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:33.278] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T11:06:33.278] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:33.281] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000960',
+    accounttype: 'saving',
+    cust_id: 1440,
+    firstname: 'Karthi 035',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:06:33.289] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000960',
+    accounttype: 'saving',
+    cust_id: 1440,
+    firstname: 'Karthi 035',
+    lastname: 'goga',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar ',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '987564554',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:06:33.292] [INFO] default - get the document data undefined
+[2023-02-22T11:06:34.269] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (7254,'wel002', '22/2/2023', 'pdf', 1440, 'Active','Wed Feb 22 2023 11:06:34 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T11:06:34.271] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:06:34.291] [INFO] default - Generatepdf
+[2023-02-22T11:06:34.723] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1440,
+  accountDetail: {
+    acctnum: '1000000960',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  custidDoc: {
+    custId: 1440,
+    listCode: 'newcustDoc',
+    acctnum: '1000000960',
+    accType: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:06:34.728] [INFO] default - Add customer Data: {
+  cust_id: 1440,
+  accountDetail: {
+    acctnum: '1000000960',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  custidDoc: {
+    custId: 1440,
+    listCode: 'newcustDoc',
+    acctnum: '1000000960',
+    accType: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:07:37.269] [INFO] default - controller createSavingAccountController  [object Object]
+[2023-02-22T11:07:38.075] [INFO] default - the service  {
+  custId: 261,
+  accountType: 'saving',
+  accsubtype: 'student',
+  branch_code: 'BOI_1234',
+  transfer_limit: 5000
+}
+[2023-02-22T11:07:38.075] [INFO] default - the accounttypequerry:  SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'
+[2023-02-22T11:07:38.319] [INFO] default - Get the data for Querry:SELECT "accounttypeID" FROM "public"."accounttype"  where accounttype='saving' and accsubtype='student'}
+[2023-02-22T11:07:38.320] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:38.320] [INFO] default - the accounttype:  [ { accounttypeID: '1' } ]
+[2023-02-22T11:07:38.560] [INFO] default - the customeraccountsquerry for inserting customeraccounts :  INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (261,'1','active','Wed Feb 22 2023 11:07:38 GMT+0530 (India Standard Time)')
+[2023-02-22T11:07:38.803] [INFO] default - Get the data for Querry:INSERT INTO "public"."customeraccounts" (cust_id, accounttypeid,"status",date) values (261,'1','active','Wed Feb 22 2023 11:07:38 GMT+0530 (India Standard Time)')}
+[2023-02-22T11:07:38.804] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:38.804] [INFO] default - the data is  inserting customer accounts  
+[2023-02-22T11:07:38.804] [INFO] default - the accounttypequerry:  SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=261  and accounttypeid=1
+[2023-02-22T11:07:39.046] [INFO] default - Get the data for Querry:SELECT "acctnum" FROM "public"."customeraccounts"  where cust_id=261  and accounttypeid=1}
+[2023-02-22T11:07:39.046] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:39.047] [INFO] default - the accounttype:  1000000961
+[2023-02-22T11:07:39.047] [INFO] default - the queryString for inserting saving :  INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000961, 0,5000,'BOI_1234',
+      1,'Active','Wed Feb 22 2023 11:07:39 GMT+0530 (India Standard Time)')
+[2023-02-22T11:07:39.288] [INFO] default - Get the data for Querry:INSERT INTO public.savingaccountdetail(
+      acctnum, balance, transfer_limit, branch_code, "SavingacctypeId", status,date)
+      VALUES (1000000961, 0,5000,'BOI_1234',
+      1,'Active','Wed Feb 22 2023 11:07:39 GMT+0530 (India Standard Time)')}
+[2023-02-22T11:07:39.289] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:39.290] [INFO] default - the data is  inserting saving  
+[2023-02-22T11:07:39.535] [INFO] default - the data is  inserting saving  2= {
+  value: {
+    acctnum: '1000000961',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  }
+}
+[2023-02-22T11:07:39.538] [INFO] default - saving account created Data: {
+  value: {
+    acctnum: '1000000961',
+    branch_code: 'BOI_1234',
+    balance: undefined,
+    accounttype: 'saving'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:07:39.540] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=261
+[2023-02-22T11:07:39.789] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.savingaccountdetail on 
+    savingaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=261}
+[2023-02-22T11:07:39.790] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:39.791] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 261,
+    firstname: 'Heap',
+    lastname: 'Cameron',
+    address1: 'France',
+    address2: 'Germany',
+    emailid: 'syeesffw@gmail.com',
+    phone: '83993677',
+    mobile: '93847747',
+    dob: '25/09/1966',
+    maritalstatus: 'married',
+    zipcode: '746353',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    acctnum: '1000000961',
+    accounttypeid: '1',
+    id: null,
+    status: 'Active',
+    date: 'Wed Feb 22 2023 11:07:39 GMT+0530 (India Standard Time)',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234',
+    SavingacctypeId: '1'
+  }
+}
+[2023-02-22T11:07:40.038] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T11:07:40.038] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:40.282] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T11:07:40.283] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:40.286] [INFO] default - document data {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000961',
+    cust_id: 261,
+    firstname: 'Heap',
+    lastname: 'Cameron',
+    address1: 'France',
+    address2: 'Germany',
+    emailid: 'syeesffw@gmail.com',
+    phone: '83993677',
+    mobile: '93847747',
+    dob: '25/09/1966',
+    maritalstatus: 'married',
+    zipcode: '746353',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    status: '1000000961',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T11:07:40.291] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: 'saving',
+    accountnum: '1000000961',
+    cust_id: 261,
+    firstname: 'Heap',
+    lastname: 'Cameron',
+    address1: 'France',
+    address2: 'Germany',
+    emailid: 'syeesffw@gmail.com',
+    phone: '83993677',
+    mobile: '93847747',
+    dob: '25/09/1966',
+    maritalstatus: 'married',
+    zipcode: '746353',
+    city: 'bengalore',
+    state: 'karnataka',
+    country: 'india',
+    status: '1000000961',
+    balance: '0',
+    transfer_limit: '5000',
+    branch_code: 'BOI_1234'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T11:07:40.337] [INFO] default - pdf savings acount
+[2023-02-22T11:07:40.343] [INFO] default - get the document data data is publish and consume
+[2023-02-22T11:07:42.205] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (3576,'wel002', '22/2/2023', 'pdf', 261, 'Active','Wed Feb 22 2023 11:07:41 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T11:07:42.205] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:43.194] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '261'}
+[2023-02-22T11:07:43.194] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:07:43.442] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob205a2ec60-b273-11ed-89b7-2596d6cf002e.pdf'
+        WHERE cust_id = 261;}
+[2023-02-22T11:07:43.443] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:33.315] [INFO] default - get the data in the Add customer [object Object]
+[2023-02-22T11:08:34.167] [INFO] default - the DB is Connected  {
+  customerdetails: {
+    FirstName: 'Karthi 040',
+    LastName: 'Wick',
+    Address1: 'Hyderabad',
+    Address2: 'Rajajinagar',
+    EmailId: 'anand.kumar1@jktech.com',
+    Phone: 94712935778,
+    Mobile: 985746663,
+    DateOfBirth: '22/03/2000',
+    MaritalStatus: 'Single',
+    ZIPCode: 530068,
+    City: 'Bengalore',
+    State: 'Karnataka',
+    Country: 'India',
+    ActionType: 'ADD'
+  },
+  Account: {
+    accountType: 'loan',
+    AccSubType: 'home',
+    BranchCode: 'BOI_1235',
+    RateOfInterest: '18',
+    LoanDuration: '30',
+    TotalLoanAmount: 43500000
+  }
+}
+[2023-02-22T11:08:34.417] [INFO] default - Get the data for Querry:INSERT INTO public.customerdetail( firstname, lastname, address1, address2, emailid, phone, mobile, dob, maritalstatus, zipcode, city, state, country)
+
+  values('Karthi 040', 'Wick', 'Hyderabad', 'Rajajinagar', 'anand.kumar1@jktech.com', 94712935778, 985746663, '22/03/2000', 'Single', '530068', 'Bengalore', 'Karnataka', 'India')}
+[2023-02-22T11:08:34.419] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:34.419] [INFO] default - querry for customer id select cust_id from customerdetail where firstname='Karthi 040' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'
+[2023-02-22T11:08:34.662] [INFO] default - Get the data for Querry:select cust_id from customerdetail where firstname='Karthi 040' and lastname='Wick' and address1='Hyderabad' and address2='Rajajinagar' and emailid='anand.kumar1@jktech.com' and phone=94712935778 and mobile=985746663 and dob='22/03/2000' and maritalstatus='Single' and zipcode='530068' and city='Bengalore' and state='Karnataka' and country='India'}
+[2023-02-22T11:08:34.663] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:34.664] [INFO] default - Customer_Service -> addCustomer -> Going to create LoanAccount {"CustId":1441,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T11:08:35.396] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1441,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000}
+[2023-02-22T11:08:36.135] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  
+[2023-02-22T11:08:36.378] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'home'  }
+[2023-02-22T11:08:36.379] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:36.381] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"3","accounttype":"loan","accsubtype":"home"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 3
+[2023-02-22T11:08:37.119] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1441,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} <--> 3
+[2023-02-22T11:08:37.367] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1441', '3', 'Active', 'Wed Feb 22 2023 11:08:37 GMT+0530 (India Standard Time)')}
+[2023-02-22T11:08:37.393] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:37.641] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T11:08:37.642] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:37.647] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T11:08:37.647] [INFO] default - calling createLoanAccount repo program : 1000000962 <===> loan
+[2023-02-22T11:08:38.384] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1441,"AccountType":"loan","AccSubType":"home","BranchCode":"BOI_1235","RateOfInterest":"18","LoanDuration":"30","TotalLoanAmount":43500000} --> 1000000962 --> 3
+[2023-02-22T11:08:38.385] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000962 -- 1000000962
+[2023-02-22T11:08:38.385] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 7830000 --> 234900000 --> 278400000 --> 9280000 --> 9280000.00
+[2023-02-22T11:08:38.385] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000962', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 11:08:38 GMT+0530 (India Standard Time)', 'Active', '9280000.00')
+[2023-02-22T11:08:38.632] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000962', '0', 'BOI_1235', '18', '30', '43500000', '3', 'Wed Feb 22 2023 11:08:38 GMT+0530 (India Standard Time)', 'Active', '9280000.00')}
+[2023-02-22T11:08:38.633] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:38.633] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000962","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T11:08:38.636] [INFO] default - {
+  cust_id: 1441,
+  AccountType: undefined,
+  accountnum: '1000000962',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T11:08:38.636] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1441
+[2023-02-22T11:08:38.882] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1441}
+[2023-02-22T11:08:38.883] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:38.884] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1441,
+    firstname: 'Karthi 040',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India',
+    acctnum: '1000000962',
+    accounttypeid: '3',
+    id: '963',
+    status: 'Active',
+    date: 'Wed Feb 22 2023 11:08:37 GMT+0530 (India Standard Time)',
+    balanceamount: '0',
+    branchcode: 'BOI_1235',
+    rateofinterest: '18',
+    loanduration: '30',
+    totalloanamount: '43500000',
+    loancreatedate: 'Wed Feb 22 2023 11:08:38 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '3',
+    emiid: '1301',
+    emiamount: '9280000.00'
+  }
+}
+[2023-02-22T11:08:39.133] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T11:08:39.134] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:39.378] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T11:08:39.378] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:39.381] [INFO] default - document data {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000962',
+    cust_id: 1441,
+    firstname: 'Karthi 040',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T11:08:39.386] [INFO] default - document payload {
+  customerdetail: {
+    AccountType: undefined,
+    accountnum: '1000000962',
+    cust_id: 1441,
+    firstname: 'Karthi 040',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  }
+}
+[2023-02-22T11:08:39.415] [INFO] default - pdf Loan acount
+[2023-02-22T11:08:39.417] [INFO] default - get the document data data is publish and consume
+[2023-02-22T11:08:40.826] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (5942,'wel002', '22/2/2023', 'pdf', 1441, 'Active','Wed Feb 22 2023 11:08:40 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T11:08:40.827] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:41.806] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1441'}
+[2023-02-22T11:08:41.807] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:42.053] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob228d711c0-b273-11ed-89b7-2596d6cf002e.pdf'
+        WHERE cust_id = 1441;}
+[2023-02-22T11:08:42.054] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:42.054] [INFO] default - Customer_Service -> addCustomer -> loan account created  {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000962","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T11:08:42.055] [INFO] default - Customer_Service -> addCustomer -> loan account created 2 {"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000962","branchcode":"BOI_1235","Status":"Active","Accounttype":"loan"}}
+[2023-02-22T11:08:42.057] [INFO] default - *********** {
+  cust_id: 1441,
+  accountDetail: {
+    AcctNum: '1000000962',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: 'loan'
+  },
+  custidDoc: {
+    custId: 1441,
+    listCode: 'newcustDoc',
+    acctnum: '1000000962',
+    accType: 'loan'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:08:43.837] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1441}
+[2023-02-22T11:08:43.837] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:43.838] [INFO] default - data got from getCustomerbyID {
+  cust_id: 1441,
+  firstname: 'Karthi 040',
+  lastname: 'Wick',
+  address1: 'Hyderabad',
+  address2: 'Rajajinagar',
+  emailid: 'anand.kumar1@jktech.com',
+  phone: '94712935778',
+  mobile: '985746663',
+  dob: '22/03/2000',
+  maritalstatus: 'Single',
+  zipcode: '530068',
+  city: 'Bengalore',
+  state: 'Karnataka',
+  country: 'India'
+}
+[2023-02-22T11:08:44.085] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T11:08:44.085] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:44.329] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T11:08:44.330] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:44.332] [INFO] default - document data {
+  customerdetail: {
+    accountnum: '1000000962',
+    accounttype: 'loan',
+    cust_id: 1441,
+    firstname: 'Karthi 040',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:08:44.340] [INFO] default - document payload {
+  customerdetail: {
+    accountnum: '1000000962',
+    accounttype: 'loan',
+    cust_id: 1441,
+    firstname: 'Karthi 040',
+    lastname: 'Wick',
+    address1: 'Hyderabad',
+    address2: 'Rajajinagar',
+    emailid: 'anand.kumar1@jktech.com',
+    phone: '94712935778',
+    mobile: '985746663',
+    dob: '22/03/2000',
+    maritalstatus: 'Single',
+    zipcode: '530068',
+    city: 'Bengalore',
+    state: 'Karnataka',
+    country: 'India'
+  },
+  Documents: {
+    doc_id: 'wel002',
+    Doc_Desc: 'Welcome ',
+    Doctype: 'pdf',
+    doc_date: '2023-14-07',
+    doc_name: 'welcome document',
+    doc_statuscode: 'Active',
+    doc_template: 'Header content Thank you'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:08:44.344] [INFO] default - get the document data undefined
+[2023-02-22T11:08:45.321] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
+        VALUES (6372,'wel002', '22/2/2023', 'pdf', 1441, 'Active','Wed Feb 22 2023 11:08:45 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T11:08:45.322] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:08:45.338] [INFO] default - Generatepdf
+[2023-02-22T11:08:45.758] [INFO] default - get the data from addCustomer api in Service  {
+  cust_id: 1441,
+  accountDetail: {
+    AcctNum: '1000000962',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: 'loan'
+  },
+  custidDoc: {
+    custId: 1441,
+    listCode: 'newcustDoc',
+    acctnum: '1000000962',
+    accType: 'loan'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:08:45.764] [INFO] default - Add customer Data: {
+  cust_id: 1441,
+  accountDetail: {
+    AcctNum: '1000000962',
+    branchcode: 'BOI_1235',
+    Status: 'Active',
+    Accounttype: 'loan'
+  },
+  custidDoc: {
+    custId: 1441,
+    listCode: 'newcustDoc',
+    acctnum: '1000000962',
+    accType: 'loan'
+  },
+  statusvalue: true
+}
+[2023-02-22T11:09:36.123] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Payload : {"CustId":1226,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000}
+[2023-02-22T11:09:36.885] [INFO] default - AccountType_Repo -> getAccountType -> Get the accounttype with Account Type and Acount Sub Type : SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  
+[2023-02-22T11:09:37.309] [INFO] default - Get the data for Querry:SELECT accounttype.* FROM public.accounttype WHERE accounttype.accounttype = 'loan' AND accounttype.accsubtype = 'car'  }
+[2023-02-22T11:09:37.310] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:37.312] [INFO] default - LoanAccount_Service-createLoanAccount - getAccountType Response : {"statusvalue":true,"value":{"command":"SELECT","rowCount":1,"oid":null,"rows":[{"accounttypeID":"2","accounttype":"loan","accsubtype":"car"}],"fields":[{"name":"accounttypeID","tableID":14093771,"columnID":1,"dataTypeID":20,"dataTypeSize":8,"dataTypeModifier":-1,"format":"text"},{"name":"accounttype","tableID":14093771,"columnID":2,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"},{"name":"accsubtype","tableID":14093771,"columnID":3,"dataTypeID":1043,"dataTypeSize":-1,"dataTypeModifier":-1,"format":"text"}],"_parsers":[null,null,null],"_types":{"_types":{"arrayParser":{},"builtins":{"BOOL":16,"BYTEA":17,"CHAR":18,"INT8":20,"INT2":21,"INT4":23,"REGPROC":24,"TEXT":25,"OID":26,"TID":27,"XID":28,"CID":29,"JSON":114,"XML":142,"PG_NODE_TREE":194,"SMGR":210,"PATH":602,"POLYGON":604,"CIDR":650,"FLOAT4":700,"FLOAT8":701,"ABSTIME":702,"RELTIME":703,"TINTERVAL":704,"CIRCLE":718,"MACADDR8":774,"MONEY":790,"MACADDR":829,"INET":869,"ACLITEM":1033,"BPCHAR":1042,"VARCHAR":1043,"DATE":1082,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"INTERVAL":1186,"TIMETZ":1266,"BIT":1560,"VARBIT":1562,"NUMERIC":1700,"REFCURSOR":1790,"REGPROCEDURE":2202,"REGOPER":2203,"REGOPERATOR":2204,"REGCLASS":2205,"REGTYPE":2206,"UUID":2950,"TXID_SNAPSHOT":2970,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_DEPENDENCIES":3402,"TSVECTOR":3614,"TSQUERY":3615,"GTSVECTOR":3642,"REGCONFIG":3734,"REGDICTIONARY":3769,"JSONB":3802,"REGNAMESPACE":4089,"REGROLE":4096}},"text":{},"binary":{}},"RowCtor":null,"rowAsArray":false}} <--> 2
+[2023-02-22T11:09:38.174] [INFO] default - CustomerAccount_Repo -> createCustomerAccount -> Inputs : {"CustId":1226,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000} <--> 2
+[2023-02-22T11:09:38.450] [INFO] default - Get the data for Querry:INSERT INTO CustomerAccounts(cust_id, accounttypeid, status, date) VALUES('1226', '2', 'Active', 'Wed Feb 22 2023 11:09:38 GMT+0530 (India Standard Time)')}
+[2023-02-22T11:09:38.451] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:38.695] [INFO] default - Get the data for Querry:SELECT max(AcctNum) FROM CustomerAccounts}
+[2023-02-22T11:09:38.695] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:38.697] [INFO] default - LoanAccount_Service -> createLoanAccount -> LoanDataRequest(This is same as input)
+[2023-02-22T11:09:38.698] [INFO] default - calling createLoanAccount repo program : 1000000963 <===> loan
+[2023-02-22T11:09:39.436] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Initial Inputs : {"CustId":1226,"accountType":"loan","AccSubType":"car","BranchCode":"12345678","RateOfInterest":"8","LoanDuration":"24","TotalLoanAmount":1000000} --> 1000000963 --> 2
+[2023-02-22T11:09:39.437] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> account number is not null(Valid) : 1000000963 -- 1000000963
+[2023-02-22T11:09:39.437] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> calculations : 80000 --> 1920000 --> 2920000 --> 121666.66666666667 --> 121666.67
+[2023-02-22T11:09:39.437] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Create LoanAccount Records -> Loanaccount create query : INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000963', '0', '12345678', '8', '24', '1000000', '2', 'Wed Feb 22 2023 11:09:39 GMT+0530 (India Standard Time)', 'Active', '121666.67')
+[2023-02-22T11:09:39.696] [INFO] default - Get the data for Querry:INSERT INTO LoanAccountDetail(acctnum, balanceamount, branchcode, rateofinterest, loanduration, totalloanamount, loanaccounttypeid, loancreatedate, status, emiamount) VALUES('1000000963', '0', '12345678', '8', '24', '1000000', '2', 'Wed Feb 22 2023 11:09:39 GMT+0530 (India Standard Time)', 'Active', '121666.67')}
+[2023-02-22T11:09:39.697] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:39.697] [INFO] default - GetLoanAccount_Repo -> createloanAccount -> Loan Account detail from Repo  : {"statusvalue":true,"message":"LoanAccountDetail Records Created","value":{"AcctNum":"1000000963","branchcode":"12345678","Status":"Active"}}
+[2023-02-22T11:09:39.701] [INFO] default - {
+  cust_id: 1226,
+  AccountType: 'loan',
+  accountnum: '1000000963',
+  listCode: 'newcustDoc'
+}
+[2023-02-22T11:09:39.702] [INFO] default - the getCustomerSavingAccountbyCustIdQueery  SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1226
+[2023-02-22T11:09:39.948] [INFO] default - Get the data for Querry:SELECT  * FROM "public"."customerdetail" join public.customeraccounts on customeraccounts.cust_id=customerdetail.cust_id join public.loanaccountdetail on 
+    loanaccountdetail.acctnum= customeraccounts.acctnum where customerdetail.cust_id=1226}
+[2023-02-22T11:09:39.948] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:39.949] [INFO] default - data got from getcCustomerTxnByCustId {
+  statusvalue: true,
+  value: {
+    cust_id: 1226,
+    firstname: 'udesh0556',
     lastname: 'Wick',
     address1: 'Hyderabad',
     address2: 'Rajajinagar',
@@ -70,32 +2700,32 @@
     city: 'Bengalore',
     state: 'Karnataka',
     country: 'India',
-    acctnum: '1000000786',
-    accounttypeid: '3',
-    id: '787',
+    acctnum: '1000000963',
+    accounttypeid: '2',
+    id: '964',
     status: 'Active',
-    date: 'Fri Feb 17 2023 09:44:53 GMT+0530 (India Standard Time)',
+    date: 'Wed Feb 22 2023 11:09:38 GMT+0530 (India Standard Time)',
     balanceamount: '0',
-    branchcode: 'BOI_1235',
-    rateofinterest: '18',
-    loanduration: '30',
-    totalloanamount: '43500000',
-    loancreatedate: 'Fri Feb 17 2023 09:44:54 GMT+0530 (India Standard Time)',
-    loanaccounttypeid: '3',
-    emiid: '1201',
-    emiamount: '9280000.00'
+    branchcode: '12345678',
+    rateofinterest: '8',
+    loanduration: '24',
+    totalloanamount: '1000000',
+    loancreatedate: 'Wed Feb 22 2023 11:09:39 GMT+0530 (India Standard Time)',
+    loanaccounttypeid: '2',
+    emiid: '1302',
+    emiamount: '121666.67'
   }
 }
-[2023-02-17T09:44:55.315] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
-[2023-02-17T09:44:55.315] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:55.564] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
-[2023-02-17T09:44:55.565] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:55.567] [INFO] default - document data {
+[2023-02-22T11:09:40.194] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
+[2023-02-22T11:09:40.194] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:40.438] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
+[2023-02-22T11:09:40.438] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:40.441] [INFO] default - document data {
   customerdetail: {
     AccountType: 'loan',
-    accountnum: '1000000786',
-    cust_id: 1256,
-    firstname: 'Karthi 015',
+    accountnum: '1000000963',
+    cust_id: 1226,
+    firstname: 'udesh0556',
     lastname: 'Wick',
     address1: 'Hyderabad',
     address2: 'Rajajinagar',
@@ -119,12 +2749,12 @@
     doc_template: 'Header content Thank you'
   }
 }
-[2023-02-17T09:44:55.570] [INFO] default - document payload {
+[2023-02-22T11:09:40.445] [INFO] default - document payload {
   customerdetail: {
     AccountType: 'loan',
-    accountnum: '1000000786',
-    cust_id: 1256,
-    firstname: 'Karthi 015',
+    accountnum: '1000000963',
+    cust_id: 1226,
+    firstname: 'udesh0556',
     lastname: 'Wick',
     address1: 'Hyderabad',
     address2: 'Rajajinagar',
@@ -148,130 +2778,26 @@
     doc_template: 'Header content Thank you'
   }
 }
-[2023-02-17T09:44:55.603] [INFO] default - pdf Loan acount
-[2023-02-17T09:44:55.613] [INFO] default - get the document data data is publish and consume
-[2023-02-17T09:44:56.601] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
+[2023-02-22T11:09:40.466] [INFO] default - pdf Loan acount
+[2023-02-22T11:09:40.468] [INFO] default - get the document data data is publish and consume
+[2023-02-22T11:09:42.565] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
         "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
-        VALUES (2914,'wel002', '17/2/2023', 'pdf', 1256, 'Active','Fri Feb 17 2023 09:44:56 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
-[2023-02-17T09:44:56.602] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:57.585] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
-	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1256'}
-[2023-02-17T09:44:57.586] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:57.853] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
-        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2a258d540-ae79-11ed-b7e1-998681a61706.pdf'
-        WHERE cust_id = 1256;}
-[2023-02-17T09:44:57.853] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:57.854] [INFO] default - get the data from addCustomer api in Service  {
+        VALUES (5273,'wel002', '22/2/2023', 'pdf', 1226, 'Active','Wed Feb 22 2023 11:09:42 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
+[2023-02-22T11:09:42.566] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:43.556] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
+	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1226'}
+[2023-02-22T11:09:43.557] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:43.805] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
+        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob24d3b0490-b273-11ed-89b7-2596d6cf002e.pdf'
+        WHERE cust_id = 1226;}
+[2023-02-22T11:09:43.807] [INFO] default - the Data got :[object Object]}
+[2023-02-22T11:09:43.807] [INFO] default - the create loan account  {
   statusvalue: true,
-  value: { Customerid: { cust_id: 1256 } },
-  accountDetail: {
-    AcctNum: '1000000786',
-    branchcode: 'BOI_1235',
-    Accounttype: 'loan'
+  message: 'LoanAccountDetail Records Created',
+  value: {
+    AcctNum: '1000000963',
+    branchcode: '12345678',
+    Status: 'Active',
+    Accounttype: undefined
   }
 }
-[2023-02-17T09:44:57.856] [INFO] default - Add customer Data: {
-  statusvalue: true,
-  value: { Customerid: { cust_id: 1256 } },
-  accountDetail: {
-    AcctNum: '1000000786',
-    branchcode: 'BOI_1235',
-    Accounttype: 'loan'
-  }
-}
-[2023-02-17T09:44:59.853] [INFO] default - Get the data for Querry:select * from customerdetail where cust_id=1256}
-[2023-02-17T09:44:59.853] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:44:59.854] [INFO] default - data got from getCustomerbyID {
-  cust_id: 1256,
-  firstname: 'Karthi 015',
-  lastname: 'Wick',
-  address1: 'Hyderabad',
-  address2: 'Rajajinagar',
-  emailid: 'udesh696@gmail.com',
-  phone: '94712935778',
-  mobile: '985746663',
-  dob: '22/03/2000',
-  maritalstatus: 'Single',
-  zipcode: '530068',
-  city: 'Bengalore',
-  state: 'Karnataka',
-  country: 'India'
-}
-[2023-02-17T09:45:00.099] [INFO] default - Get the data for Querry:SELECT listdtlvalue FROM listdatadetail where "listCode" = 'newcustDoc'}
-[2023-02-17T09:45:00.099] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:45:00.358] [INFO] default - Get the data for Querry:select * from document_master where doc_id = 'wel002'}
-[2023-02-17T09:45:00.358] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:45:00.360] [INFO] default - document data {
-  customerdetail: {
-    accountnum: '1000000786',
-    accounttype: 'loan',
-    cust_id: 1256,
-    firstname: 'Karthi 015',
-    lastname: 'Wick',
-    address1: 'Hyderabad',
-    address2: 'Rajajinagar',
-    emailid: 'udesh696@gmail.com',
-    phone: '94712935778',
-    mobile: '985746663',
-    dob: '22/03/2000',
-    maritalstatus: 'Single',
-    zipcode: '530068',
-    city: 'Bengalore',
-    state: 'Karnataka',
-    country: 'India'
-  },
-  Documents: {
-    doc_id: 'wel002',
-    Doc_Desc: 'Welcome ',
-    Doctype: 'pdf',
-    doc_date: '2023-14-07',
-    doc_name: 'welcome document',
-    doc_statuscode: 'Active',
-    doc_template: 'Header content Thank you'
-  },
-  statusvalue: true
-}
-[2023-02-17T09:45:00.365] [INFO] default - document payload {
-  customerdetail: {
-    accountnum: '1000000786',
-    accounttype: 'loan',
-    cust_id: 1256,
-    firstname: 'Karthi 015',
-    lastname: 'Wick',
-    address1: 'Hyderabad',
-    address2: 'Rajajinagar',
-    emailid: 'udesh696@gmail.com',
-    phone: '94712935778',
-    mobile: '985746663',
-    dob: '22/03/2000',
-    maritalstatus: 'Single',
-    zipcode: '530068',
-    city: 'Bengalore',
-    state: 'Karnataka',
-    country: 'India'
-  },
-  Documents: {
-    doc_id: 'wel002',
-    Doc_Desc: 'Welcome ',
-    Doctype: 'pdf',
-    doc_date: '2023-14-07',
-    doc_name: 'welcome document',
-    doc_statuscode: 'Active',
-    doc_template: 'Header content Thank you'
-  },
-  statusvalue: true
-}
-[2023-02-17T09:45:00.369] [INFO] default - get the document data
-[2023-02-17T09:45:00.387] [INFO] default - Generatepdf in customer controller
-[2023-02-17T09:45:01.373] [INFO] default - Get the data for Querry:INSERT INTO public."document_cutomer_master _table"(id,
-        "Docid", "DocDate", "DocType", cust_id, statuscode, timstamp, "DocDesc","Docname")
-        VALUES (6297,'wel002', '17/2/2023', 'pdf', 1256, 'Active','Fri Feb 17 2023 09:45:01 GMT+0530 (India Standard Time)', 'Welcome ', 'welcome document')}
-[2023-02-17T09:45:01.374] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:45:02.359] [INFO] default - Get the data for Querry:SELECT  "Docid",cust_id
-	FROM "public"."document_cutomer_master _table" where "Docid" = 'wel002' and cust_id = '1256'}
-[2023-02-17T09:45:02.360] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:45:02.608] [INFO] default - Get the data for Querry:UPDATE "public"."document_cutomer_master _table"
-        SET referid='https://storagejktraining.blob.core.windows.net/quickstart85534a40-a60c-11ed-906f-c7e4eaa0d700/demo_blob2a5308650-ae79-11ed-b7e1-998681a61706.pdf'
-        WHERE cust_id = 1256;}
-[2023-02-17T09:45:02.609] [INFO] default - the Data got :[object Object]}
-[2023-02-17T09:45:04.555] [INFO] default - get the document data { statusvalue: true }

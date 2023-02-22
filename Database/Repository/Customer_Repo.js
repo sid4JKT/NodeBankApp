@@ -8,6 +8,10 @@ const xlsxj = require("xlsx-to-json");
 
 const fs = require("fs");
 
+const SavingAccountTxn_Service = require("../../services/SavingAccountTxn_Service")
+
+const loanAccountDetail = require("../../services/LoanAccount_Service")
+
 //const { addCustomer } = require("../../services/CustomerService");
 
 //Getting customer by id
@@ -48,7 +52,7 @@ exports.getCustomers = async () => {
     const client = await DB.dbConnection();
     resultdata = await DB.ExtractQuerry(
       client,
-      " select * from customerdetail"
+      " SELECT * FROM public.customerdetail ORDER BY cust_id DESC "
     );
 
     resultfinaldata = resultdata.rows[0];
@@ -62,30 +66,124 @@ exports.getCustomers = async () => {
 
 //Adding customer
 
+// 
 exports.addCustomer = async (data) => {
+  let custidDoc;
+  return new Promise  (async (resolve,reject) => {
   const client = await DB.dbConnection();
   try {
+    let getdata = {};
     let resultdata = {};
+   
     logger.info(`the DB is Connected `, data);
 
-    if (data.ActionType == "ADD") {
-      let add = await Add(data);
-      await DB.ExtractQuerry(client, add);
-      let Custid = `select cust_id from customerdetail where firstname='${data.FirstName}' and lastname='${data.LastName}' and address1='${data.Address1}' and address2='${data.Address2}' and emailid='${data.EmailId}' and phone=${data.Phone} and mobile=${data.Mobile} and dob='${data.DateOfBirth}' and maritalstatus='${data.MaritalStatus}' and zipcode='${data.ZIPCode}' and city='${data.City}' and state='${data.State}' and country='${data.Country}'`;
+    if (data.customerdetails.ActionType == "ADD") {
+      let addCustomer = await Add(data.customerdetails);
+      await DB.ExtractQuerry(client, addCustomer);
+      let Custid = `select cust_id from customerdetail where firstname='${data.customerdetails.FirstName}' and lastname='${data.customerdetails.LastName}' and address1='${data.customerdetails.Address1}' and address2='${data.customerdetails.Address2}' and emailid='${data.customerdetails.EmailId}' and phone=${data.customerdetails.Phone} and mobile=${data.customerdetails.Mobile} and dob='${data.customerdetails.DateOfBirth}' and maritalstatus='${data.customerdetails.MaritalStatus}' and zipcode='${data.customerdetails.ZIPCode}' and city='${data.customerdetails.City}' and state='${data.customerdetails.State}' and country='${data.customerdetails.Country}'`;
 
       logger.info("querry for customer id", Custid);
       let val = await DB.ExtractQuerry(client, Custid);
+      console.log("db return" , val.rows[0]);
+
+      if (data.customerdetails.ActionType == "ADD") {
+       
+          if (data.Account.accountType == "loan" || data.Account.accountType == "Loan") {
+           
+            let createLoanAccountPayload = {
+              CustId: val.rows[0].cust_id,
+              AccountType: data.Account.accountType,
+              AccSubType: data.Account.AccSubType,
+              BranchCode: data.Account.BranchCode,
+              RateOfInterest: data.Account.RateOfInterest,
+              LoanDuration: data.Account.LoanDuration,
+              TotalLoanAmount: data.Account.TotalLoanAmount,
+            };
+            logger.info(
+              "Customer_Service -> addCustomer -> Going to create LoanAccount " +
+                JSON.stringify(createLoanAccountPayload)
+            );
+            let responseFormLoan = await loanAccountDetail.createLoanAccount(
+              createLoanAccountPayload
+            );
+            logger.info("Customer_Service -> addCustomer -> loan account created  "+ JSON.stringify(responseFormLoan ))
+            if (responseFormLoan.statusvalue) {
+            delete responseFormLoan.statusvalue
+           // delete responseFormLoan.message
+            //delete responseFormLoan.value.Status
+            logger.info("Customer_Service -> addCustomer -> loan account created 2 "+ JSON.stringify(responseFormLoan ))
+            
+            getdata = val.rows[0];
+              getdata.accountDetail = responseFormLoan.value;
+
+              console.log("response body ----------" , getdata)
+               custidDoc = {
+                custId: val.rows[0].cust_id,
+                listCode: "newcustDoc",
+                acctnum: getdata.accountDetail.AcctNum,
+                accType: getdata.accountDetail.Accounttype
+              };
+              getdata.custidDoc = custidDoc;
+              resultdata = getdata;
+             
+            } else {
+              getdata.accountDetail = responseFormLoan.message;
+            }
+          }
+         else if (data.Account.accountType == "saving") {
+            let createSavingAccountpayload = {
+              custId: val.rows[0].cust_id,
+              accountType: data.Account.accountType,
+              accsubtype: data.Account.accsubtype,
+              branch_code: data.Account.branch_code,
+              transfer_limit: data.Account.transfer_limit,
+            };
+            let responseFormSavingAccount =
+              await SavingAccountTxn_Service.createSavingAccountService(
+                createSavingAccountpayload
+              );
+            if (responseFormSavingAccount.statusvalue) {
+              getdata.accountDetail = responseFormSavingAccount.value;
+            // } 
+            
+            getdata = val.rows[0];
+              getdata.accountDetail = responseFormSavingAccount.value;
+
+              console.log("response body ----------" , getdata)
+               custidDoc = {
+                custId: val.rows[0].cust_id,
+                listCode: "newcustDoc",
+                acctnum: getdata.accountDetail.acctnum,
+                accType: getdata.accountDetail.accounttype
+              };
+              getdata.custidDoc = custidDoc;
+              resultdata = getdata;
+             
+            } else {
+              getdata.accountDetail = responseFormSavingAccount.message;
+            }
+          } else {
+            //need to write to code here
+          }
+        
+      } else {
+        return getdata;
+      }
+
       resultdata.statusvalue = true;
-      resultdata.value = {
-        Customerid: val.rows[0]
-      };
-      console.log("inthe  ADD ", resultdata);
+      // resultdata.value = {
+      //   Customerid: val.rows[0],
+      // };
+      
+      resolve(resultdata);
+      
       return resultdata;
+      
     }
     if (data.ActionType === "UPDATE") {
       let selectQuery = `Select * from customerdetail where cust_id=${data.Cust_id}`;
       let beforeUpdate = await DB.ExtractQuerry(client, selectQuery);
-      let update = await Update(data);
+      let update = await updateCustomer(data);
       await DB.ExtractQuerry(client, update);
       resultdata.statusvalue = true;
 
@@ -98,16 +196,11 @@ exports.addCustomer = async (data) => {
         Phone: data.Phone,
         Mobile: data.Mobile,
         DOB: data.DateOfBirth,
-
         MaritalStatus: data.MaritalStatus,
-
         ZIPCode: data.ZIPCode,
-
         City: data.City,
-
         State: data.State,
-
-        Country: data.Country
+        Country: data.Country,
       };
 
       resultdata.Oldvalue = beforeUpdate.rows;
@@ -115,14 +208,19 @@ exports.addCustomer = async (data) => {
       // await client.release();
 
       return resultdata;
+      
     }
-  } catch (err) {
+    
+  } 
+  catch (err) {
     logger.error("Something went wrong in the add customers repo");
 
     throw err;
   } finally {
     client.release();
   }
+    //resolve();
+    });
 };
 
 function readFile() {

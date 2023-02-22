@@ -52,55 +52,55 @@ exports.addCustomer = async (req, res) => {
           statusseverity: "information",
           getData
         });
-      } else {
-        let accountType;
-        let accountNum;
+       } else {
+      //   let accountType;
+      //   let accountNum;
       
-        if (req.body.Account.accountType == "Loan" || req.body.Account.accountType == "loan" ){
-          accountNum = getData.accountDetail.AcctNum
-          accountType = getData.accountDetail.Accounttype
-        } else {
-          accountNum = getData.accountDetail.acctnum
-          accountType = getData.accountDetail.accounttype
-        }
+      //   if (req.body.Account.accountType == "Loan" || req.body.Account.accountType == "loan" ){
+      //     accountNum = getData.accountDetail.AcctNum
+      //     accountType = getData.accountDetail.Accounttype
+      //   } else {
+      //     accountNum = getData.accountDetail.acctnum
+      //     accountType = getData.accountDetail.accounttype
+      //   }
       
-        let custidDoc = {
-          custId: getData.value.Customerid.cust_id,
-          listCode: "newcustDoc",
-          acctnum: accountNum,
-          accType: accountType
+      //   let custidDoc = {
+      //     custId: getData.value.Customerid.cust_id,
+      //     listCode: "newcustDoc",
+      //     acctnum: accountNum,
+      //     accType: accountType
         
-        };
-        // console.log(custidDoc);
-        const payload = await documentService.documentCustomer(custidDoc);
-        logger.info("document payload", payload);
+      //   };
+      //   // console.log(custidDoc);
+      //   const payload = await documentService.documentCustomer(custidDoc);
+      //   logger.info("document payload", payload);
 
-        //sending payload to publisher
-        if(payload.statusvalue == true){
-         await doc.newpubdoc(payload);
-          logger.info("get the document data");
-        }
-        //creating pdf
-         await pdfGenerate.pdfgenernate(payload);
-        logger.info("Generatepdf in customer controller");
+      //   //sending payload to publisher
+      //   if(payload.statusvalue == true){
+      //    await doc.newpubdoc(payload);
+      //     logger.info("get the document data");
+      //   }
+      //   //creating pdf
+      //    await pdfGenerate.pdfgenernate(payload);
+      //   logger.info("Generatepdf in customer controller");
 
-        //inserting records into document_customer_master_table
-        await Communication_Repo.insert_Document_Customer(payload);
+      //   //inserting records into document_customer_master_table
+      //   await Communication_Repo.insert_Document_Customer(payload);
 
-        let blobURL = blob.datafinal.url;
-        let doc_id = payload.Documents.doc_id;
-        let cust_id = payload.customerdetail.cust_id;
+      //   let blobURL = blob.datafinal.url;
+      //   let doc_id = payload.Documents.doc_id;
+      //   let cust_id = payload.customerdetail.cust_id;
 
-        await Communication_Repo.insertDocCustomerData(
-          cust_id,
-          doc_id,
-          blobURL
-        );
+      //   await Communication_Repo.insertDocCustomerData(
+      //     cust_id,
+      //     doc_id,
+      //     blobURL
+      //   );
 
-        // sending emails
-        let data = payload.customerdetail;
-        const Emails = await email.main(data);
-        logger.info("get the document data", Emails);
+      //   // sending emails
+      //   let data = payload.customerdetail;
+      //   const Emails = await email.main(data);
+      //   logger.info("get the document data", Emails);
 
         return res.status(200).json({
           ststusCode: 200,
